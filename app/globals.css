@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@theme {
+  --color-q-teal-dark: #0b2e34;
+  --color-q-teal-light: #0f3f46;
+  --color-q-gold: #c6a75e;
+  --color-q-cyan: #1f6f78;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-arabic: var(--font-cairo), ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .bg-q-gradient {
+    background: linear-gradient(
+      135deg,
+      var(--color-q-teal-dark) 0%,
+      var(--color-q-teal-light) 100%
+    );
+  }
+  .text-gradient-gold {
+    background: linear-gradient(to right, #c6a75e, #e8d399, #c6a75e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
