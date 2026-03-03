@@ -288,4 +288,40 @@ export const en = {
       },
     },
   },
+  footer: {
+    brand: {
+      name: "Q MOTORS",
+      tagline: "Automotive Distribution & Mobility Platform",
+      location: "Kingdom of Saudi Arabia",
+      description: "Q Motors is a Saudi-owned automotive distribution platform built on over 65 years of logistics and operational heritage, serving global OEMs and strategic partners across the Kingdom.",
+    },
+    quickLinks: {
+      title: "Quick Links",
+      links: [
+        { label: "Home", href: "/" },
+        { label: "About", href: "/about" },
+        { label: "Services", href: "/services" },
+        { label: "Strategy & Governance", href: "/strategy" },
+        { label: "Contact", href: "/contact" },
+      ],
+    },
+    marketCoverage: {
+      title: "Market Coverage",
+      regions: [
+        { name: "Jeddah & Ports", region: "Western Region" },
+        { name: "Riyadh", region: "Central Region" },
+        { name: "Dammam & Industrial Hubs", region: "Eastern Region" },
+      ],
+    },
+    corporate: {
+      title: "Headquarters & Operations",
+      location: "Kingdom of Saudi Arabia",
+      coverage: "Nationwide operational coverage",
+    },
+    bottom: {
+      copyright: "© 2026 JHWebDev. All Rights Reserved.",
+      privacy: "Privacy Policy",
+      terms: "Terms of Use",
+    },
+  },
 };
