@@ -1,27 +1,12 @@
 "use client";
 
+import { useLanguage } from "@/components/LanguageProvider";
 import { FadeIn, GoldDivider } from "@/components/Shared";
 import { MapPin, Mail, Phone } from "lucide-react";
 import { motion } from "motion/react";
 
 export default function Contact() {
-  const regions = [
-    {
-      number: "01",
-      name: "Jeddah & Ports",
-      description: "Western Region",
-    },
-    {
-      number: "02", 
-      name: "Riyadh",
-      description: "Central Region",
-    },
-    {
-      number: "03",
-      name: "Dammam & Industrial ",
-      description: "Eastern Region",
-    },
-  ];
+  const { t } = useLanguage();
 
   return (
     <main className="min-h-screen bg-q-dark overflow-hidden">
@@ -50,8 +35,9 @@ export default function Contact() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, ease: [0.25, 0.46, 0.45, 0.94] }}
+              data-testid="contact-page-title"
             >
-              Contact Q Motors
+              {t("contact.title")}
             </motion.h1>
 
             {/* Gold Divider */}
@@ -70,10 +56,10 @@ export default function Contact() {
               transition={{ duration: 0.8, delay: 0.7 }}
             >
               <h2 className="text-2xl md:text-3xl text-q-gold font-heading font-normal tracking-wide mb-4">
-                Corporate Headquarters & Nationwide Operations
+                {t("contact.subtitle")}
               </h2>
               <p className="text-xl text-white/60 font-body font-light">
-                Kingdom of Saudi Arabia
+                {t("contact.location")}
               </p>
             </motion.div>
 
@@ -84,13 +70,11 @@ export default function Contact() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1 }}
             >
-              Q Motors operates as a Saudi-owned automotive distribution and mobility platform with nationwide operational coverage, supporting global OEMs, financial institutions, and strategic partners.
+              {t("contact.description")}
             </motion.p>
           </FadeIn>
         </div>
       </section>
-
-     
 
       <GoldDivider />
 
@@ -101,8 +85,8 @@ export default function Contact() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <div className="text-center mb-20">
-              <h2 className="text-4xl md:text-6xl font-heading font-medium text-white uppercase tracking-tight mb-6">
-                Market Coverage
+              <h2 className="text-4xl md:text-6xl font-heading font-medium text-white uppercase tracking-tight mb-6" data-testid="market-coverage-title">
+                {t("contact.coverage.title")}
               </h2>
               <div className="w-24 h-[2px] bg-q-gold mx-auto" style={{ boxShadow: '0 0 15px rgba(198,167,94,0.4)' }} />
             </div>
@@ -110,11 +94,12 @@ export default function Contact() {
 
           {/* Regions Grid */}
           <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
-            {regions.map((region, idx) => (
+            {t("contact.coverage.regions").map((region: any, idx: number) => (
               <FadeIn key={idx} delay={idx * 0.15}>
                 <motion.div 
                   className="relative bg-q-teal-dark/40 border border-q-gold/20 p-10 text-center group transition-all duration-500 hover:border-q-gold/40 hover:bg-q-teal-dark/60"
                   whileHover={{ y: -5 }}
+                  data-testid={`region-${idx + 1}`}
                 >
                   {/* Region Number */}
                   <div className="text-7xl md:text-8xl font-heading font-bold text-transparent bg-clip-text bg-gradient-to-b from-q-gold/30 to-q-gold/5 mb-6 leading-none">
@@ -152,17 +137,17 @@ export default function Contact() {
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-6xl font-heading font-medium text-white uppercase tracking-tight mb-6">
-                Strategic Partnership & Corporate Inquiries
+              <h2 className="text-4xl md:text-6xl font-heading font-medium text-white uppercase tracking-tight mb-6" data-testid="engagement-title">
+                {t("contact.engagement.title")}
               </h2>
               <div className="w-24 h-[2px] bg-q-gold mx-auto mb-12" style={{ boxShadow: '0 0 15px rgba(198,167,94,0.4)' }} />
               
               <p className="text-xl text-white/70 font-body font-light leading-relaxed max-w-3xl mx-auto mb-8">
-                Q Motors engages with global automotive manufacturers, financial institutions, regulatory bodies, and strategic partners seeking long-term collaboration within the Saudi automotive market.
+                {t("contact.engagement.description1")}
               </p>
               
               <p className="text-lg text-white/50 font-body font-light leading-relaxed max-w-3xl mx-auto">
-                For partnership discussions and executive-level engagement, communication is handled directly through corporate channels.
+                {t("contact.engagement.description2")}
               </p>
             </div>
           </FadeIn>
@@ -170,15 +155,15 @@ export default function Contact() {
           {/* Corporate Contact Block */}
           <FadeIn delay={0.3}>
             <div className="mt-20">
-              <div className="bg-q-teal-dark/30 border border-q-gold/20 p-12 md:p-16 text-center backdrop-blur-sm">
+              <div className="bg-q-teal-dark/30 border border-q-gold/20 p-12 md:p-16 text-center backdrop-blur-sm" data-testid="corporate-office">
                 <h3 className="text-2xl md:text-3xl text-q-gold font-heading font-normal tracking-wider mb-4">
-                  Corporate Office
+                  {t("contact.engagement.office.title")}
                 </h3>
                 <p className="text-xl text-white font-heading font-medium mb-2">
-                  Q Motors
+                  {t("contact.engagement.office.company")}
                 </p>
                 <p className="text-lg text-white/60 font-body font-light">
-                  Kingdom of Saudi Arabia
+                  {t("contact.engagement.office.location")}
                 </p>
 
                 {/* Icon Row */}
