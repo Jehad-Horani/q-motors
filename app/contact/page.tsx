@@ -18,7 +18,7 @@ export default function Contact() {
     },
     {
       number: "03",
-      name: "Dammam & Industrial Hubs",
+      name: "Dammam & Industrial ",
       description: "Eastern Region",
     },
   ];
