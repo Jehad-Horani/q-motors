@@ -4,6 +4,7 @@ import { useLanguage } from "@/components/LanguageProvider";
 import { FadeIn, SectionTitle, GoldDivider } from "@/components/Shared";
 import { ShieldCheck, Truck, BarChart3, Target, Globe2, TrendingUp } from "lucide-react";
 import { motion } from "motion/react";
+import Image from "next/image";
 
 export default function Strategy() {
   const { t } = useLanguage();
