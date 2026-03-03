@@ -1,29 +1,156 @@
 @import "tailwindcss";
 
 @theme {
-  --color-q-teal-dark: #0b2e34;
-  --color-q-teal-light: #0f3f46;
-  --color-q-gold: #c6a75e;
-  --color-q-cyan: #1f6f78;
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  /* Deep Premium Color Palette */
+  --color-q-dark: #0A1E24;
+  --color-q-teal-dark: #0C262E;
+  --color-q-teal-light: #0E3A44;
+  --color-q-teal-accent: #134854;
+  --color-q-gold: #C6A75E;
+  --color-q-gold-light: #D4BC7E;
+  --color-q-gold-dark: #9E8547;
+  --color-q-cyan: #1A5A66;
+  
+  /* Typography */
+  --font-heading: var(--font-playfair), Georgia, "Times New Roman", serif;
+  --font-body: var(--font-work-sans), "Helvetica Neue", Arial, sans-serif;
   --font-arabic: var(--font-cairo), ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Base Styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-q-dark);
+}
+
+/* Premium Heading Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  letter-spacing: -0.02em;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+  
+  /* Premium Gradients */
   .bg-q-gradient {
     background: linear-gradient(
-      135deg,
-      var(--color-q-teal-dark) 0%,
-      var(--color-q-teal-light) 100%
+      165deg,
+      var(--color-q-dark) 0%,
+      var(--color-q-teal-dark) 50%,
+      var(--color-q-dark) 100%
     );
   }
+  
+  .bg-q-gradient-hero {
+    background: linear-gradient(
+      180deg,
+      var(--color-q-dark) 0%,
+      var(--color-q-teal-dark) 30%,
+      var(--color-q-teal-light) 60%,
+      var(--color-q-teal-dark) 100%
+    );
+  }
+  
+  /* Gold Text Gradient */
   .text-gradient-gold {
-    background: linear-gradient(to right, #c6a75e, #e8d399, #c6a75e);
+    background: linear-gradient(135deg, #9E8547 0%, #C6A75E 25%, #E8D399 50%, #C6A75E 75%, #9E8547 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
+  
+  /* Premium Font Classes */
+  .font-heading {
+    font-family: var(--font-heading);
+  }
+  
+  .font-body {
+    font-family: var(--font-body);
+  }
+  
+  /* Gold Divider */
+  .gold-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, var(--color-q-gold) 20%, var(--color-q-gold) 80%, transparent 100%);
+  }
+  
+  /* Premium Box Shadow */
+  .shadow-premium {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 80px -20px rgba(198, 167, 94, 0.15);
+  }
+  
+  .shadow-gold-glow {
+    box-shadow: 0 0 60px -15px rgba(198, 167, 94, 0.3);
+  }
+  
+  /* Cinematic Vignette */
+  .vignette {
+    background: radial-gradient(ellipse at center, transparent 0%, transparent 40%, rgba(10, 30, 36, 0.8) 100%);
+  }
+  
+  /* Noise Texture Overlay */
+  .noise-overlay {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  }
+}
+
+/* Premium Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-q-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-q-teal-light);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-q-gold);
+}
+
+/* Selection */
+::selection {
+  background: var(--color-q-gold);
+  color: var(--color-q-dark);
+}
+
+/* Animation Keyframes */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes glow-pulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.8; }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  animation: shimmer 3s linear infinite;
+  background-size: 200% 100%;
+}
+
+.animate-glow {
+  animation: glow-pulse 4s ease-in-out infinite;
 }
