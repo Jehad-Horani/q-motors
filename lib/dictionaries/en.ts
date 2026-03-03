@@ -54,6 +54,17 @@ export const en = {
         "We integrate distribution, logistics, aftersales, lifecycle value management, and long-term brand development under one unified structure.",
     },
     leadership: {
+      title: "LEADERSHIP MESSAGE",
+      chairman: {
+        title: "Chairman's Message",
+        content: "For more than 65 years, our group has grown alongside the Kingdom of Saudi Arabia — beginning as a logistics and transportation enterprise and evolving in parallel with the nation's economic and industrial development.\n\nAcross decades of continuous operation, we have built our reputation on reliability, long-term commitment, and disciplined execution. Our logistics heritage enabled us to support government entities, multinational corporations, and large-scale industrial projects across the Kingdom, earning trust through consistency rather than rhetoric.\n\nThe establishment of Q Motors represents the natural progression of this legacy. As Saudi Arabia enters a new era of mobility, sustainability, and technological advancement, the automotive sector increasingly requires partners with deep local roots, institutional experience, and a long-term perspective.\n\nQ Motors was created to serve as that partner — bridging global automotive innovation with Saudi Arabia's regulatory framework, market realities, and customer expectations, while contributing meaningfully to the objectives of Vision 2030.",
+      },
+      ceo: {
+        title: "CEO Message",
+        content: "Q Motors was designed from inception to be a modern automotive distribution platform, not a traditional trading operation.\n\nOur objective is clear: to provide OEM partners with a stable, compliant, and scalable operating structure in Saudi Arabia — supported by a long-established operational backbone, strong governance, and a long-term business mindset.\n\nWe believe sustainable success in the Saudi automotive market requires:\n\n• Long-term brand development\n• Strong aftersales and lifecycle foundations\n• Control over logistics, parts, and compliance\n• A deep understanding of local market dynamics\n\nQ Motors integrates all of these elements into a single, cohesive ecosystem. We do not pursue short-term volume; we build durable automotive businesses.",
+      },
+    },
+    philosophy: {
       title: "Leadership Philosophy",
       content1: "Sustainable success in the Saudi automotive market requires:",
       bullets: [
@@ -145,58 +156,136 @@ export const en = {
     ],
   },
   strategy: {
-    regulatory: {
-      title: "Regulatory & Compliance Control",
-      content: "Q Motors manages:",
-      bullets: [
-        "SASO approvals and certifications",
-        "Vehicle homologation",
-        "Import and customs compliance",
-        "Continuous regulatory monitoring",
+    title: "STRATEGY & GOVERNANCE",
+    subtitle: "Strategic Control Framework",
+    intro: "Q Motors operates through a comprehensive control architecture designed to deliver predictability, compliance, and long-term stability for OEM partners and financial institutions.",
+    
+    framework: {
+      title: "Strategic Control Framework",
+      regulatory: {
+        title: "Regulatory & Compliance Control",
+        bullets: [
+          "SASO approvals and certifications",
+          "Vehicle homologation",
+          "Import and customs compliance",
+          "Continuous regulatory monitoring",
+        ],
+      },
+      logistics: {
+        title: "Logistics & Supply Chain Control",
+        bullets: [
+          "Factory-to-port coordination",
+          "Shipping and customs clearance",
+          "Inland transportation",
+          "Inventory management",
+        ],
+      },
+      financial: {
+        title: "Financial & Risk Governance",
+        bullets: [
+          "Conservative inventory planning",
+          "Strong cash-flow governance",
+          "Transparent OEM and lender reporting",
+          "Scalable network planning",
+        ],
+      },
+    },
+    
+    risk: {
+      title: "Risk & Stability Architecture",
+      subtitle: "Our logistics backbone and operational discipline reduce exposure across critical risk vectors:",
+      items: [
+        {
+          title: "Conservative Inventory Planning",
+          description: "Disciplined stock management aligned with demand forecasting and market conditions",
+        },
+        {
+          title: "Strong Cash-Flow Governance",
+          description: "Institutional financial controls ensuring liquidity and operational continuity",
+        },
+        {
+          title: "Transparent OEM & Lender Reporting",
+          description: "Regular, structured reporting frameworks for all stakeholders",
+        },
+        {
+          title: "Scalable Network Planning",
+          description: "Strategic expansion aligned with market growth and infrastructure development",
+        },
+        {
+          title: "Working Capital Risk Reduction",
+          description: "Optimized capital deployment through logistics control and inventory efficiency",
+        },
+        {
+          title: "Delivery Delay Mitigation",
+          description: "End-to-end logistics control ensuring predictable timelines",
+        },
+        {
+          title: "Cost Volatility Control",
+          description: "Institutional relationships and operational scale reducing cost exposure",
+        },
       ],
     },
-    logistics: {
-      title: "Logistics & Supply Chain Control",
-      content: "A core differentiator rooted in operational heritage:",
-      bullets: [
-        "Factory-to-port coordination",
-        "Shipping and customs clearance",
-        "Inland transportation",
-        "Inventory management",
-      ],
-    },
-    financial: {
-      title: "Financial & Risk Governance",
-      content1: "We operate with:",
-      bullets1: [
-        "Conservative inventory planning",
-        "Strong cash-flow governance",
-        "Transparent OEM and lender reporting",
-        "Scalable network planning",
-      ],
-      content2: "Our logistics backbone reduces:",
-      bullets2: ["Working capital risk", "Delivery delays", "Cost volatility"],
-    },
+    
     vision: {
-      title: "Alignment with Vision 2030",
-      content: "Q Motors supports Saudi Arabia’s strategic objectives through:",
-      bullets: [
-        "Localization of automotive operations",
-        "Saudization and talent development",
-        "Sustainable and clean mobility",
-        "Contribution to industrial growth",
+      title: "Vision 2030 Alignment",
+      subtitle: "Contributing to Saudi Arabia's Strategic Transformation",
+      description: "Q Motors supports the Kingdom's automotive sector development through institutional commitment to national objectives:",
+      pillars: [
+        {
+          title: "Localization of Automotive Operations",
+          description: "Building local capabilities, infrastructure, and supply chain integration",
+        },
+        {
+          title: "Saudization & Talent Development",
+          description: "Developing Saudi talent across technical, commercial, and management functions",
+        },
+        {
+          title: "Sustainable & Clean Mobility",
+          description: "Supporting the transition to electric and sustainable vehicle technologies",
+        },
+        {
+          title: "Contribution to Industrial Growth",
+          description: "Strengthening the automotive sector's role in economic diversification",
+        },
       ],
     },
   },
   contact: {
-    title: "CONTACT CORPORATE OFFICE",
-    info: "Headquarters & Operations – Kingdom of Saudi Arabia – Nationwide operational coverage",
-    form: {
-      name: "Name",
-      email: "Email",
-      company: "Company",
-      message: "Message",
-      submit: "Partner With Q Motors",
+    title: "CONTACT Q MOTORS",
+    subtitle: "Corporate Headquarters & Nationwide Operations",
+    location: "Kingdom of Saudi Arabia",
+    description: "Q Motors operates as a Saudi-owned automotive distribution and mobility platform with nationwide operational coverage, supporting global OEMs, financial institutions, and strategic partners.",
+    
+    coverage: {
+      title: "Market Coverage",
+      regions: [
+        {
+          number: "01",
+          name: "Jeddah & Ports",
+          description: "Western Region",
+        },
+        {
+          number: "02",
+          name: "Riyadh",
+          description: "Central Region",
+        },
+        {
+          number: "03",
+          name: "Dammam & Industrial",
+          description: "Eastern Region",
+        },
+      ],
+    },
+    
+    engagement: {
+      title: "Strategic Partnership & Corporate Inquiries",
+      description1: "Q Motors engages with global automotive manufacturers, financial institutions, regulatory bodies, and strategic partners seeking long-term collaboration within the Saudi automotive market.",
+      description2: "For partnership discussions and executive-level engagement, communication is handled directly through corporate channels.",
+      office: {
+        title: "Corporate Office",
+        company: "Q Motors",
+        location: "Kingdom of Saudi Arabia",
+      },
     },
   },
 };
