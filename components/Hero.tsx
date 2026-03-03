@@ -117,7 +117,7 @@ export function Hero() {
       <div className="absolute inset-0 noise-overlay pointer-events-none" />
 
       {/* Content Container */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-32 pb-20">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-32 pb-30">
         <div className="max-w-3xl">
           
           {/* Main Title - Q MOTORS */}

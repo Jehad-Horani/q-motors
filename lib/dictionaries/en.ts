@@ -102,6 +102,7 @@ export const en = {
         content2:
           "This integration ensures predictable delivery timelines, regulatory compliance, and a premium customer experience.",
       },
+
       {
         title: "2. Aftersales Servicing & Parts Inventory Management",
         content1:
@@ -120,6 +121,7 @@ export const en = {
           "Long-term brand credibility and trust",
         ],
       },
+
       {
         title: "3. Trade-In & Professional Valuation",
         content1:
@@ -129,7 +131,10 @@ export const en = {
           "Protect residual values",
           "Maintain stable depreciation curves",
         ],
+                content2: "",
+
       },
+
       {
         title: "4. Certified Pre-Owned (CPO) Resale",
         content1: "Our structured CPO ecosystem includes:",
@@ -142,6 +147,7 @@ export const en = {
         content2:
           "This protects brand integrity and supports financial partners through stable resale values.",
       },
+
       {
         title: "5. Repeat Purchase & Customer Retention",
         content1:
@@ -152,6 +158,7 @@ export const en = {
           "Supports long-term demand",
           "Protects overall brand equity",
         ],
+        content2: "",
       },
     ],
   },
