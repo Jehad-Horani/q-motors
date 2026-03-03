@@ -114,8 +114,9 @@ export function Hero() {
               transition={{ duration: 1.2, delay: 0.5, ease: "easeOut" }}
               className="relative inline-block"
             >
-              <h1 className="text-6xl md:text-8xl font-bold text-white tracking-tighter mb-2 relative overflow-hidden">
-                {t('home.hero.title')}
+              <h1 className="text-6xl md:text-8xl font-bold tracking-tighter mb-2 relative overflow-hidden">
+                <span className="text-q-cyan">Q</span>{' '}
+                <span className="text-gray-950">MOTORS</span>
                 {/* Light reflection shimmer passing over the logo */}
                 <motion.div 
                   className="absolute top-0 left-0 w-1/2 h-full bg-gradient-to-r from-transparent via-white/30 to-transparent skew-x-[-20deg]"

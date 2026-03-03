@@ -27,9 +27,9 @@ export function Navbar() {
           <div className="flex-shrink-0 flex items-center">
             <Link
               href="/"
-              className="text-2xl font-bold text-white tracking-widest"
+              className="text-2xl font-bold text-q-cyan tracking-widest"
             >
-              Q <span className="text-q-gold">MOTORS</span>
+              Q <span className="text-black">MOTORS</span>
             </Link>
           </div>
 
