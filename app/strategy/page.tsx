@@ -179,78 +179,135 @@ export default function Strategy() {
       <GoldDivider />
 
       {/* SECTION 3: VISION 2030 ALIGNMENT */}
-      <section className="py-32 relative bg-gradient-to-b from-q-dark to-black">
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute inset-0 bg-[linear-gradient(rgba(198,167,94,0.2)_1px,transparent_1px),linear-gradient(90deg,rgba(198,167,94,0.2)_1px,transparent_1px)] bg-[size:100px_100px]" />
+      <section className="py-32 relative bg-gradient-to-b from-q-dark via-q-teal-dark to-black">
+        {/* Top Gold Divider */}
+        <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-q-gold to-transparent" style={{ boxShadow: '0 0 15px rgba(198,167,94,0.3)' }} />
+        
+        {/* Subtle Background */}
+        <div className="absolute inset-0 opacity-[0.015]">
+          <div className="absolute inset-0 bg-[linear-gradient(rgba(198,167,94,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(198,167,94,0.1)_1px,transparent_1px)] bg-[size:120px_120px]" />
         </div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <FadeIn>
-            <div className="text-center mb-20">
-              {/* VISION 2030 Display */}
+          {/* Split Layout - Text Left, Logo Right */}
+          <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
+            {/* Left Side - Text Content */}
+            <FadeIn>
+              <div>
+                <motion.h2 
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8 }}
+                  className="text-4xl md:text-5xl font-heading font-bold text-white uppercase tracking-tight mb-6 leading-tight"
+                >
+                  {t("strategy.vision.title")}
+                </motion.h2>
+                
+                <div className="w-24 h-[2px] bg-q-gold mb-8" style={{ boxShadow: '0 0 15px rgba(198,167,94,0.4)' }} />
+                
+                <motion.p
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, delay: 0.2 }}
+                  className="text-xl text-white/70 font-body font-light leading-relaxed mb-8"
+                >
+                  {t("strategy.vision.description")}
+                </motion.p>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, delay: 0.3 }}
+                  className="bg-q-teal-dark/30 border-l-2 border-q-gold/50 pl-6 py-4"
+                >
+                  <p className="text-lg text-white/80 font-body font-light leading-relaxed italic">
+                    Q Motors operates as an institutional automotive partner aligned with Saudi Arabia's long-term strategic transformation.
+                  </p>
+                </motion.div>
+              </div>
+            </FadeIn>
+
+            {/* Right Side - Vision 2030 Logo */}
+            <FadeIn delay={0.4}>
               <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 1 }}
-                className="mb-12"
+                className="relative flex items-center justify-center"
               >
-                <div className="text-8xl md:text-9xl font-heading font-bold text-transparent bg-clip-text bg-gradient-to-r from-q-gold-dark via-q-gold to-q-gold-dark tracking-tight">
-                  VISION 2030
+                <div className="relative w-full max-w-lg mx-auto">
+                  {/* Subtle glow effect behind logo */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-q-gold/10 to-transparent blur-3xl" />
+                  
+                  {/* Official Vision 2030 Logo */}
+                  <Image
+                    src="https://customer-assets.emergentagent.com/job_ebe463d2-bcea-4c69-b584-ebbb0ff759c0/artifacts/zwxjp1s9_Screenshot_2026-03-03_152152-removebg-preview.png"
+                    alt="Saudi Vision 2030"
+                    width={600}
+                    height={600}
+                    className="relative z-10 w-full h-auto"
+                    style={{ 
+                      filter: 'drop-shadow(0 0 30px rgba(198,167,94,0.15))',
+                    }}
+                    unoptimized
+                  />
                 </div>
               </motion.div>
-
-              <h2 className="text-3xl md:text-5xl font-heading font-bold text-white uppercase tracking-wide mb-6">
-                {t("strategy.vision.title")}
-              </h2>
-              <div className="w-32 h-[2px] bg-gradient-to-r from-transparent via-q-gold to-transparent mx-auto mb-10" style={{ boxShadow: '0 0 20px rgba(198,167,94,0.5)' }} />
-              <p className="text-xl text-white/70 font-body font-light max-w-4xl mx-auto leading-relaxed">
-                {t("strategy.vision.description")}
-              </p>
-            </div>
-          </FadeIn>
-
-          {/* Four National Pillars */}
-          <div className="grid sm:grid-cols-2 gap-8">
-            {t("strategy.vision.pillars").map((pillar: any, idx: number) => (
-              <FadeIn key={idx} delay={idx * 0.12}>
-                <motion.div
-                  whileHover={{ y: -6 }}
-                  transition={{ duration: 0.4 }}
-                  className="bg-black/60 border-2 border-q-gold/30 p-10 group hover:border-q-gold hover:bg-black/80 transition-all duration-500"
-                >
-                  {/* Icon */}
-                  <div className="mb-6">
-                    <div className="w-16 h-16 border border-q-gold/50 flex items-center justify-center group-hover:border-q-gold transition-all duration-500">
-                      <Globe2 className="w-8 h-8 text-q-gold" />
-                    </div>
-                  </div>
-
-                  {/* Title */}
-                  <h3 className="text-2xl md:text-3xl font-heading font-bold text-q-gold mb-4 leading-tight">
-                    {pillar.title}
-                  </h3>
-
-                  {/* Description */}
-                  <p className="text-base text-white/70 font-body font-light leading-relaxed">
-                    {pillar.description}
-                  </p>
-
-                  {/* Bottom Accent */}
-                  <div className="mt-8 w-full h-[1px] bg-gradient-to-r from-q-gold/0 via-q-gold/50 to-q-gold/0" />
-                </motion.div>
-              </FadeIn>
-            ))}
+            </FadeIn>
           </div>
 
-          {/* Closing Statement */}
+          {/* Strategic Pillars - 2x2 Grid */}
           <FadeIn delay={0.5}>
-            <div className="mt-20 text-center">
-              <div className="max-w-4xl mx-auto bg-q-teal-dark/20 border border-q-gold/20 p-12">
-                <TrendingUp className="w-12 h-12 text-q-gold mx-auto mb-6" />
-                <p className="text-xl md:text-2xl text-white/80 font-heading font-normal leading-relaxed">
-                  Q Motors operates as an institutional automotive partner aligned with Saudi Arabia's long-term strategic transformation.
-                </p>
+            <div className="mt-20">
+              <h3 className="text-2xl md:text-3xl font-heading font-bold text-white text-center uppercase tracking-wide mb-12">
+                Strategic Commitment Areas
+              </h3>
+              
+              <div className="grid sm:grid-cols-2 gap-6">
+                {t("strategy.vision.pillars").map((pillar: any, idx: number) => (
+                  <motion.div
+                    key={idx}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: idx * 0.1 }}
+                    className="group relative bg-black/40 border border-q-gold/20 p-8 transition-all duration-500 hover:border-q-gold/40 hover:bg-black/60"
+                  >
+                    {/* Number Badge */}
+                    <div className="absolute top-4 right-4 w-10 h-10 border border-q-gold/30 flex items-center justify-center">
+                      <span className="text-q-gold/60 font-heading font-bold text-sm">
+                        {String(idx + 1).padStart(2, '0')}
+                      </span>
+                    </div>
+
+                    {/* Icon */}
+                    <div className="mb-4">
+                      <div className="w-12 h-12 border border-q-gold/40 flex items-center justify-center group-hover:border-q-gold transition-all duration-500">
+                        <Globe2 className="w-6 h-6 text-q-gold" />
+                      </div>
+                    </div>
+
+                    {/* Title */}
+                    <h4 className="text-xl font-heading font-bold text-q-gold mb-3 leading-tight">
+                      {pillar.title}
+                    </h4>
+
+                    {/* Divider */}
+                    <div className="w-12 h-[1px] bg-q-gold/40 mb-4" />
+
+                    {/* Description */}
+                    <p className="text-sm text-white/60 font-body font-light leading-relaxed">
+                      {pillar.description}
+                    </p>
+
+                    {/* Bottom accent on hover */}
+                    <div className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-q-gold to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left" />
+                  </motion.div>
+                ))}
               </div>
             </div>
           </FadeIn>
