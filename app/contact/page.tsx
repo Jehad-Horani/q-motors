@@ -1,136 +1,287 @@
 "use client";
 
-import { useLanguage } from "@/components/LanguageProvider";
-import { FadeIn, SectionTitle } from "@/components/Shared";
-import { MapPin, Mail, Phone, Linkedin, Twitter } from "lucide-react";
+import { FadeIn, GoldDivider } from "@/components/Shared";
+import { MapPin, Mail, Phone } from "lucide-react";
 import { motion } from "motion/react";
 
 export default function Contact() {
-  const { t } = useLanguage();
+  const regions = [
+    {
+      number: "01",
+      name: "Jeddah & Ports",
+      description: "Western Region",
+    },
+    {
+      number: "02", 
+      name: "Riyadh",
+      description: "Central Region",
+    },
+    {
+      number: "03",
+      name: "Dammam & Industrial Hubs",
+      description: "Eastern Region",
+    },
+  ];
 
   return (
-    <main className="min-h-screen bg-q-dark pt-24 overflow-hidden">
+    <main className="min-h-screen bg-q-dark overflow-hidden">
+      {/* HERO SECTION */}
+      <section className="relative pt-32 pb-24 bg-gradient-to-b from-q-dark via-q-teal-dark to-q-dark">
+        {/* Subtle Background Texture */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute inset-0 bg-[linear-gradient(rgba(198,167,94,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(198,167,94,0.1)_1px,transparent_1px)] bg-[size:80px_80px]" />
+        </div>
+        
+        {/* Subtle Automotive Silhouette */}
+        <motion.div 
+          className="absolute inset-0 opacity-[0.03]"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 0.03 }}
+          transition={{ duration: 2 }}
+        >
+          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[1200px] h-[400px] bg-gradient-to-t from-white/20 to-transparent rounded-t-full blur-3xl" />
+        </motion.div>
+
+        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <FadeIn>
+            {/* Main Title */}
+            <motion.h1 
+              className="text-5xl md:text-8xl font-heading font-bold text-white tracking-tight mb-6 uppercase"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, ease: [0.25, 0.46, 0.45, 0.94] }}
+            >
+              Contact Q Motors
+            </motion.h1>
+
+            {/* Gold Divider */}
+            <motion.div 
+              className="w-32 h-[2px] bg-gradient-to-r from-transparent via-q-gold to-transparent mx-auto mb-8"
+              initial={{ width: 0, opacity: 0 }}
+              animate={{ width: 128, opacity: 1 }}
+              transition={{ duration: 1, delay: 0.5 }}
+              style={{ boxShadow: '0 0 20px rgba(198,167,94,0.4)' }}
+            />
+
+            {/* Subtitle */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.7 }}
+            >
+              <h2 className="text-2xl md:text-3xl text-q-gold font-heading font-normal tracking-wide mb-4">
+                Corporate Headquarters & Nationwide Operations
+              </h2>
+              <p className="text-xl text-white/60 font-body font-light">
+                Kingdom of Saudi Arabia
+              </p>
+            </motion.div>
+
+            {/* Statement */}
+            <motion.p
+              className="text-lg md:text-xl text-white/70 font-body font-light leading-relaxed max-w-3xl mx-auto mt-12"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 1 }}
+            >
+              Q Motors operates as a Saudi-owned automotive distribution and mobility platform with nationwide operational coverage, supporting global OEMs, financial institutions, and strategic partners.
+            </motion.p>
+          </FadeIn>
+        </div>
+      </section>
+
+      <GoldDivider />
+
+      {/* HEADQUARTERS SECTION */}
       <section className="py-32 relative bg-q-teal-dark">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(198,167,94,0.05)_0%,transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(198,167,94,0.03)_0%,transparent_60%)]" />
+        
+        <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <FadeIn>
+            <div className="text-center mb-20">
+              <h2 className="text-4xl md:text-6xl font-heading font-medium text-white uppercase tracking-tight mb-6">
+                Headquarters & Operations
+              </h2>
+              <div className="w-24 h-[2px] bg-q-gold mx-auto" style={{ boxShadow: '0 0 15px rgba(198,167,94,0.4)' }} />
+            </div>
+          </FadeIn>
+
+          <FadeIn delay={0.2}>
+            <div className="flex flex-col items-center">
+              {/* Saudi Arabia Outline */}
+              <div className="relative mb-12">
+                {/* Glow Effect */}
+                <motion.div 
+                  className="absolute inset-0 blur-3xl opacity-30"
+                  animate={{ opacity: [0.2, 0.4, 0.2] }}
+                  transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                >
+                  <svg viewBox="0 0 400 300" className="w-80 h-60 fill-q-gold/20">
+                    <path d="M50,150 Q80,80 150,60 Q200,50 250,70 Q320,90 360,130 Q380,160 370,200 Q350,250 280,260 Q200,270 130,250 Q70,230 50,180 Q40,160 50,150 Z" />
+                  </svg>
+                </motion.div>
+                
+                {/* Main Outline */}
+                <motion.svg 
+                  viewBox="0 0 400 300" 
+                  className="w-80 h-60 relative z-10"
+                  initial={{ pathLength: 0, opacity: 0 }}
+                  whileInView={{ pathLength: 1, opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 2, ease: "easeInOut" }}
+                >
+                  <motion.path 
+                    d="M50,150 Q80,80 150,60 Q200,50 250,70 Q320,90 360,130 Q380,160 370,200 Q350,250 280,260 Q200,270 130,250 Q70,230 50,180 Q40,160 50,150 Z"
+                    fill="none"
+                    stroke="url(#goldGradient)"
+                    strokeWidth="2"
+                    initial={{ pathLength: 0 }}
+                    whileInView={{ pathLength: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 2, ease: "easeInOut" }}
+                  />
+                  <defs>
+                    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="#9E8547" />
+                      <stop offset="50%" stopColor="#C6A75E" />
+                      <stop offset="100%" stopColor="#9E8547" />
+                    </linearGradient>
+                  </defs>
+                  
+                  {/* Region Markers */}
+                  <motion.circle cx="120" cy="180" r="6" fill="#C6A75E" initial={{ scale: 0 }} whileInView={{ scale: 1 }} viewport={{ once: true }} transition={{ delay: 2.2 }} />
+                  <motion.circle cx="200" cy="150" r="6" fill="#C6A75E" initial={{ scale: 0 }} whileInView={{ scale: 1 }} viewport={{ once: true }} transition={{ delay: 2.4 }} />
+                  <motion.circle cx="300" cy="160" r="6" fill="#C6A75E" initial={{ scale: 0 }} whileInView={{ scale: 1 }} viewport={{ once: true }} transition={{ delay: 2.6 }} />
+                </motion.svg>
+              </div>
+
+              <div className="text-center">
+                <h3 className="text-2xl md:text-3xl text-white font-heading font-normal mb-3">
+                  Kingdom of Saudi Arabia
+                </h3>
+                <p className="text-lg text-q-gold/80 font-body font-light">
+                  Nationwide operational coverage
+                </p>
+              </div>
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
+      <GoldDivider />
+
+      {/* MARKET COVERAGE SECTION */}
+      <section className="py-32 relative bg-q-dark">
         <div className="absolute inset-0 bg-[linear-gradient(rgba(198,167,94,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(198,167,94,0.02)_1px,transparent_1px)] bg-[size:60px_60px]" />
         
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <SectionTitle title={t("contact.title")} />
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <FadeIn>
+            <div className="text-center mb-20">
+              <h2 className="text-4xl md:text-6xl font-heading font-medium text-white uppercase tracking-tight mb-6">
+                Market Coverage
+              </h2>
+              <div className="w-24 h-[2px] bg-q-gold mx-auto" style={{ boxShadow: '0 0 15px rgba(198,167,94,0.4)' }} />
+            </div>
+          </FadeIn>
 
-          <div className="grid md:grid-cols-2 gap-12 mt-16">
-            {/* Contact Info */}
-            <FadeIn>
-              <div className="bg-q-dark/50 p-12 border border-q-gold/20 h-full backdrop-blur-sm">
-                <h3 className="text-3xl text-q-gold font-heading uppercase tracking-wider mb-8">
-                  Q Motors
+          {/* Regions Grid */}
+          <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
+            {regions.map((region, idx) => (
+              <FadeIn key={idx} delay={idx * 0.15}>
+                <motion.div 
+                  className="relative bg-q-teal-dark/40 border border-q-gold/20 p-10 text-center group transition-all duration-500 hover:border-q-gold/40 hover:bg-q-teal-dark/60"
+                  whileHover={{ y: -5 }}
+                >
+                  {/* Region Number */}
+                  <div className="text-7xl md:text-8xl font-heading font-bold text-transparent bg-clip-text bg-gradient-to-b from-q-gold/30 to-q-gold/5 mb-6 leading-none">
+                    {region.number}
+                  </div>
+                  
+                  {/* Gold Marker Dot */}
+                  <div className="w-3 h-3 bg-q-gold rounded-full mx-auto mb-6 shadow-[0_0_15px_rgba(198,167,94,0.6)]" />
+                  
+                  {/* Region Name */}
+                  <h3 className="text-2xl md:text-3xl font-heading font-medium text-white mb-3 tracking-wide">
+                    {region.name}
+                  </h3>
+                  
+                  {/* Region Description */}
+                  <p className="text-lg text-q-gold/70 font-body font-light">
+                    {region.description}
+                  </p>
+
+                  {/* Bottom Accent Line */}
+                  <div className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-q-gold/50 to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
+                </motion.div>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <GoldDivider />
+
+      {/* STRATEGIC ENGAGEMENT SECTION */}
+      <section className="py-32 relative bg-gradient-to-b from-q-teal-dark via-q-dark to-black">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,rgba(198,167,94,0.05)_0%,transparent_50%)]" />
+        
+        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <FadeIn>
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-6xl font-heading font-medium text-white uppercase tracking-tight mb-6">
+                Strategic Partnership & Corporate Inquiries
+              </h2>
+              <div className="w-24 h-[2px] bg-q-gold mx-auto mb-12" style={{ boxShadow: '0 0 15px rgba(198,167,94,0.4)' }} />
+              
+              <p className="text-xl text-white/70 font-body font-light leading-relaxed max-w-3xl mx-auto mb-8">
+                Q Motors engages with global automotive manufacturers, financial institutions, regulatory bodies, and strategic partners seeking long-term collaboration within the Saudi automotive market.
+              </p>
+              
+              <p className="text-lg text-white/50 font-body font-light leading-relaxed max-w-3xl mx-auto">
+                For partnership discussions and executive-level engagement, communication is handled directly through corporate channels.
+              </p>
+            </div>
+          </FadeIn>
+
+          {/* Corporate Contact Block */}
+          <FadeIn delay={0.3}>
+            <div className="mt-20">
+              <div className="bg-q-teal-dark/30 border border-q-gold/20 p-12 md:p-16 text-center backdrop-blur-sm">
+                <h3 className="text-2xl md:text-3xl text-q-gold font-heading font-normal tracking-wider mb-4">
+                  Corporate Office
                 </h3>
-                <p className="text-xl text-white/80 font-body font-light leading-relaxed mb-12">
-                  {t("contact.info")}
+                <p className="text-xl text-white font-heading font-medium mb-2">
+                  Q Motors
+                </p>
+                <p className="text-lg text-white/60 font-body font-light">
+                  Kingdom of Saudi Arabia
                 </p>
 
-                <div className="space-y-6 mb-12">
-                  <motion.div 
-                    className="flex items-center gap-4 group"
-                    whileHover={{ x: 5 }}
-                  >
-                    <div className="w-12 h-12 bg-q-gold/10 border border-q-gold/30 flex items-center justify-center transition-all duration-300 group-hover:bg-q-gold/20">
-                      <MapPin className="w-5 h-5 text-q-gold" />
-                    </div>
-                    <span className="text-white/70 font-body">Riyadh, Kingdom of Saudi Arabia</span>
-                  </motion.div>
-                  <motion.div 
-                    className="flex items-center gap-4 group"
-                    whileHover={{ x: 5 }}
-                  >
-                    <div className="w-12 h-12 bg-q-gold/10 border border-q-gold/30 flex items-center justify-center transition-all duration-300 group-hover:bg-q-gold/20">
-                      <Mail className="w-5 h-5 text-q-gold" />
-                    </div>
-                    <span className="text-white/70 font-body">corporate@qmotors.sa</span>
-                  </motion.div>
-                  <motion.div 
-                    className="flex items-center gap-4 group"
-                    whileHover={{ x: 5 }}
-                  >
-                    <div className="w-12 h-12 bg-q-gold/10 border border-q-gold/30 flex items-center justify-center transition-all duration-300 group-hover:bg-q-gold/20">
-                      <Phone className="w-5 h-5 text-q-gold" />
-                    </div>
-                    <span className="text-white/70 font-body" dir="ltr">+966 11 XXX XXXX</span>
-                  </motion.div>
-                </div>
-
-                <div className="pt-8 border-t border-q-gold/20">
-                  <p className="text-sm text-white/40 font-body uppercase tracking-wider mb-4">Connect With Us</p>
-                  <div className="flex gap-4">
-                    {[Linkedin, Twitter].map((Icon, idx) => (
-                      <motion.a
-                        key={idx}
-                        href="#"
-                        whileHover={{ scale: 1.1, y: -2 }}
-                        className="w-12 h-12 border border-q-gold/40 flex items-center justify-center text-q-gold hover:bg-q-gold hover:text-q-dark transition-all duration-300"
-                      >
-                        <Icon className="w-5 h-5" />
-                      </motion.a>
-                    ))}
-                  </div>
+                {/* Icon Row */}
+                <div className="flex justify-center items-center gap-8 mt-12 pt-8 border-t border-q-gold/10">
+                  {[
+                    { Icon: MapPin, label: "Location" },
+                    { Icon: Mail, label: "Email" },
+                    { Icon: Phone, label: "Phone" },
+                  ].map(({ Icon, label }, idx) => (
+                    <motion.div
+                      key={idx}
+                      className="flex flex-col items-center gap-3"
+                      whileHover={{ y: -3 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <div className="w-14 h-14 border border-q-gold/40 flex items-center justify-center transition-all duration-300 hover:border-q-gold hover:bg-q-gold/10">
+                        <Icon className="w-6 h-6 text-q-gold" />
+                      </div>
+                      <span className="text-xs text-white/40 font-body uppercase tracking-wider">
+                        {label}
+                      </span>
+                    </motion.div>
+                  ))}
                 </div>
               </div>
-            </FadeIn>
-
-            {/* Contact Form */}
-            <FadeIn delay={0.2}>
-              <form className="bg-q-dark/30 p-12 border border-q-gold/20 space-y-6 backdrop-blur-sm" data-testid="contact-form">
-                <div>
-                  <label className="block text-sm font-body font-medium text-white/60 mb-3 uppercase tracking-wider">
-                    {t("contact.form.name")}
-                  </label>
-                  <input
-                    type="text"
-                    data-testid="contact-name-input"
-                    className="w-full bg-white/5 border border-white/10 p-4 text-white font-body focus:outline-none focus:border-q-gold transition-all duration-300"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-body font-medium text-white/60 mb-3 uppercase tracking-wider">
-                    {t("contact.form.email")}
-                  </label>
-                  <input
-                    type="email"
-                    data-testid="contact-email-input"
-                    className="w-full bg-white/5 border border-white/10 p-4 text-white font-body focus:outline-none focus:border-q-gold transition-all duration-300"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-body font-medium text-white/60 mb-3 uppercase tracking-wider">
-                    {t("contact.form.company")}
-                  </label>
-                  <input
-                    type="text"
-                    data-testid="contact-company-input"
-                    className="w-full bg-white/5 border border-white/10 p-4 text-white font-body focus:outline-none focus:border-q-gold transition-all duration-300"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-body font-medium text-white/60 mb-3 uppercase tracking-wider">
-                    {t("contact.form.message")}
-                  </label>
-                  <textarea
-                    rows={4}
-                    data-testid="contact-message-input"
-                    className="w-full bg-white/5 border border-white/10 p-4 text-white font-body focus:outline-none focus:border-q-gold transition-all duration-300 resize-none"
-                  />
-                </div>
-                <motion.button
-                  type="button"
-                  data-testid="contact-submit-btn"
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  className="w-full py-5 bg-q-gold text-q-dark font-body font-bold uppercase tracking-[0.2em] text-sm hover:shadow-gold-glow transition-all duration-300 mt-4"
-                >
-                  {t("contact.form.submit")}
-                </motion.button>
-              </form>
-            </FadeIn>
-          </div>
+            </div>
+          </FadeIn>
         </div>
       </section>
     </main>
