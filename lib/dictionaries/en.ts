@@ -328,4 +328,70 @@ export const en = {
       terms: "Terms of Use",
     },
   },
+  privacy: {
+    title: "Privacy Policy",
+    lastUpdated: "Last Updated: March 2026",
+    intro: "Q Motors is committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy outlines how we collect, use, and safeguard your data.",
+    sections: [
+      {
+        title: "Information Collection",
+        content: "We collect information that you provide directly to us, including contact details, business inquiries, and communication preferences. This information is collected when you interact with our website, submit inquiries, or engage with our services.",
+      },
+      {
+        title: "Use of Information",
+        content: "The information we collect is used to respond to your inquiries, provide services, improve our operations, and communicate with you about our automotive distribution platform and related services.",
+      },
+      {
+        title: "Data Protection",
+        content: "We implement appropriate technical and organizational security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. Your data is stored securely and accessed only by authorized personnel.",
+      },
+      {
+        title: "Information Sharing",
+        content: "We do not sell or rent your personal information to third parties. Information may be shared with trusted partners and service providers who assist in our operations, subject to confidentiality agreements.",
+      },
+      {
+        title: "Your Rights",
+        content: "You have the right to access, correct, or delete your personal information. You may also object to processing or request data portability. To exercise these rights, please contact us through our official channels.",
+      },
+      {
+        title: "Contact Information",
+        content: "For questions or concerns regarding this Privacy Policy or our data practices, please contact Q Motors through the contact information provided on our website.",
+      },
+    ],
+  },
+  terms: {
+    title: "Terms of Use",
+    lastUpdated: "Last Updated: March 2026",
+    intro: "By accessing and using the Q Motors website, you agree to comply with and be bound by the following terms and conditions. Please review these terms carefully.",
+    sections: [
+      {
+        title: "Website Usage",
+        content: "This website is provided for informational purposes regarding Q Motors' automotive distribution platform and services. You may view, download, and print content for personal, non-commercial use only.",
+      },
+      {
+        title: "Intellectual Property",
+        content: "All content on this website, including text, graphics, logos, images, and software, is the property of Q Motors or its content suppliers and is protected by intellectual property laws. Unauthorized use is strictly prohibited.",
+      },
+      {
+        title: "Accuracy of Information",
+        content: "While we strive to ensure the accuracy of information presented on this website, Q Motors makes no warranties or representations regarding the completeness, accuracy, or reliability of any content.",
+      },
+      {
+        title: "Limitation of Liability",
+        content: "Q Motors shall not be liable for any direct, indirect, incidental, consequential, or punitive damages arising from your use of this website or inability to use the website, even if advised of the possibility of such damages.",
+      },
+      {
+        title: "External Links",
+        content: "This website may contain links to third-party websites. Q Motors is not responsible for the content, accuracy, or practices of external sites. Access to any linked websites is at your own risk.",
+      },
+      {
+        title: "Modifications",
+        content: "Q Motors reserves the right to modify these Terms of Use at any time without prior notice. Continued use of the website following any changes constitutes acceptance of the modified terms.",
+      },
+      {
+        title: "Governing Law",
+        content: "These Terms of Use are governed by and construed in accordance with the laws of the Kingdom of Saudi Arabia. Any disputes shall be subject to the exclusive jurisdiction of Saudi Arabian courts.",
+      },
+    ],
+  },
 };
