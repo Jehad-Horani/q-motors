@@ -209,7 +209,7 @@ export default function Services() {
               className="group relative inline-flex items-center justify-center gap-3 px-12 py-6 bg-q-gold text-q-dark font-body font-bold uppercase tracking-[0.2em] text-sm transition-all duration-300 hover:shadow-gold-glow overflow-hidden"
             >
               <span className="relative z-10 flex items-center gap-3">
-                {t("contact.form.submit")}
+                {t("contact us")}
                 <ChevronRight
                   className={`w-5 h-5 transition-transform duration-300 group-hover:translate-x-1 ${isRtl ? "rotate-180 group-hover:-translate-x-1" : ""}`}
                 />

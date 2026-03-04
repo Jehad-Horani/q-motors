@@ -226,10 +226,7 @@ export const en = {
           title: "Delivery Delay Mitigation",
           description: "End-to-end logistics control ensuring predictable timelines",
         },
-        {
-          title: "Cost Volatility Control",
-          description: "Institutional relationships and operational scale reducing cost exposure",
-        },
+        
       ],
     },
     

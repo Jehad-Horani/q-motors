@@ -5,6 +5,7 @@ import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 export function Navbar() {
@@ -30,12 +31,11 @@ export function Navbar() {
   ];
 
   return (
-    <motion.nav 
-      className={`fixed w-full z-50 transition-all duration-500 ${
-        scrolled 
-          ? "bg-q-dark/95 backdrop-blur-xl border-b border-q-gold/20 shadow-[0_4px_30px_rgba(0,0,0,0.4)]" 
+    <motion.nav
+      className={`fixed w-full z-50 transition-all duration-500 ${scrolled
+          ? "bg-q-dark/95 backdrop-blur-xl border-b border-q-gold/20 shadow-[0_4px_30px_rgba(0,0,0,0.4)]"
           : "bg-transparent border-b border-transparent"
-      }`}
+        }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
@@ -49,12 +49,14 @@ export function Navbar() {
               className="group flex items-center gap-2"
               data-testid="navbar-logo"
             >
-              <span className="text-3xl font-heading font-bold text-white tracking-wider transition-all duration-300 group-hover:text-white/90">
-                Q
-              </span>
-              <span className="text-3xl font-heading font-bold text-q-gold tracking-wider transition-all duration-300 group-hover:text-q-gold-light">
-                MOTORS
-              </span>
+              <Image
+                src="/logo.png"
+                alt="Q Motors Logo"
+                width={0}
+                height={0}
+                sizes="50vw"
+                className="w-25 h-auto object-contain transition-all duration-300 group-hover:scale-105"
+              />
             </Link>
           </div>
 
@@ -67,18 +69,16 @@ export function Navbar() {
                 data-testid={`nav-link-${link.href.replace('/', '') || 'home'}`}
                 className="relative group py-2"
               >
-                <span className={`text-sm font-body font-medium uppercase tracking-[0.2em] transition-colors duration-300 ${
-                  pathname === link.href 
-                    ? "text-q-gold" 
+                <span className={`text-sm font-body font-medium uppercase tracking-[0.2em] transition-colors duration-300 ${pathname === link.href
+                    ? "text-q-gold"
                     : "text-white/80 group-hover:text-q-gold"
-                }`}>
+                  }`}>
                   {t(link.label)}
                 </span>
                 {/* Active/Hover Underline */}
-                <motion.span 
-                  className={`absolute -bottom-1 left-0 h-[2px] bg-q-gold transition-all duration-300 ${
-                    pathname === link.href ? "w-full" : "w-0 group-hover:w-full"
-                  }`}
+                <motion.span
+                  className={`absolute -bottom-1 left-0 h-[2px] bg-q-gold transition-all duration-300 ${pathname === link.href ? "w-full" : "w-0 group-hover:w-full"
+                    }`}
                   style={{
                     boxShadow: pathname === link.href ? '0 0 10px rgba(198,167,94,0.5)' : 'none',
                   }}
@@ -126,11 +126,10 @@ export function Navbar() {
                   <Link
                     href={link.href}
                     onClick={() => setIsOpen(false)}
-                    className={`block px-4 py-4 text-lg font-body font-medium uppercase tracking-wider transition-colors border-b border-white/5 ${
-                      pathname === link.href 
-                        ? "text-q-gold" 
+                    className={`block px-4 py-4 text-lg font-body font-medium uppercase tracking-wider transition-colors border-b border-white/5 ${pathname === link.href
+                        ? "text-q-gold"
                         : "text-white/80 hover:text-q-gold"
-                    }`}
+                      }`}
                   >
                     {t(link.label)}
                   </Link>
