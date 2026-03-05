@@ -137,19 +137,25 @@ export function Footer() {
             {/* Institutional Icon Row */}
             <div className="flex items-center gap-4 pt-4 border-t border-white/10">
               <div className="group cursor-pointer">
-                <div className="w-10 h-10 border border-q-gold/40 flex items-center justify-center transition-all duration-300 group-hover:border-q-gold group-hover:bg-q-gold/10">
-                  <MapPin className="w-4 h-4 text-q-gold/70 group-hover:text-q-gold transition-colors duration-300" />
-                </div>
+                <Link href="https://www.google.com/maps">
+                  <div className="w-10 h-10 border border-q-gold/40 flex items-center justify-center transition-all duration-300 group-hover:border-q-gold group-hover:bg-q-gold/10">
+                    <MapPin className="w-4 h-4 text-q-gold/70 group-hover:text-q-gold transition-colors duration-300" />
+                  </div>
+                </Link>
               </div>
               <div className="group cursor-pointer">
-                <div className="w-10 h-10 border border-q-gold/40 flex items-center justify-center transition-all duration-300 group-hover:border-q-gold group-hover:bg-q-gold/10">
-                  <Mail className="w-4 h-4 text-q-gold/70 group-hover:text-q-gold transition-colors duration-300" />
-                </div>
+                <Link href="mailto:info@qmotorssaudi.com">
+                  <div className="w-10 h-10 border border-q-gold/40 flex items-center justify-center transition-all duration-300 group-hover:border-q-gold group-hover:bg-q-gold/10">
+                    <Mail className="w-4 h-4 text-q-gold/70 group-hover:text-q-gold transition-colors duration-300" />
+                  </div>
+                </Link>
               </div>
               <div className="group cursor-pointer">
-                <div className="w-10 h-10 border border-q-gold/40 flex items-center justify-center transition-all duration-300 group-hover:border-q-gold group-hover:bg-q-gold/10">
-                  <Phone className="w-4 h-4 text-q-gold/70 group-hover:text-q-gold transition-colors duration-300" />
-                </div>
+                <Link href="tel:+1234567890">
+                  <div className="w-10 h-10 border border-q-gold/40 flex items-center justify-center transition-all duration-300 group-hover:border-q-gold group-hover:bg-q-gold/10">
+                    <Phone className="w-4 h-4 text-q-gold/70 group-hover:text-q-gold transition-colors duration-300" />
+                  </div>
+                </Link>
               </div>
             </div>
           </motion.div>

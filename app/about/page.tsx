@@ -71,7 +71,7 @@ export default function About() {
                 >
                   <div className="absolute inset-0 border border-q-gold/30 -translate-x-4 -translate-y-4" />
                   <Image
-                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop"
+                    src="/test.jpeg"
                     alt="Chairman"
                     fill
                     className="object-cover relative z-10 grayscale"
@@ -147,7 +147,7 @@ export default function About() {
                 >
                   <div className="absolute inset-0 border border-q-gold/30 translate-x-4 -translate-y-4" />
                   <Image
-                    src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=800&auto=format&fit=crop"
+                    src="/QMOTORCEO.jpeg"
                     alt="CEO"
                     fill
                     className="object-cover relative z-10 grayscale"

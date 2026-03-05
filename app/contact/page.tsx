@@ -4,6 +4,7 @@ import { useLanguage } from "@/components/LanguageProvider";
 import { FadeIn, GoldDivider } from "@/components/Shared";
 import { MapPin, Mail, Phone } from "lucide-react";
 import { motion } from "motion/react";
+import Link from "next/link";
 
 export default function Contact() {
   const { t } = useLanguage();
@@ -179,12 +180,14 @@ export default function Contact() {
                       whileHover={{ y: -3 }}
                       transition={{ duration: 0.3 }}
                     >
+                      <Link href={label === "Location" ? "https://www.google.com/maps" : label === "Email" ? "mailto:info@qmotorssaudi.com" : "tel:+1234567890"} target="_blank">
                       <div className="w-14 h-14 border border-q-gold/40 flex items-center justify-center transition-all duration-300 hover:border-q-gold hover:bg-q-gold/10">
                         <Icon className="w-6 h-6 text-q-gold" />
                       </div>
                       <span className="text-xs text-white/40 font-body uppercase tracking-wider">
                         {label}
                       </span>
+                      </Link>
                     </motion.div>
                   ))}
                 </div>
