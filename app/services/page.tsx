@@ -226,17 +226,6 @@ export default function Services() {
               transition={{ duration: 0.8, delay: 0.3 }}
               className="text-4xl md:text-6xl font-heading font-bold text-white mb-6 leading-tight tracking-tight uppercase"
             >
-<<<<<<< HEAD
-              <span className="relative z-10 flex items-center gap-3">
-                {t("contact us")}
-                <ChevronRight
-                  className={`w-5 h-5 transition-transform duration-300 group-hover:translate-x-1 ${isRtl ? "rotate-180 group-hover:-translate-x-1" : ""}`}
-                />
-              </span>
-              <div className="absolute inset-0 -translate-x-[150%] group-hover:translate-x-[150%] transition-transform duration-700 ease-in-out bg-gradient-to-r from-transparent via-white/30 to-transparent skew-x-[-20deg]" />
-            </Link>
-          </FadeIn>
-=======
               Ready to Partner with Us?
             </motion.h3>
 
@@ -286,7 +275,6 @@ export default function Services() {
               className="h-[1px] bg-gradient-to-r from-transparent via-q-gold/40 to-transparent mt-14"
             />
           </div>
->>>>>>> dd6883bccda0c24fd263905792ba77df7d92dc3a
         </div>
       </section>
     </main>
