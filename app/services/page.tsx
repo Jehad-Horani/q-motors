@@ -226,7 +226,7 @@ export default function Services() {
               transition={{ duration: 0.8, delay: 0.3 }}
               className="text-4xl md:text-6xl font-heading font-bold text-white mb-6 leading-tight tracking-tight uppercase"
             >
-              Ready to Partner with Us?
+              {t("services.cta.title")}
             </motion.h3>
 
             {/* Subtext */}
@@ -237,7 +237,7 @@ export default function Services() {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="text-lg md:text-xl text-white/70 font-body font-light leading-relaxed mb-14 max-w-2xl"
             >
-              Connect with Q Motors to explore strategic partnership opportunities in Saudi Arabia's automotive sector.
+              {t("services.cta.description")}
             </motion.p>
 
             {/* Premium CTA Button */}
@@ -253,7 +253,7 @@ export default function Services() {
                 className="group relative inline-flex items-center justify-center gap-3 px-14 py-7 bg-q-gold text-q-dark font-body font-bold uppercase tracking-[0.25em] text-sm transition-all duration-300 hover:shadow-[0_0_40px_rgba(198,167,94,0.6)] overflow-hidden"
               >
                 <span className="relative z-10 flex items-center gap-3">
-                  Get in Touch
+                  {t("services.cta.button")}
                   <ChevronRight
                     className={`w-5 h-5 transition-transform duration-300 group-hover:translate-x-1 ${isRtl ? "rotate-180 group-hover:-translate-x-1" : ""}`}
                   />
