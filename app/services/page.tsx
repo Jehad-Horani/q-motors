@@ -193,30 +193,88 @@ export default function Services() {
         );
       })}
 
-      {/* CTA Section */}
-      <section className="py-32 relative bg-q-dark">
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-q-dark to-q-dark" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,rgba(198,167,94,0.08)_0%,transparent_60%)]" />
+      {/* CTA Section - Premium Refined */}
+      <section className="relative py-40 bg-gradient-to-b from-q-dark via-q-teal-dark to-black overflow-hidden">
+        {/* Seamless Background Gradient */}
+        <div className="absolute inset-0 bg-gradient-to-b from-q-dark/80 via-q-teal-dark/60 to-black" />
         
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <FadeIn>
-            <h3 className="text-3xl md:text-4xl font-heading font-medium text-white mb-12">
-              Ready to Partner with Us?
-            </h3>
-            <Link
-              href="/contact"
-              data-testid="services-cta-contact"
-              className="group relative inline-flex items-center justify-center gap-3 px-12 py-6 bg-q-gold text-q-dark font-body font-bold uppercase tracking-[0.2em] text-sm transition-all duration-300 hover:shadow-gold-glow overflow-hidden"
+        {/* Radial Glow Effect */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(198,167,94,0.12)_0%,transparent_70%)]" />
+        
+        {/* Subtle Texture */}
+        <div className="absolute inset-0 opacity-[0.015]">
+          <div className="absolute inset-0 bg-[linear-gradient(rgba(198,167,94,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(198,167,94,0.1)_1px,transparent_1px)] bg-[size:100px_100px]" />
+        </div>
+        
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col items-center justify-center text-center">
+            {/* Gold Divider Above */}
+            <motion.div
+              initial={{ width: 0, opacity: 0 }}
+              whileInView={{ width: 80, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1, delay: 0.2 }}
+              className="h-[2px] bg-gradient-to-r from-transparent via-q-gold to-transparent mb-12"
+              style={{ boxShadow: '0 0 20px rgba(198,167,94,0.4)' }}
+            />
+
+            {/* Headline with Fade-in */}
+            <motion.h3
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="text-4xl md:text-6xl font-heading font-bold text-white mb-6 leading-tight tracking-tight uppercase"
             >
-              <span className="relative z-10 flex items-center gap-3">
-                {t("contact.form.submit")}
-                <ChevronRight
-                  className={`w-5 h-5 transition-transform duration-300 group-hover:translate-x-1 ${isRtl ? "rotate-180 group-hover:-translate-x-1" : ""}`}
-                />
-              </span>
-              <div className="absolute inset-0 -translate-x-[150%] group-hover:translate-x-[150%] transition-transform duration-700 ease-in-out bg-gradient-to-r from-transparent via-white/30 to-transparent skew-x-[-20deg]" />
-            </Link>
-          </FadeIn>
+              Ready to Partner with Us?
+            </motion.h3>
+
+            {/* Subtext */}
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="text-lg md:text-xl text-white/70 font-body font-light leading-relaxed mb-14 max-w-2xl"
+            >
+              Connect with Q Motors to explore strategic partnership opportunities in Saudi Arabia's automotive sector.
+            </motion.p>
+
+            {/* Premium CTA Button */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+            >
+              <Link
+                href="/contact"
+                data-testid="services-cta-contact"
+                className="group relative inline-flex items-center justify-center gap-3 px-14 py-7 bg-q-gold text-q-dark font-body font-bold uppercase tracking-[0.25em] text-sm transition-all duration-300 hover:shadow-[0_0_40px_rgba(198,167,94,0.6)] overflow-hidden"
+              >
+                <span className="relative z-10 flex items-center gap-3">
+                  Get in Touch
+                  <ChevronRight
+                    className={`w-5 h-5 transition-transform duration-300 group-hover:translate-x-1 ${isRtl ? "rotate-180 group-hover:-translate-x-1" : ""}`}
+                  />
+                </span>
+                {/* Smooth Sweep Effect */}
+                <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out bg-gradient-to-r from-transparent via-white/30 to-transparent" />
+                
+                {/* Subtle Glow on Hover */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-t from-white/10 to-transparent" />
+              </Link>
+            </motion.div>
+
+            {/* Bottom Decorative Element */}
+            <motion.div
+              initial={{ width: 0, opacity: 0 }}
+              whileInView={{ width: 160, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1, delay: 0.6 }}
+              className="h-[1px] bg-gradient-to-r from-transparent via-q-gold/40 to-transparent mt-14"
+            />
+          </div>
         </div>
       </section>
     </main>
