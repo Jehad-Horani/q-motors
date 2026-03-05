@@ -154,6 +154,11 @@ export const en = {
         ],
       },
     ],
+    cta: {
+      title: "Ready to Partner with Us?",
+      description: "Connect with Q Motors to explore strategic partnership opportunities in Saudi Arabia's automotive sector.",
+      button: "Contact Us",
+    },
   },
   strategy: {
     title: "STRATEGY & GOVERNANCE",
