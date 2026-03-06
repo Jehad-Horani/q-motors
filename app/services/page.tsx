@@ -12,11 +12,11 @@ export default function Services() {
   const isRtl = language === "ar";
 
   const blocks = [
-    { key: "0", image: "/service1.jpg" },
-    { key: "1", image: "/service2.jpg" },
-    { key: "2", image: "/service3.jpg" },
-    { key: "3", image: "/service4.jpg" },
-    { key: "4", image: "/service5.png" },
+    { key: "0", image: "/services1.jpg" },
+    { key: "1", image: "/services2.jpg" },
+    { key: "2", image: "/services3.jpg" },
+    { key: "3", image: "/services4.jpg" },
+    { key: "4", image: "/services5.png" },
   ];
 
   return (
