@@ -363,7 +363,7 @@ export const ar = {
       coverage: "تغطية تشغيلية على مستوى البلاد",
     },
     bottom: {
-      copyright: "© 2026 JHWebDev. جميع الحقوق محفوظة.",
+      copyright: "©  JHWebDev. جميع الحقوق محفوظة.",
       privacy: "سياسة الخصوصية",
       terms: "شروط الاستخدام",
     },

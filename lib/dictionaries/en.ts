@@ -367,7 +367,7 @@ export const en = {
       coverage: "Nationwide operational coverage",
     },
     bottom: {
-      copyright: "© 2026 JHWebDev. All Rights Reserved.",
+      copyright: "© JHWebDev. All Rights Reserved.",
       privacy: "Privacy Policy",
       terms: "Terms of Use",
     },
