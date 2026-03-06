@@ -176,7 +176,7 @@ export function Footer() {
               transition={{ duration: 0.6, delay: 0.4 }}
               >
               <p className="text-xs text-white/40 font-body font-light">
-                {t(`${new Date().getFullYear()}footer.bottom.copyright`)}
+                {`${new Date().getFullYear()} ${t("footer.bottom.copyright")}`}
               </p>
             </motion.div>
               </Link>
