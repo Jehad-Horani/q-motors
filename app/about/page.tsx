@@ -28,7 +28,7 @@ export default function About() {
             <FadeIn delay={0.2} className="relative h-[500px] hidden md:block">
               <div className="absolute inset-0 border-2 border-q-gold/30 translate-x-4 translate-y-4" />
               <Image
-                src="https://images.unsplash.com/photo-1760713170685-b67abc3be5ad?q=80&w=800&auto=format&fit=crop"
+                src="/car1.png"
                 alt="Who We Are"
                 fill
                 className="object-cover relative z-10"
