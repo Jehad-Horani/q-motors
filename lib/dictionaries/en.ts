@@ -79,9 +79,8 @@ export const en = {
           name: "Bayan Kairat",
           position: "Chief Commercial Officer",
           experienceTitle: "Experience & Expertise",
-          intro: "Multilingual — Including Chinese",
+          intro: "Multilingual — Including Chinese. Over 10 years of experience in Marketing, Public Relations, and OEM business development.",
           expertise: [
-            "Over 10 years of experience in Marketing, Public Relations, and OEM business development.",
             "Leading multi-brand automotive distribution strategy in Saudi Arabia",
             "Deep regional expertise and strong Chinese OEM relationships",
             "Drives market expansion, partnerships, and long-term commercial success",
