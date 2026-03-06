@@ -133,10 +133,10 @@ export default function About() {
                     <Image
                       src={
                         idx === 0 
-                          ? "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=800&auto=format&fit=crop"
+                          ? "/QMOTORCEO.jpeg"
                           : idx === 1
-                          ? "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop"
-                          : "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=800&auto=format&fit=crop"
+                          ? "/bayan.jpeg"
+                          : "/nader.jpeg"
                       }
                       alt={profile.name}
                       fill
