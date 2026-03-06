@@ -57,41 +57,72 @@ export default function About() {
             </div>
           </FadeIn>
 
-          {/* Split Layout - Text & Image */}
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            {/* Left Side - Leadership Statement */}
+          {/* Improved Layout - Image Left, Text Right */}
+          <div className="grid lg:grid-cols-5 gap-8 lg:gap-12 items-center">
+            {/* Left Side - Executive Image (2 columns on desktop) */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
+              className="lg:col-span-2 relative"
             >
-              <div className="bg-q-teal-dark/30 border-l-2 border-q-gold/50 pl-8 py-8">
-                {t("about.leadership.content").split('\\n\\n').map((paragraph: string, idx: number) => (
-                  <p key={idx} className="text-xl md:text-2xl text-white/90 font-body font-light leading-relaxed mb-6 last:mb-0">
-                    {paragraph}
-                  </p>
-                ))}
+              <div className="relative h-[500px] lg:h-[600px]">
+                {/* Border Frame */}
+                <div className="absolute inset-0 border-2 border-q-gold/30 -translate-x-3 -translate-y-3 lg:-translate-x-4 lg:-translate-y-4" />
+                
+                {/* Executive Portrait */}
+                <div className="relative h-full overflow-hidden">
+                  <Image
+                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop"
+                    alt="Executive Leadership"
+                    fill
+                    className="object-cover relative z-10"
+                    unoptimized
+                  />
+                  {/* Subtle Gradient Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent z-20" />
+                  
+                  {/* Gold Accent Corner */}
+                  <div className="absolute bottom-0 left-0 w-20 h-20 border-l-2 border-b-2 border-q-gold/60 z-30" />
+                </div>
               </div>
             </motion.div>
 
-            {/* Right Side - Executive Image */}
+            {/* Right Side - Leadership Statement (3 columns on desktop) */}
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="relative h-[600px]"
+              className="lg:col-span-3"
             >
-              <div className="absolute inset-0 border border-q-gold/30 translate-x-4 -translate-y-4" />
-              <Image
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop"
-                alt="Executive Leadership"
-                fill
-                className="object-cover relative z-10"
-                unoptimized
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent z-20" />
+              <div className="relative">
+                {/* Gold Accent Line */}
+                <div className="absolute -left-4 top-0 bottom-0 w-[2px] bg-gradient-to-b from-q-gold/60 via-q-gold/40 to-transparent hidden lg:block" />
+                
+                {/* Content Box */}
+                <div className="bg-q-teal-dark/30 border border-q-gold/20 p-8 lg:p-12 backdrop-blur-sm">
+                  {/* Statement Content */}
+                  <div className="space-y-6">
+                    {t("about.leadership.content").split('\\n\\n').map((paragraph: string, idx: number) => (
+                      <p key={idx} className="text-lg md:text-xl lg:text-2xl text-white/90 font-body font-light leading-relaxed">
+                        {paragraph}
+                      </p>
+                    ))}
+                  </div>
+
+                  {/* Bottom Gold Divider */}
+                  <div className="mt-8 pt-6 border-t border-q-gold/20">
+                    <div className="flex items-center gap-3">
+                      <div className="w-12 h-[2px] bg-q-gold" style={{ boxShadow: '0 0 10px rgba(198,167,94,0.4)' }} />
+                      <span className="text-xs text-q-gold/70 font-body font-light uppercase tracking-wider">
+                        Leadership Statement
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </motion.div>
           </div>
         </div>
