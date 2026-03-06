@@ -165,16 +165,21 @@ export function Footer() {
         <div className="border-t border-q-gold/10">
           <div className="py-8 flex flex-col md:flex-row justify-between items-center gap-4">
             {/* Copyright */}
+               
+                   
+            <Link href="https://jehadh-portfolio.vercel.app/" target="_blank">
+              
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.4 }}
-            >
+              >
               <p className="text-xs text-white/40 font-body font-light">
-                {t("footer.bottom.copyright")}
+                {t(`${new Date().getFullYear()}footer.bottom.copyright`)}
               </p>
             </motion.div>
+              </Link>
 
             {/* Legal Links */}
             <motion.div
