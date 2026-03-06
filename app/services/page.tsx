@@ -12,11 +12,11 @@ export default function Services() {
   const isRtl = language === "ar";
 
   const blocks = [
-    { key: "0", image: "https://images.unsplash.com/photo-1726315185844-b4cb8e95cab3?q=80&w=1920&auto=format&fit=crop" },
-    { key: "1", image: "https://images.unsplash.com/photo-1469289759076-d1484757abc3?q=80&w=1920&auto=format&fit=crop" },
-    { key: "2", image: "https://images.unsplash.com/photo-1768796370672-3931e5d1ded7?q=80&w=1920&auto=format&fit=crop" },
-    { key: "3", image: "https://images.unsplash.com/photo-1760713170685-b67abc3be5ad?q=80&w=1920&auto=format&fit=crop" },
-    { key: "4", image: "https://images.unsplash.com/photo-1666542061805-817deaf22f3f?q=80&w=1920&auto=format&fit=crop" },
+    { key: "0", image: "/service1.jpg" },
+    { key: "1", image: "/service2.jpg" },
+    { key: "2", image: "/service3.jpg" },
+    { key: "3", image: "/service4.jpg" },
+    { key: "4", image: "/service5.png" },
   ];
 
   return (
