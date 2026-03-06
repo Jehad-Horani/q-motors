@@ -55,14 +55,53 @@ export const en = {
     },
     leadership: {
       title: "LEADERSHIP MESSAGE",
-      chairman: {
-        title: "Chairman's Message",
-        content: "For more than 65 years, our group has grown alongside the Kingdom of Saudi Arabia — beginning as a logistics and transportation enterprise and evolving in parallel with the nation's economic and industrial development.\n\nAcross decades of continuous operation, we have built our reputation on reliability, long-term commitment, and disciplined execution. Our logistics heritage enabled us to support government entities, multinational corporations, and large-scale industrial projects across the Kingdom, earning trust through consistency rather than rhetoric.\n\nThe establishment of Q Motors represents the natural progression of this legacy. As Saudi Arabia enters a new era of mobility, sustainability, and technological advancement, the automotive sector increasingly requires partners with deep local roots, institutional experience, and a long-term perspective.\n\nQ Motors was created to serve as that partner — bridging global automotive innovation with Saudi Arabia's regulatory framework, market realities, and customer expectations, while contributing meaningfully to the objectives of Vision 2030.",
-      },
-      ceo: {
-        title: "CEO Message",
-        content: "Q Motors was designed from inception to be a modern automotive distribution platform, not a traditional trading operation.\n\nOur objective is clear: to provide OEM partners with a stable, compliant, and scalable operating structure in Saudi Arabia — supported by a long-established operational backbone, strong governance, and a long-term business mindset.\n\nWe believe sustainable success in the Saudi automotive market requires:\n\n• Long-term brand development\n• Strong aftersales and lifecycle foundations\n• Control over logistics, parts, and compliance\n• A deep understanding of local market dynamics\n\nQ Motors integrates all of these elements into a single, cohesive ecosystem. We do not pursue short-term volume; we build durable automotive businesses.",
-      },
+      content: "For more than 65 years, our group has grown alongside the Kingdom of Saudi Arabia — beginning as a logistics and transportation enterprise and evolving in parallel with the nation's economic and industrial development.\n\nBuilt on reliability, disciplined execution, and long-term commitment, our operational heritage has enabled us to support government entities, multinational corporations, and large-scale industrial projects across the Kingdom.\n\nQ Motors represents the natural progression of this legacy — bridging global automotive innovation with Saudi Arabia's regulatory framework, market realities, and customer expectations while contributing to the objectives of Vision 2030.",
+    },
+    team: {
+      title: "OUR LEADERSHIP TEAM",
+      subtitle: "Executive leadership guiding Q Motors' strategic growth and operational excellence.",
+      profiles: [
+        {
+          name: "Simon Ackers",
+          position: "CEO",
+          experienceTitle: "Experience & Expertise",
+          intro: "30 years of multinational distribution & OEM experience.",
+          expertise: [
+            "Proven Saudi Market Entry & Scale up",
+            "Structured, Brand-Protective Distribution Models",
+            "EV & Premium Technology Positioning",
+            "Governance, Capital & Cashflow Discipline",
+            "High-Performance Local Leadership Platform",
+            "Long-Term Strategic Partnership Approach",
+          ],
+        },
+        {
+          name: "Bayan Kairat",
+          position: "Chief Commercial Officer",
+          experienceTitle: "Experience & Expertise",
+          intro: "Multilingual — Including Chinese",
+          expertise: [
+            "Leading multi-brand automotive distribution strategy in Saudi Arabia",
+            "Deep regional expertise and strong Chinese OEM relationships",
+            "Drives market expansion, partnerships, and long-term commercial success",
+            "Go-To-Market Strategy Expert – KSA",
+          ],
+        },
+        {
+          name: "Nader Quays",
+          position: "Chief Supply Chain Officer",
+          experienceTitle: "Experience & Expertise",
+          intro: "Saudi National and supply chain expert\n\nSaudi Distribution & OEM – 15 years",
+          expertise: [
+            "Supply Chain & Logistics Strategy",
+            "Automotive Distribution & OEM Support",
+            "Organizational Design and Operational Scaling",
+            "Financial and Working Capital Structuring",
+            "Data & Reporting Frameworks",
+            "Performance Dashboards",
+          ],
+        },
+      ],
     },
     philosophy: {
       title: "Leadership Philosophy",
