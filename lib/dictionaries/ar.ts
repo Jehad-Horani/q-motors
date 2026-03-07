@@ -363,6 +363,15 @@ export const ar = {
       location: "المملكة العربية السعودية",
       coverage: "تغطية تشغيلية على مستوى البلاد",
     },
+    social: {
+      title: "تابعنا",
+      platforms: [
+        { name: "YouTube", url: "https://www.youtube.com/@QmotorsSaudi" },
+        { name: "Facebook", url: "https://www.facebook.com/QMotorsSaudi" },
+        { name: "Instagram", url: "https://www.instagram.com/qmotorssaudi/" },
+        { name: "X", url: "https://x.com/QmotorsSaudi" },
+      ],
+    },
     bottom: {
       copyright: "© 2026 JHWebDev. جميع الحقوق محفوظة.",
       privacy: "سياسة الخصوصية",
