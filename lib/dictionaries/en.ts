@@ -362,6 +362,15 @@ export const en = {
       location: "Kingdom of Saudi Arabia",
       coverage: "Nationwide operational coverage",
     },
+    social: {
+      title: "Follow Us",
+      platforms: [
+        { name: "YouTube", url: "https://www.youtube.com/@QmotorsSaudi" },
+        { name: "Facebook", url: "https://www.facebook.com/QMotorsSaudi" },
+        { name: "Instagram", url: "https://www.instagram.com/qmotorssaudi/" },
+        { name: "X", url: "https://x.com/QmotorsSaudi" },
+      ],
+    },
     bottom: {
       copyright: "© 2026 JHWebDev. All Rights Reserved.",
       privacy: "Privacy Policy",
