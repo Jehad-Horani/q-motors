@@ -74,7 +74,7 @@ export default function About() {
                 {/* Executive Portrait */}
                 <div className="relative h-full overflow-hidden">
                   <Image
-                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop"
+                    src="chairman.jpeg"
                     alt="Executive Leadership"
                     fill
                     className="object-cover relative z-10"
@@ -184,7 +184,7 @@ export default function About() {
                           ? "/QMOTORCEO.jpeg"
                           : idx === 1
                           ? "/bayan.jpeg"
-                          : "/nader.jpeg"
+                          : "/nader2.jpeg"
                       }
                       alt={profile.name}
                       fill
