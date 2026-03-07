@@ -55,6 +55,10 @@ export const en = {
     },
     leadership: {
       title: "LEADERSHIP MESSAGE",
+      chairman: {
+        name: "Hilal Khalaf Al-Rowaili",
+        title: "Chairman",
+      },
       content: "For more than 65 years, our group has grown alongside the Kingdom of Saudi Arabia — beginning as a logistics and transportation enterprise and evolving in parallel with the nation's economic and industrial development.\n\nBuilt on reliability, disciplined execution, and long-term commitment, our operational heritage has enabled us to support government entities, multinational corporations, and large-scale industrial projects across the Kingdom.\n\nQ Motors represents the natural progression of this legacy — bridging global automotive innovation with Saudi Arabia's regulatory framework, market realities, and customer expectations while contributing to the objectives of Vision 2030.",
     },
     team: {
@@ -365,6 +369,15 @@ export const en = {
       title: "Headquarters & Operations",
       location: "Kingdom of Saudi Arabia",
       coverage: "Nationwide operational coverage",
+    },
+    social: {
+      title: "Follow Us",
+      platforms: [
+        { name: "YouTube", url: "https://www.youtube.com/@QmotorsSaudi" },
+        { name: "Facebook", url: "https://www.facebook.com/QMotorsSaudi" },
+        { name: "Instagram", url: "https://www.instagram.com/qmotorssaudi/" },
+        { name: "X", url: "https://x.com/QmotorsSaudi" },
+      ],
     },
     bottom: {
       copyright: "© JHWebDev. All Rights Reserved.",

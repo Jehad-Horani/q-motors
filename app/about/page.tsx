@@ -87,6 +87,23 @@ export default function About() {
                   <div className="absolute bottom-0 left-0 w-20 h-20 border-l-2 border-b-2 border-q-gold/60 z-30" />
                 </div>
               </div>
+
+              {/* Chairman Name & Title */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+                className="mt-6 bg-black/60 border border-q-gold/30 p-6"
+              >
+                <h3 className="text-2xl font-heading font-bold text-white mb-2">
+                  {t("about.leadership.chairman.name")}
+                </h3>
+                <div className="w-12 h-[2px] bg-q-gold mb-3" style={{ boxShadow: '0 0 10px rgba(198,167,94,0.4)' }} />
+                <p className="text-sm text-q-gold font-body font-medium uppercase tracking-wider">
+                  {t("about.leadership.chairman.title")}
+                </p>
+              </motion.div>
             </motion.div>
 
             {/* Right Side - Leadership Statement (3 columns on desktop) */}

@@ -2,9 +2,21 @@
 
 import { useLanguage } from "@/components/LanguageProvider";
 import { FadeIn, GoldDivider } from "@/components/Shared";
-import { MapPin, Mail, Phone } from "lucide-react";
+import { Youtube, Facebook, Instagram } from "lucide-react";
 import { motion } from "motion/react";
 import Link from "next/link";
+
+// X (Twitter) Icon Component
+const XIcon = ({ className }: { className?: string }) => (
+  <svg
+    viewBox="0 0 24 24"
+    aria-hidden="true"
+    className={className}
+    fill="currentColor"
+  >
+    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+  </svg>
+);
 
 export default function Contact() {
   const { t } = useLanguage();
@@ -167,20 +179,25 @@ export default function Contact() {
                   {t("contact.engagement.office.location")}
                 </p>
 
-                {/* Icon Row */}
+                {/* Icon Row - Social Media */}
                 <div className="flex justify-center items-center gap-8 mt-12 pt-8 border-t border-q-gold/10">
                   {[
-                    { Icon: MapPin, label: "Location" },
-                    { Icon: Mail, label: "Email" },
-                    { Icon: Phone, label: "Phone" },
-                  ].map(({ Icon, label }, idx) => (
-                    <motion.div
+                    { Icon: Youtube, label: "YouTube", url: "https://www.youtube.com/@QmotorsSaudi" },
+                    { Icon: Facebook, label: "Facebook", url: "https://www.facebook.com/QMotorsSaudi" },
+                    { Icon: Instagram, label: "Instagram", url: "https://www.instagram.com/qmotorssaudi/" },
+                    { Icon: XIcon, label: "X", url: "https://x.com/QmotorsSaudi" },
+                  ].map(({ Icon, label, url }, idx) => (
+                    <motion.a
                       key={idx}
+                      href={url}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="flex flex-col items-center gap-3"
                       whileHover={{ y: -3 }}
                       transition={{ duration: 0.3 }}
+                      aria-label={label}
                     >
-                      <Link href={label === "Location" ? "https://www.google.com/maps" : label === "Email" ? "mailto:info@qmotorssaudi.com" : "tel:+1234567890"} target="_blank">
+                      <Link href={url} target="_blank">
                       <div className="w-14 h-14 border border-q-gold/40 flex items-center justify-center transition-all duration-300 hover:border-q-gold hover:bg-q-gold/10">
                         <Icon className="w-6 h-6 text-q-gold" />
                       </div>
@@ -188,7 +205,7 @@ export default function Contact() {
                         {label}
                       </span>
                       </Link>
-                    </motion.div>
+                    </motion.a>
                   ))}
                 </div>
               </div>
