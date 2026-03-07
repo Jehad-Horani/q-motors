@@ -166,18 +166,23 @@ export default function Contact() {
                   {t("contact.engagement.office.location")}
                 </p>
 
-                {/* Icon Row */}
+                {/* Icon Row - Social Media */}
                 <div className="flex justify-center items-center gap-8 mt-12 pt-8 border-t border-q-gold/10">
                   {[
-                    { Icon: MapPin, label: "Location" },
-                    { Icon: Mail, label: "Email" },
-                    { Icon: Phone, label: "Phone" },
-                  ].map(({ Icon, label }, idx) => (
-                    <motion.div
+                    { Icon: Youtube, label: "YouTube", url: "https://www.youtube.com/@QmotorsSaudi" },
+                    { Icon: Facebook, label: "Facebook", url: "https://www.facebook.com/QMotorsSaudi" },
+                    { Icon: Instagram, label: "Instagram", url: "https://www.instagram.com/qmotorssaudi/" },
+                    { Icon: XIcon, label: "X", url: "https://x.com/QmotorsSaudi" },
+                  ].map(({ Icon, label, url }, idx) => (
+                    <motion.a
                       key={idx}
+                      href={url}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="flex flex-col items-center gap-3"
                       whileHover={{ y: -3 }}
                       transition={{ duration: 0.3 }}
+                      aria-label={label}
                     >
                       <div className="w-14 h-14 border border-q-gold/40 flex items-center justify-center transition-all duration-300 hover:border-q-gold hover:bg-q-gold/10">
                         <Icon className="w-6 h-6 text-q-gold" />
@@ -185,7 +190,7 @@ export default function Contact() {
                       <span className="text-xs text-white/40 font-body uppercase tracking-wider">
                         {label}
                       </span>
-                    </motion.div>
+                    </motion.a>
                   ))}
                 </div>
               </div>
