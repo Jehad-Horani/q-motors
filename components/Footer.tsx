@@ -1,12 +1,31 @@
 "use client";
 
 import { useLanguage } from "@/components/LanguageProvider";
-import { MapPin, Mail, Phone } from "lucide-react";
+import { Youtube, Facebook, Instagram } from "lucide-react";
 import Link from "next/link";
 import { motion } from "motion/react";
 
+// X (Twitter) Icon Component
+const XIcon = ({ className }: { className?: string }) => (
+  <svg
+    viewBox="0 0 24 24"
+    aria-hidden="true"
+    className={className}
+    fill="currentColor"
+  >
+    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+  </svg>
+);
+
 export function Footer() {
   const { t } = useLanguage();
+
+  const socialIcons: { [key: string]: any } = {
+    YouTube: Youtube,
+    Facebook: Facebook,
+    Instagram: Instagram,
+    X: XIcon,
+  };
 
   return (
     <footer className="relative bg-gradient-to-b from-q-dark via-q-teal-dark to-black border-t border-q-gold/20">
@@ -113,7 +132,7 @@ export function Footer() {
             </div>
           </motion.div>
 
-          {/* COLUMN 4 - Corporate Presence */}
+          {/* COLUMN 4 - Corporate & Social */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -134,22 +153,29 @@ export function Footer() {
               </p>
             </div>
 
-            {/* Institutional Icon Row */}
-            <div className="flex items-center gap-4 pt-4 border-t border-white/10">
-              <div className="group cursor-pointer">
-                <div className="w-10 h-10 border border-q-gold/40 flex items-center justify-center transition-all duration-300 group-hover:border-q-gold group-hover:bg-q-gold/10">
-                  <MapPin className="w-4 h-4 text-q-gold/70 group-hover:text-q-gold transition-colors duration-300" />
-                </div>
-              </div>
-              <div className="group cursor-pointer">
-                <div className="w-10 h-10 border border-q-gold/40 flex items-center justify-center transition-all duration-300 group-hover:border-q-gold group-hover:bg-q-gold/10">
-                  <Mail className="w-4 h-4 text-q-gold/70 group-hover:text-q-gold transition-colors duration-300" />
-                </div>
-              </div>
-              <div className="group cursor-pointer">
-                <div className="w-10 h-10 border border-q-gold/40 flex items-center justify-center transition-all duration-300 group-hover:border-q-gold group-hover:bg-q-gold/10">
-                  <Phone className="w-4 h-4 text-q-gold/70 group-hover:text-q-gold transition-colors duration-300" />
-                </div>
+            {/* Social Media Section */}
+            <div className="pt-6 border-t border-white/10">
+              <h4 className="text-sm font-heading font-bold text-white uppercase tracking-wider mb-4">
+                {t("footer.social.title")}
+              </h4>
+              <div className="flex items-center gap-3">
+                {t("footer.social.platforms").map((platform: any, idx: number) => {
+                  const Icon = socialIcons[platform.name];
+                  return (
+                    <a
+                      key={idx}
+                      href={platform.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group"
+                      aria-label={platform.name}
+                    >
+                      <div className="w-10 h-10 border border-q-gold/40 flex items-center justify-center transition-all duration-300 group-hover:border-q-gold group-hover:bg-q-gold/10">
+                        <Icon className="w-4 h-4 text-q-gold/70 group-hover:text-q-gold transition-colors duration-300" />
+                      </div>
+                    </a>
+                  );
+                })}
               </div>
             </div>
           </motion.div>
