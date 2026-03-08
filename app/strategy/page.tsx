@@ -148,7 +148,7 @@ export default function Strategy() {
 
           {/* Governance Matrix */}
           <div className="grid md:grid-cols-2 gap-6">
-            {t("strategy.risk.items").map((item: any, idx: number) => (
+            {Array.isArray(t("strategy.risk.items")) && t("strategy.risk.items").map((item: any, idx: number) => (
               <FadeIn key={idx} delay={idx * 0.08}>
                 <motion.div
                   whileHover={{ scale: 1.02 }}
