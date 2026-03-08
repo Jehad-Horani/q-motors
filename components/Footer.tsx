@@ -89,7 +89,7 @@ export function Footer() {
             </h3>
             
             <nav className="space-y-3">
-              {t("footer.quickLinks.links").map((link: any, idx: number) => (
+              {Array.isArray(t("footer.quickLinks.links")) && t("footer.quickLinks.links").map((link: any, idx: number) => (
                 <Link
                   key={idx}
                   href={link.href}
