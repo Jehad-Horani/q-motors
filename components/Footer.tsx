@@ -117,7 +117,7 @@ export function Footer() {
             </h3>
             
             <div className="space-y-4">
-              {t("footer.marketCoverage.regions").map((region: any, idx: number) => (
+              {Array.isArray(t("footer.marketCoverage.regions")) && t("footer.marketCoverage.regions").map((region: any, idx: number) => (
                 <div key={idx} className="flex items-start gap-3">
                   <div className="w-1.5 h-1.5 bg-q-gold rounded-full mt-2 flex-shrink-0" />
                   <div>
