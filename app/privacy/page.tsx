@@ -28,7 +28,7 @@ export default function Privacy() {
 
         {/* Sections */}
         <div className="space-y-12">
-          {t("privacy.sections").map((section: any, idx: number) => (
+          {Array.isArray(t("privacy.sections")) && t("privacy.sections").map((section: any, idx: number) => (
             <div key={idx}>
               <h2 className="text-2xl font-heading font-bold text-q-gold mb-4">
                 {section.title}
