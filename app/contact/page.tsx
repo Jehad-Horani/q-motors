@@ -107,7 +107,7 @@ export default function Contact() {
 
           {/* Regions Grid */}
           <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
-            {t("contact.coverage.regions").map((region: any, idx: number) => (
+            {Array.isArray(t("contact.coverage.regions")) && t("contact.coverage.regions").map((region: any, idx: number) => (
               <FadeIn key={idx} delay={idx * 0.15}>
                 <motion.div 
                   className="relative bg-q-teal-dark/40 border border-q-gold/20 p-10 text-center group transition-all duration-500 hover:border-q-gold/40 hover:bg-q-teal-dark/60"
