@@ -180,124 +180,116 @@ export default function About() {
             </div>
           </FadeIn>
 
-          {/* Leadership Profile Cards */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            {t("about.team.profiles").slice(0, 2).map((profile: any, idx: number) => {
-              // Map images to profiles
-              const imageMap: { [key: number]: string } = {
-                0: "/QMOTORSCEO.jpeg",      // Simon Ackers - CEO
-                1: "/bayan.jpeg",            // Bayan Kairat - CCO
-              };
-
-              return (
-                <FadeIn key={idx} delay={idx * 0.15}>
-                  <motion.div
-                    whileHover={{ y: -8 }}
-                    transition={{ duration: 0.3 }}
-                    className="group relative bg-black/60 border border-q-gold/20 p-8 transition-all duration-500 hover:border-q-gold/40 hover:bg-black/80 h-full flex flex-col"
-                  >
-                    {/* Executive Portrait */}
-                    <div className="relative h-80 mb-6 overflow-hidden">
+          {/* Single CEO Executive Card - Centered */}
+          <div className="flex justify-center">
+            <FadeIn>
+              <motion.div
+                whileHover={{ y: -8 }}
+                transition={{ duration: 0.3 }}
+                className="group relative bg-black/60 border border-q-gold/30 transition-all duration-500 hover:border-q-gold/50 hover:bg-black/80 w-full max-w-[800px] md:max-w-[700px] lg:max-w-[800px]"
+                data-testid="ceo-leadership-card"
+              >
+                {/* Desktop/Tablet Layout - Side by Side */}
+                <div className="hidden md:flex">
+                  {/* CEO Portrait - Left Side */}
+                  <div className="relative w-[320px] lg:w-[380px] flex-shrink-0 overflow-hidden">
+                    <div className="absolute inset-0">
                       <Image
-                        src={imageMap[idx]}
-                        alt={profile.name}
+                        src="/QMOTORCEO.jpeg"
+                        alt="Simon Ackers - CEO"
                         fill
-                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                        className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
                         unoptimized
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
-                      {/* Subtle glow effect */}
-                      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 shadow-[inset_0_0_40px_rgba(198,167,94,0.2)]" />
                     </div>
+                    {/* Subtle overlay gradient */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-black/40" />
+                    {/* Gold corner accent */}
+                    <div className="absolute bottom-0 left-0 w-24 h-24 border-l-2 border-b-2 border-q-gold/60" />
+                    <div className="absolute top-0 right-0 w-16 h-16 border-t-2 border-r-2 border-q-gold/40" />
+                    {/* Glow effect on hover */}
+                    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 shadow-[inset_0_0_60px_rgba(198,167,94,0.15)]" />
+                  </div>
 
-                    {/* Name & Position */}
-                    <div className="mb-6">
-                      <h3 className="text-2xl font-heading font-bold text-white mb-2">
-                        {profile.name}
+                  {/* Content - Right Side */}
+                  <div className="flex-1 p-10 lg:p-12 flex flex-col justify-center">
+                    {/* Name & Title */}
+                    <div className="mb-8">
+                      <h3 className="text-3xl lg:text-4xl font-heading font-bold text-white mb-3">
+                        Simon Ackers
                       </h3>
-                      <div className="w-16 h-[2px] bg-q-gold mb-3" style={{ boxShadow: '0 0 10px rgba(198,167,94,0.4)' }} />
-                      <p className="text-base text-q-gold font-body font-medium tracking-wide uppercase">
-                        {profile.position}
+                      <div className="w-20 h-[2px] bg-q-gold mb-4" style={{ boxShadow: '0 0 15px rgba(198,167,94,0.5)' }} />
+                      <p className="text-lg text-q-gold font-body font-medium tracking-wider uppercase">
+                        Chief Executive Officer
                       </p>
                     </div>
 
-                    {/* Experience & Expertise */}
-                    <div className="flex-1">
-                      <h4 className="text-lg font-heading font-bold text-white/90 mb-4">
-                        {profile.experienceTitle}
-                      </h4>
-                      
-                      {/* Intro */}
-                      <p className="text-base text-white/70 font-body font-light leading-relaxed mb-4 whitespace-pre-line">
-                        {profile.intro}
-                      </p>
+                    {/* Experience Title */}
+                    <h4 className="text-xl font-heading font-bold text-white/90 mb-5">
+                      {t("about.team.profiles")[0]?.experienceTitle || "Leadership & Expertise"}
+                    </h4>
 
-                      {/* Expertise Bullets */}
-                      <ul className="space-y-3">
-                        {profile.expertise.map((item: string, bulletIdx: number) => (
-                          <li key={bulletIdx} className="flex items-start gap-3">
-                            <div className="w-1.5 h-1.5 bg-q-gold rounded-full mt-2 flex-shrink-0" />
-                            <span className="text-sm text-white/70 font-body font-light leading-relaxed">
-                              {item}
-                            </span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
+                    {/* Intro Text */}
+                    <p className="text-base lg:text-lg text-white/70 font-body font-light leading-relaxed mb-6 whitespace-pre-line">
+                      {t("about.team.profiles")[0]?.intro || ""}
+                    </p>
 
-                    {/* Bottom Accent Line */}
-                    <div className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-q-gold to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left" />
-                  </motion.div>
-                </FadeIn>
-              );
-            })}
+                    {/* Expertise Bullets */}
+                    <ul className="space-y-3">
+                      {(t("about.team.profiles")[0]?.expertise || []).map((item: string, bulletIdx: number) => (
+                        <li key={bulletIdx} className="flex items-start gap-3">
+                          <div className="w-2 h-2 bg-q-gold rounded-full mt-2 flex-shrink-0" style={{ boxShadow: '0 0 8px rgba(198,167,94,0.4)' }} />
+                          <span className="text-base text-white/70 font-body font-light leading-relaxed">
+                            {item}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
 
-            {/* THIRD CARD - NADER QUAYS - COMMENTED OUT TEMPORARILY */}
-            {/* 
-            To re-enable this card, simply uncomment the entire block below.
-            The grid will automatically adjust from 2 columns to 3 columns (change lg:grid-cols-2 to lg:grid-cols-3).
-            Also change .slice(0, 2) to .slice(0, 3) or remove .slice() entirely above.
-            
-            {t("about.team.profiles")[2] && (
-              <FadeIn delay={0.3}>
-                <motion.div
-                  whileHover={{ y: -8 }}
-                  transition={{ duration: 0.3 }}
-                  className="group relative bg-black/60 border border-q-gold/20 p-8 transition-all duration-500 hover:border-q-gold/40 hover:bg-black/80 h-full flex flex-col"
-                >
-                  <div className="relative h-80 mb-6 overflow-hidden">
+                {/* Mobile Layout - Stacked */}
+                <div className="md:hidden">
+                  {/* CEO Portrait - Top */}
+                  <div className="relative h-[400px] overflow-hidden">
                     <Image
-                      src="/nader.jpeg"
-                      alt={t("about.team.profiles")[2].name}
+                      src="/QMOTORCEO.jpeg"
+                      alt="Simon Ackers - CEO"
                       fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
                       unoptimized
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
-                    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 shadow-[inset_0_0_40px_rgba(198,167,94,0.2)]" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                    {/* Gold corner accent */}
+                    <div className="absolute bottom-0 left-0 w-20 h-20 border-l-2 border-b-2 border-q-gold/60" />
                   </div>
 
-                  <div className="mb-6">
-                    <h3 className="text-2xl font-heading font-bold text-white mb-2">
-                      {t("about.team.profiles")[2].name}
-                    </h3>
-                    <div className="w-16 h-[2px] bg-q-gold mb-3" style={{ boxShadow: '0 0 10px rgba(198,167,94,0.4)' }} />
-                    <p className="text-base text-q-gold font-body font-medium tracking-wide uppercase">
-                      {t("about.team.profiles")[2].position}
-                    </p>
-                  </div>
+                  {/* Content - Bottom */}
+                  <div className="p-8">
+                    {/* Name & Title */}
+                    <div className="mb-6">
+                      <h3 className="text-2xl font-heading font-bold text-white mb-2">
+                        Simon Ackers
+                      </h3>
+                      <div className="w-16 h-[2px] bg-q-gold mb-3" style={{ boxShadow: '0 0 10px rgba(198,167,94,0.4)' }} />
+                      <p className="text-base text-q-gold font-body font-medium tracking-wider uppercase">
+                        Chief Executive Officer
+                      </p>
+                    </div>
 
-                  <div className="flex-1">
+                    {/* Experience Title */}
                     <h4 className="text-lg font-heading font-bold text-white/90 mb-4">
-                      {t("about.team.profiles")[2].experienceTitle}
+                      {t("about.team.profiles")[0]?.experienceTitle || "Leadership & Expertise"}
                     </h4>
-                    
-                    <p className="text-base text-white/70 font-body font-light leading-relaxed mb-4 whitespace-pre-line">
-                      {t("about.team.profiles")[2].intro}
+
+                    {/* Intro Text */}
+                    <p className="text-base text-white/70 font-body font-light leading-relaxed mb-5 whitespace-pre-line">
+                      {t("about.team.profiles")[0]?.intro || ""}
                     </p>
 
+                    {/* Expertise Bullets */}
                     <ul className="space-y-3">
-                      {t("about.team.profiles")[2].expertise.map((item: string, bulletIdx: number) => (
+                      {(t("about.team.profiles")[0]?.expertise || []).map((item: string, bulletIdx: number) => (
                         <li key={bulletIdx} className="flex items-start gap-3">
                           <div className="w-1.5 h-1.5 bg-q-gold rounded-full mt-2 flex-shrink-0" />
                           <span className="text-sm text-white/70 font-body font-light leading-relaxed">
@@ -307,13 +299,50 @@ export default function About() {
                       ))}
                     </ul>
                   </div>
+                </div>
 
-                  <div className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-q-gold to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left" />
-                </motion.div>
-              </FadeIn>
-            )}
-            */}
+                {/* Bottom Accent Line */}
+                <div className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-q-gold via-q-gold/60 to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left" />
+              </motion.div>
+            </FadeIn>
           </div>
+
+          {/* HIDDEN PROFILES - CCO AND CSCO - COMMENTED OUT */}
+          {/* 
+          To re-enable additional leadership cards:
+          1. Change the layout from single card to grid: className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto"
+          2. Uncomment the profiles below
+          3. Adjust .slice() as needed in the profiles array
+          
+          CCO - Bayan Kairat Card:
+          <FadeIn delay={0.15}>
+            <motion.div
+              whileHover={{ y: -8 }}
+              transition={{ duration: 0.3 }}
+              className="group relative bg-black/60 border border-q-gold/20 p-8 transition-all duration-500 hover:border-q-gold/40 hover:bg-black/80 h-full flex flex-col"
+            >
+              <div className="relative h-80 mb-6 overflow-hidden">
+                <Image src="/bayan.jpeg" alt="Bayan Kairat - CCO" fill className="object-cover transition-transform duration-500 group-hover:scale-105" unoptimized />
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
+              </div>
+              <div className="mb-6">
+                <h3 className="text-2xl font-heading font-bold text-white mb-2">Bayan Kairat</h3>
+                <div className="w-16 h-[2px] bg-q-gold mb-3" />
+                <p className="text-base text-q-gold font-body font-medium tracking-wide uppercase">Chief Commercial Officer</p>
+              </div>
+              <div className="flex-1">
+                <p className="text-base text-white/70 font-body font-light leading-relaxed">{t("about.team.profiles")[1]?.intro}</p>
+              </div>
+            </motion.div>
+          </FadeIn>
+
+          CSCO - Nader Quays Card:
+          <FadeIn delay={0.3}>
+            <motion.div className="group relative bg-black/60 border border-q-gold/20 p-8 ...">
+              ...
+            </motion.div>
+          </FadeIn>
+          */}
         </div>
       </section>
 
