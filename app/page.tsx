@@ -58,7 +58,7 @@ export default function Home() {
           <SectionTitle title={t("home.different.title")} />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {t("home.different.bullets").map((bullet: string, idx: number) => (
+            {Array.isArray(t("home.different.bullets")) && t("home.different.bullets").map((bullet: string, idx: number) => (
               <FadeIn
                 key={idx}
                 delay={idx * 0.1}
