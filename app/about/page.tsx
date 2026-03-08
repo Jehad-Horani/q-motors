@@ -314,7 +314,7 @@ export default function About() {
                   </div>
 
                   {/* Experience & Expertise */}
-                  <div className="flex-1">
+                  <div className="mb-6">
                     <h4 className="text-lg font-heading font-bold text-white/90 mb-4">
                       Experience &amp; Expertise
                     </h4>
@@ -339,6 +339,21 @@ export default function About() {
                         <span className="text-sm text-white/70 font-body font-light">Go-To-Market Strategy Expert – KSA</span>
                       </li>
                     </ul>
+                  </div>
+
+                  {/* Leadership Overview */}
+                  <div className="flex-1">
+                    <h4 className="text-lg font-heading font-bold text-white/90 mb-4">
+                      Leadership Overview
+                    </h4>
+                    <div className="space-y-3">
+                      <p className="text-sm text-white/70 font-body font-light leading-relaxed">
+                        Bayan Kairat plays a key role in shaping Q Motors&apos; commercial strategy and market expansion across Saudi Arabia. With strong expertise in automotive distribution, OEM partnerships, and regional market development, she leads initiatives that strengthen brand positioning and long-term commercial growth.
+                      </p>
+                      <p className="text-sm text-white/70 font-body font-light leading-relaxed">
+                        Her multilingual background and deep relationships with international OEM partners, particularly in China, enable Q Motors to build strong strategic alliances and execute effective go-to-market strategies within the Kingdom.
+                      </p>
+                    </div>
                   </div>
                 </div>
 
