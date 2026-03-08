@@ -163,7 +163,7 @@ export default function About() {
       {/* OUR LEADERSHIP TEAM SECTION - CEO & CCO */}
       <section className="py-32 relative bg-gradient-to-b from-q-teal-dark via-q-dark to-black">
         <div className="absolute inset-0 opacity-[0.02]">
-          <div className="absolute inset-0 bg-[linear-gradient(rgba(198,167,94,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(198,167,94,0.1)_1px,transparent_1px)] bg-[size:80px_80px]" />
+          <div className="absolute inset-0 bg-[linear-gradient(rgba(198,167,94,0.1)_1px,transparent_1px),linear_gradient(90deg,rgba(198,167,94,0.1)_1px,transparent_1px)] bg-[size:80px_80px]" />
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -171,11 +171,11 @@ export default function About() {
           <FadeIn>
             <div className="text-center mb-20">
               <h2 className="text-4xl md:text-6xl font-heading font-bold text-white uppercase tracking-tight mb-4">
-                OUR LEADERSHIP TEAM
+                {t("about.team.title")}
               </h2>
               <div className="w-32 h-[2px] bg-gradient-to-r from-transparent via-q-gold to-transparent mx-auto mb-8" style={{ boxShadow: '0 0 20px rgba(198,167,94,0.4)' }} />
               <p className="text-lg text-white/60 font-body font-light max-w-3xl mx-auto">
-                Executive leadership guiding Q Motors&apos; strategic growth and operational excellence.
+                {t("about.team.subtitle")}
               </p>
             </div>
           </FadeIn>
@@ -195,14 +195,14 @@ export default function About() {
                 <div className="relative h-[320px] overflow-hidden">
                   <Image
                     src="/QMOTORCEO.jpeg"
-                    alt="Simon Ackers - CEO"
+                    alt={t("about.team.ceo.name")}
                     fill
                     className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
                     unoptimized
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-                  <div className="absolute bottom-0 left-0 w-20 h-20 border-l-2 border-b-2 border-q-gold/60" />
-                  <div className="absolute top-0 right-0 w-12 h-12 border-t-2 border-r-2 border-q-gold/40" />
+                  <div className="absolute bottom-0 left-0 w-20 h-20 border-l-2 border-b-2 border-q-gold/60 rtl:left-auto rtl:right-0 rtl:border-l-0 rtl:border-r-2" />
+                  <div className="absolute top-0 right-0 w-12 h-12 border-t-2 border-r-2 border-q-gold/40 rtl:right-auto rtl:left-0 rtl:border-r-0 rtl:border-l-2" />
                 </div>
 
                 {/* Content */}
@@ -210,71 +210,49 @@ export default function About() {
                   {/* Name & Title */}
                   <div className="mb-6">
                     <h3 className="text-2xl lg:text-3xl font-heading font-bold text-white mb-2">
-                      Simon Ackers
+                      {t("about.team.ceo.name")}
                     </h3>
                     <div className="w-16 h-[2px] bg-q-gold mb-3" style={{ boxShadow: '0 0 12px rgba(198,167,94,0.5)' }} />
                     <p className="text-base text-q-gold font-body font-medium tracking-wider uppercase">
-                      Chief Executive Officer
+                      {t("about.team.ceo.position")}
                     </p>
                   </div>
 
                   {/* Experience & Expertise */}
                   <div className="mb-6">
                     <h4 className="text-lg font-heading font-bold text-white/90 mb-4">
-                      Experience &amp; Expertise
+                      {t("about.team.experienceTitle")}
                     </h4>
                     <p className="text-base text-white/70 font-body font-light leading-relaxed mb-4">
-                      30 years of multinational distribution &amp; OEM experience.
+                      {t("about.team.ceo.intro")}
                     </p>
                     <ul className="space-y-2">
-                      <li className="flex items-start gap-3">
-                        <div className="w-1.5 h-1.5 bg-q-gold rounded-full mt-2 flex-shrink-0" style={{ boxShadow: '0 0 6px rgba(198,167,94,0.4)' }} />
-                        <span className="text-sm text-white/70 font-body font-light">Proven Saudi Market Entry &amp; Scale up</span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <div className="w-1.5 h-1.5 bg-q-gold rounded-full mt-2 flex-shrink-0" style={{ boxShadow: '0 0 6px rgba(198,167,94,0.4)' }} />
-                        <span className="text-sm text-white/70 font-body font-light">Structured, Brand-Protective Distribution Models</span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <div className="w-1.5 h-1.5 bg-q-gold rounded-full mt-2 flex-shrink-0" style={{ boxShadow: '0 0 6px rgba(198,167,94,0.4)' }} />
-                        <span className="text-sm text-white/70 font-body font-light">EV &amp; Premium Technology Positioning</span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <div className="w-1.5 h-1.5 bg-q-gold rounded-full mt-2 flex-shrink-0" style={{ boxShadow: '0 0 6px rgba(198,167,94,0.4)' }} />
-                        <span className="text-sm text-white/70 font-body font-light">Governance, Capital &amp; Cashflow Discipline</span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <div className="w-1.5 h-1.5 bg-q-gold rounded-full mt-2 flex-shrink-0" style={{ boxShadow: '0 0 6px rgba(198,167,94,0.4)' }} />
-                        <span className="text-sm text-white/70 font-body font-light">High-Performance Local Leadership Platform</span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <div className="w-1.5 h-1.5 bg-q-gold rounded-full mt-2 flex-shrink-0" style={{ boxShadow: '0 0 6px rgba(198,167,94,0.4)' }} />
-                        <span className="text-sm text-white/70 font-body font-light">Long-Term Strategic Partnership Approach</span>
-                      </li>
+                      {t("about.team.ceo.expertise").map((item: string, idx: number) => (
+                        <li key={idx} className="flex items-start gap-3">
+                          <div className="w-1.5 h-1.5 bg-q-gold rounded-full mt-2 flex-shrink-0" style={{ boxShadow: '0 0 6px rgba(198,167,94,0.4)' }} />
+                          <span className="text-sm text-white/70 font-body font-light">{item}</span>
+                        </li>
+                      ))}
                     </ul>
                   </div>
 
                   {/* Leadership Overview */}
                   <div className="flex-1">
                     <h4 className="text-lg font-heading font-bold text-white/90 mb-4">
-                      Leadership Overview
+                      {t("about.team.leadershipOverviewTitle")}
                     </h4>
                     <div className="space-y-3">
-                      <p className="text-sm text-white/70 font-body font-light leading-relaxed">
-                        Q Motors was established as a fully integrated automotive distribution and market development platform designed to support global OEM brands entering and expanding within the Saudi market.
-                      </p>
-                      <p className="text-sm text-white/70 font-body font-light leading-relaxed">
-                        Our leadership combines deep Saudi market expertise with international automotive experience, enabling disciplined governance, strong operational execution, and long-term brand development.
-                      </p>
-                      <p className="text-sm text-white/70 font-body font-light leading-relaxed">
-                        The platform is built to provide OEM partners with a stable, transparent, and scalable operating environment that supports sustainable growth aligned with Vision 2030.
-                      </p>
+                      {t("about.team.ceo.leadershipOverview").map((paragraph: string, idx: number) => (
+                        <p key={idx} className="text-sm text-white/70 font-body font-light leading-relaxed">
+                          {paragraph}
+                        </p>
+                      ))}
                     </div>
                   </div>
                 </div>
 
                 {/* Bottom Accent Line */}
-                <div className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-q-gold via-q-gold/60 to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left" />
+                <div className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-q-gold via-q-gold/60 to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left rtl:origin-right rtl:bg-gradient-to-l" />
               </motion.div>
             </FadeIn>
 
@@ -290,14 +268,14 @@ export default function About() {
                 <div className="relative h-[320px] overflow-hidden">
                   <Image
                     src="/bayan.jpeg"
-                    alt="Bayan Kairat - CCO"
+                    alt={t("about.team.cco.name")}
                     fill
                     className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
                     unoptimized
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-                  <div className="absolute bottom-0 left-0 w-20 h-20 border-l-2 border-b-2 border-q-gold/60" />
-                  <div className="absolute top-0 right-0 w-12 h-12 border-t-2 border-r-2 border-q-gold/40" />
+                  <div className="absolute bottom-0 left-0 w-20 h-20 border-l-2 border-b-2 border-q-gold/60 rtl:left-auto rtl:right-0 rtl:border-l-0 rtl:border-r-2" />
+                  <div className="absolute top-0 right-0 w-12 h-12 border-t-2 border-r-2 border-q-gold/40 rtl:right-auto rtl:left-0 rtl:border-r-0 rtl:border-l-2" />
                 </div>
 
                 {/* Content */}
@@ -305,60 +283,49 @@ export default function About() {
                   {/* Name & Title */}
                   <div className="mb-6">
                     <h3 className="text-2xl lg:text-3xl font-heading font-bold text-white mb-2">
-                      Bayan Kairat
+                      {t("about.team.cco.name")}
                     </h3>
                     <div className="w-16 h-[2px] bg-q-gold mb-3" style={{ boxShadow: '0 0 12px rgba(198,167,94,0.5)' }} />
                     <p className="text-base text-q-gold font-body font-medium tracking-wider uppercase">
-                      Chief Commercial Officer
+                      {t("about.team.cco.position")}
                     </p>
                   </div>
 
                   {/* Experience & Expertise */}
                   <div className="mb-6">
                     <h4 className="text-lg font-heading font-bold text-white/90 mb-4">
-                      Experience &amp; Expertise
+                      {t("about.team.experienceTitle")}
                     </h4>
                     <p className="text-base text-white/70 font-body font-light leading-relaxed mb-4">
-                      Multilingual — Including Chinese. Over 10 years of experience in Marketing, Public Relations, and OEM business development.
+                      {t("about.team.cco.intro")}
                     </p>
                     <ul className="space-y-2">
-                      <li className="flex items-start gap-3">
-                        <div className="w-1.5 h-1.5 bg-q-gold rounded-full mt-2 flex-shrink-0" style={{ boxShadow: '0 0 6px rgba(198,167,94,0.4)' }} />
-                        <span className="text-sm text-white/70 font-body font-light">Leading multi-brand automotive distribution strategy in Saudi Arabia</span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <div className="w-1.5 h-1.5 bg-q-gold rounded-full mt-2 flex-shrink-0" style={{ boxShadow: '0 0 6px rgba(198,167,94,0.4)' }} />
-                        <span className="text-sm text-white/70 font-body font-light">Deep regional expertise and strong Chinese OEM relationships</span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <div className="w-1.5 h-1.5 bg-q-gold rounded-full mt-2 flex-shrink-0" style={{ boxShadow: '0 0 6px rgba(198,167,94,0.4)' }} />
-                        <span className="text-sm text-white/70 font-body font-light">Drives market expansion, partnerships, and long-term commercial success</span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <div className="w-1.5 h-1.5 bg-q-gold rounded-full mt-2 flex-shrink-0" style={{ boxShadow: '0 0 6px rgba(198,167,94,0.4)' }} />
-                        <span className="text-sm text-white/70 font-body font-light">Go-To-Market Strategy Expert – KSA</span>
-                      </li>
+                      {t("about.team.cco.expertise").map((item: string, idx: number) => (
+                        <li key={idx} className="flex items-start gap-3">
+                          <div className="w-1.5 h-1.5 bg-q-gold rounded-full mt-2 flex-shrink-0" style={{ boxShadow: '0 0 6px rgba(198,167,94,0.4)' }} />
+                          <span className="text-sm text-white/70 font-body font-light">{item}</span>
+                        </li>
+                      ))}
                     </ul>
                   </div>
 
                   {/* Leadership Overview */}
                   <div className="flex-1">
                     <h4 className="text-lg font-heading font-bold text-white/90 mb-4">
-                      Leadership Overview
+                      {t("about.team.leadershipOverviewTitle")}
                     </h4>
                     <div className="space-y-3">
-                      <p className="text-sm text-white/70 font-body font-light leading-relaxed">
-                        Bayan Kairat plays a key role in shaping Q Motors&apos; commercial strategy and market expansion across Saudi Arabia. With strong expertise in automotive distribution, OEM partnerships, and regional market development, she leads initiatives that strengthen brand positioning and long-term commercial growth.
-                      </p>
-                      <p className="text-sm text-white/70 font-body font-light leading-relaxed">
-                        Her multilingual background and deep relationships with international OEM partners, particularly in China, enable Q Motors to build strong strategic alliances and execute effective go-to-market strategies within the Kingdom.
-                      </p>
+                      {t("about.team.cco.leadershipOverview").map((paragraph: string, idx: number) => (
+                        <p key={idx} className="text-sm text-white/70 font-body font-light leading-relaxed">
+                          {paragraph}
+                        </p>
+                      ))}
                     </div>
                   </div>
                 </div>
 
                 {/* Bottom Accent Line */}
-                <div className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-q-gold via-q-gold/60 to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left" />
+                <div className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-q-gold via-q-gold/60 to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left rtl:origin-right rtl:bg-gradient-to-l" />
               </motion.div>
             </FadeIn>
           </div>
