@@ -51,7 +51,7 @@ export default function About() {
           <FadeIn>
             <div className="text-center mb-20">
               <h2 className="text-4xl md:text-6xl font-heading font-bold text-white uppercase tracking-tight mb-6">
-                LEADERSHIP MESSAGE
+                {t("about.leadership.title")}
               </h2>
               <div className="w-32 h-[2px] bg-gradient-to-r from-transparent via-q-gold to-transparent mx-auto" style={{ boxShadow: '0 0 20px rgba(198,167,94,0.4)' }} />
             </div>
@@ -69,44 +69,40 @@ export default function About() {
             >
               {/* Desktop Layout - Side by Side */}
               <div className="hidden md:flex bg-black/40 border border-q-gold/30 overflow-hidden">
-                {/* Chairman Portrait - Left */}
+                {/* Chairman Portrait - Left (RTL: Right) */}
                 <div className="relative w-[400px] lg:w-[450px] flex-shrink-0">
                   <Image
                     src="/chairman.jpeg"
-                    alt="Hilal Khalaf Al-Rowaili - Chairman"
+                    alt={t("about.leadership.chairman.name")}
                     fill
                     className="object-cover object-center"
                     unoptimized
                   />
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent to-black/30" />
-                  <div className="absolute bottom-0 left-0 w-24 h-24 border-l-2 border-b-2 border-q-gold/60" />
-                  <div className="absolute top-0 right-0 w-16 h-16 border-t-2 border-r-2 border-q-gold/40" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent to-black/30 rtl:bg-gradient-to-l" />
+                  <div className="absolute bottom-0 left-0 w-24 h-24 border-l-2 border-b-2 border-q-gold/60 rtl:left-auto rtl:right-0 rtl:border-l-0 rtl:border-r-2" />
+                  <div className="absolute top-0 right-0 w-16 h-16 border-t-2 border-r-2 border-q-gold/40 rtl:right-auto rtl:left-0 rtl:border-r-0 rtl:border-l-2" />
                 </div>
 
-                {/* Content - Right */}
+                {/* Content - Right (RTL: Left) */}
                 <div className="flex-1 p-10 lg:p-14 flex flex-col justify-center">
                   {/* Name & Title */}
                   <div className="mb-8">
                     <h3 className="text-3xl lg:text-4xl font-heading font-bold text-white mb-3">
-                      Hilal Khalaf Al-Rowaili
+                      {t("about.leadership.chairman.name")}
                     </h3>
                     <div className="w-20 h-[2px] bg-q-gold mb-4" style={{ boxShadow: '0 0 15px rgba(198,167,94,0.5)' }} />
                     <p className="text-lg text-q-gold font-body font-medium tracking-wider uppercase">
-                      Chairman
+                      {t("about.leadership.chairman.title")}
                     </p>
                   </div>
 
                   {/* Content Paragraphs */}
                   <div className="space-y-5">
-                    <p className="text-base lg:text-lg text-white/80 font-body font-light leading-relaxed">
-                      Mr. Hilal Khalaf Al-Rowaili is a business leader with deep expertise in logistics, supply chain, customs, and government relations within the Kingdom of Saudi Arabia. His experience builds upon the legacy of his father, Sheikh Khalaf Mohammed Al-Rowaili, a pioneer in the Saudi logistics and transportation sector.
-                    </p>
-                    <p className="text-base lg:text-lg text-white/80 font-body font-light leading-relaxed">
-                      Growing up at the heart of the family business, supporting major automotive agencies across the Kingdom, Mr. Hilal developed a strong understanding of the Saudi market, its regulatory environment, and the operational requirements of large-scale distribution.
-                    </p>
-                    <p className="text-base lg:text-lg text-white/80 font-body font-light leading-relaxed">
-                      Today, Q Motors represents the evolution of this legacy — connecting global automotive innovation with Saudi Arabia&apos;s regulatory framework and market needs, while contributing to the Kingdom&apos;s Vision 2030 objectives.
-                    </p>
+                    {t("about.leadership.chairman.content").map((paragraph: string, idx: number) => (
+                      <p key={idx} className="text-base lg:text-lg text-white/80 font-body font-light leading-relaxed">
+                        {paragraph}
+                      </p>
+                    ))}
                   </div>
                 </div>
               </div>
@@ -117,13 +113,13 @@ export default function About() {
                 <div className="relative h-[350px]">
                   <Image
                     src="/chairman.jpeg"
-                    alt="Hilal Khalaf Al-Rowaili - Chairman"
+                    alt={t("about.leadership.chairman.name")}
                     fill
                     className="object-cover object-center"
                     unoptimized
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                  <div className="absolute bottom-0 left-0 w-20 h-20 border-l-2 border-b-2 border-q-gold/60" />
+                  <div className="absolute bottom-0 left-0 w-20 h-20 border-l-2 border-b-2 border-q-gold/60 rtl:left-auto rtl:right-0 rtl:border-l-0 rtl:border-r-2" />
                 </div>
 
                 {/* Content - Bottom */}
@@ -131,25 +127,21 @@ export default function About() {
                   {/* Name & Title */}
                   <div className="mb-6">
                     <h3 className="text-2xl font-heading font-bold text-white mb-2">
-                      Hilal Khalaf Al-Rowaili
+                      {t("about.leadership.chairman.name")}
                     </h3>
                     <div className="w-16 h-[2px] bg-q-gold mb-3" style={{ boxShadow: '0 0 10px rgba(198,167,94,0.4)' }} />
                     <p className="text-base text-q-gold font-body font-medium tracking-wider uppercase">
-                      Chairman
+                      {t("about.leadership.chairman.title")}
                     </p>
                   </div>
 
                   {/* Content Paragraphs */}
                   <div className="space-y-4">
-                    <p className="text-base text-white/80 font-body font-light leading-relaxed">
-                      Mr. Hilal Khalaf Al-Rowaili is a business leader with deep expertise in logistics, supply chain, customs, and government relations within the Kingdom of Saudi Arabia. His experience builds upon the legacy of his father, Sheikh Khalaf Mohammed Al-Rowaili, a pioneer in the Saudi logistics and transportation sector.
-                    </p>
-                    <p className="text-base text-white/80 font-body font-light leading-relaxed">
-                      Growing up at the heart of the family business, supporting major automotive agencies across the Kingdom, Mr. Hilal developed a strong understanding of the Saudi market, its regulatory environment, and the operational requirements of large-scale distribution.
-                    </p>
-                    <p className="text-base text-white/80 font-body font-light leading-relaxed">
-                      Today, Q Motors represents the evolution of this legacy — connecting global automotive innovation with Saudi Arabia&apos;s regulatory framework and market needs, while contributing to the Kingdom&apos;s Vision 2030 objectives.
-                    </p>
+                    {t("about.leadership.chairman.content").map((paragraph: string, idx: number) => (
+                      <p key={idx} className="text-base text-white/80 font-body font-light leading-relaxed">
+                        {paragraph}
+                      </p>
+                    ))}
                   </div>
                 </div>
               </div>
