@@ -69,48 +69,41 @@ export const en = {
     team: {
       title: "OUR LEADERSHIP TEAM",
       subtitle: "Executive leadership guiding Q Motors' strategic growth and operational excellence.",
-      profiles: [
-        {
-          name: "Simon Ackers",
-          position: "CEO",
-          experienceTitle: "Experience & Expertise",
-          intro: "30 years of multinational distribution & OEM experience.",
-          expertise: [
-            "Proven Saudi Market Entry & Scale up",
-            "Structured, Brand-Protective Distribution Models",
-            "EV & Premium Technology Positioning",
-            "Governance, Capital & Cashflow Discipline",
-            "High-Performance Local Leadership Platform",
-            "Long-Term Strategic Partnership Approach",
-          ],
-        },
-        {
-          name: "Bayan Kairat",
-          position: "Chief Commercial Officer",
-          experienceTitle: "Experience & Expertise",
-          intro: "Multilingual — Including Chinese",
-          expertise: [
-            "Leading multi-brand automotive distribution strategy in Saudi Arabia",
-            "Deep regional expertise and strong Chinese OEM relationships",
-            "Drives market expansion, partnerships, and long-term commercial success",
-            "Go-To-Market Strategy Expert – KSA",
-          ],
-        },
-        {
-          name: "Nader Quays",
-          position: "Chief Supply Chain Officer",
-          experienceTitle: "Experience & Expertise",
-          intro: "Saudi National and supply chain expert\n\nSaudi Distribution & OEM – 15 years",
-          expertise: [
-            "Supply Chain & Logistics Strategy",
-            "Automotive Distribution & OEM Support",
-            "Organizational Design and Operational Scaling",
-            "Financial and Working Capital Structuring",
-            "Data & Reporting Frameworks",
-            "Performance Dashboards",
-          ],
-        },
-      ],
+      experienceTitle: "Experience & Expertise",
+      leadershipOverviewTitle: "Leadership Overview",
+      ceo: {
+        name: "Simon Ackers",
+        position: "Chief Executive Officer",
+        intro: "30 years of multinational distribution & OEM experience.",
+        expertise: [
+          "Proven Saudi Market Entry & Scale up",
+          "Structured, Brand-Protective Distribution Models",
+          "EV & Premium Technology Positioning",
+          "Governance, Capital & Cashflow Discipline",
+          "High-Performance Local Leadership Platform",
+          "Long-Term Strategic Partnership Approach",
+        ],
+        leadershipOverview: [
+          "Q Motors was established as a fully integrated automotive distribution and market development platform designed to support global OEM brands entering and expanding within the Saudi market.",
+          "Our leadership combines deep Saudi market expertise with international automotive experience, enabling disciplined governance, strong operational execution, and long-term brand development.",
+          "The platform is built to provide OEM partners with a stable, transparent, and scalable operating environment that supports sustainable growth aligned with Vision 2030.",
+        ],
+      },
+      cco: {
+        name: "Bayan Kairat",
+        position: "Chief Commercial Officer",
+        intro: "Multilingual — Including Chinese. Over 10 years of experience in Marketing, Public Relations, and OEM business development.",
+        expertise: [
+          "Leading multi-brand automotive distribution strategy in Saudi Arabia",
+          "Deep regional expertise and strong Chinese OEM relationships",
+          "Drives market expansion, partnerships, and long-term commercial success",
+          "Go-To-Market Strategy Expert – KSA",
+        ],
+        leadershipOverview: [
+          "Bayan Kairat plays a key role in shaping Q Motors' commercial strategy and market expansion across Saudi Arabia. With strong expertise in automotive distribution, OEM partnerships, and regional market development, she leads initiatives that strengthen brand positioning and long-term commercial growth.",
+          "Her multilingual background and deep relationships with international OEM partners, particularly in China, enable Q Motors to build strong strategic alliances and execute effective go-to-market strategies within the Kingdom.",
+        ],
+      },
     },
     philosophy: {
       title: "Leadership Philosophy",
