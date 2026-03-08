@@ -58,8 +58,13 @@ export const en = {
       chairman: {
         name: "Hilal Khalaf Al-Rowaili",
         title: "Chairman",
+        content: "Mr. Hilal Khalaf Al-Rowaili is a business leader with deep expertise in logistics, supply chain, customs, and government relations within the Kingdom of Saudi Arabia. His experience builds upon the legacy of his father, Sheikh Khalaf Mohammed Al-Rowaili, a pioneer in the Saudi logistics and transportation sector.\n\nGrowing up at the heart of the family business, supporting major automotive agencies across the Kingdom, Mr. Hilal developed a strong understanding of the Saudi market, its regulatory environment, and the operational requirements of large-scale distribution.\n\nToday, Q Motors represents the evolution of this legacy — connecting global automotive innovation with Saudi Arabia's regulatory framework and market needs, while contributing to the Kingdom's Vision 2030 objectives.",
       },
-      content: "For more than 65 years, our group has grown alongside the Kingdom of Saudi Arabia — beginning as a logistics and transportation enterprise and evolving in parallel with the nation's economic and industrial development.\n\nBuilt on reliability, disciplined execution, and long-term commitment, our operational heritage has enabled us to support government entities, multinational corporations, and large-scale industrial projects across the Kingdom.\n\nQ Motors represents the natural progression of this legacy — bridging global automotive innovation with Saudi Arabia's regulatory framework, market realities, and customer expectations while contributing to the objectives of Vision 2030.",
+      ceo: {
+        name: "Simon Ackers",
+        title: "Chief Executive Officer",
+        content: "Q Motors was established as a fully integrated automotive distribution and market development platform designed to support global OEM brands entering and expanding within the Saudi market.\n\nOur leadership combines deep Saudi market expertise with international automotive experience, enabling disciplined governance, strong operational execution, and long-term brand development.\n\nThe platform is built to provide OEM partners with a stable, transparent, and scalable operating environment that supports sustainable growth aligned with Vision 2030.",
+      },
     },
     team: {
       title: "OUR LEADERSHIP TEAM",
