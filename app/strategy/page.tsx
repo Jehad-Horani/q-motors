@@ -100,7 +100,7 @@ export default function Strategy() {
 
                     {/* Bullets */}
                     <ul className="space-y-4 relative z-10">
-                      {data.bullets.map((bullet: string, bulletIdx: number) => (
+                      {Array.isArray(data.bullets) && data.bullets.map((bullet: string, bulletIdx: number) => (
                         <motion.li
                           key={bulletIdx}
                           initial={{ opacity: 0, x: -10 }}
