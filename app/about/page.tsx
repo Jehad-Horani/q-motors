@@ -43,74 +43,103 @@ export default function About() {
       <GoldDivider />
 
       {/* LEADERSHIP MESSAGE SECTION - CHAIRMAN */}
-      <section className="py-32 relative bg-gradient-to-b from-black via-q-dark to-q-teal-dark">
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(198,167,94,0.015)_1px,transparent_1px),linear-gradient(90deg,rgba(198,167,94,0.015)_1px,transparent_1px)] bg-[size:100px_100px]" />
+      <section className="py-40 relative bg-gradient-to-b from-black via-q-dark to-q-teal-dark overflow-hidden">
+        {/* Refined Background Pattern */}
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(198,167,94,0.01)_1px,transparent_1px),linear-gradient(90deg,rgba(198,167,94,0.01)_1px,transparent_1px)] bg-[size:80px_80px]" />
+        
+        {/* Subtle Radial Glow */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(198,167,94,0.03)_0%,transparent_60%)]" />
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           {/* Section Title */}
           <FadeIn>
-            <div className="text-center mb-20">
-              <h2 className="text-4xl md:text-6xl font-heading font-bold text-white uppercase tracking-tight mb-6">
+            <div className="text-center mb-24">
+              <h2 className="text-5xl md:text-7xl font-heading font-bold text-white uppercase tracking-tight mb-8">
                 {t("about.leadership.title")}
               </h2>
-              <div className="w-24 h-[2px] bg-q-gold mx-auto" style={{ boxShadow: '0 0 20px rgba(198,167,94,0.5)' }} />
+              <div className="w-32 h-[2px] bg-gradient-to-r from-transparent via-q-gold to-transparent mx-auto" style={{ boxShadow: '0 0 25px rgba(198,167,94,0.6)' }} />
             </div>
           </FadeIn>
 
-          {/* Chairman Layout - Split Design */}
-          <div className="max-w-6xl mx-auto">
-            <FadeIn>
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8 }}
-                className="grid lg:grid-cols-2 gap-16 items-center"
-              >
-                {/* LEFT - Chairman Portrait */}
-                <div className="relative">
-                  <div className="relative h-[500px] lg:h-[600px] overflow-hidden rounded-sm shadow-2xl">
-                    <Image
-                      src="/chairman.jpeg"
-                      alt={t("about.leadership.chairman.name")}
-                      fill
-                      className="object-cover object-center"
-                      unoptimized
-                    />
-                    {/* Subtle Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+          {/* Chairman Content - Premium Split Layout */}
+          <FadeIn delay={0.2}>
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1, ease: [0.25, 0.46, 0.45, 0.94] }}
+              className="max-w-7xl mx-auto"
+            >
+              <div className="grid lg:grid-cols-5 gap-12 lg:gap-20 items-start">
+                
+                {/* LEFT - Portrait (2 columns) */}
+                <div className="lg:col-span-2">
+                  <div className="relative group">
+                    {/* Main Image Container */}
+                    <div className="relative h-[480px] md:h-[580px] lg:h-[700px] overflow-hidden">
+                      <Image
+                        src="/chairman.jpeg"
+                        alt={t("about.leadership.chairman.name")}
+                        fill
+                        className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
+                        unoptimized
+                      />
+                      {/* Elegant Gradient Overlay */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+                    </div>
                     
-                    {/* Corner Accents */}
-                    <div className="absolute top-0 left-0 w-16 h-16 border-l-2 border-t-2 border-q-gold/60" />
-                    <div className="absolute bottom-0 right-0 w-16 h-16 border-r-2 border-b-2 border-q-gold/60" />
+                    {/* Gold Frame Accents */}
+                    <div className="absolute -top-3 -left-3 w-20 h-20 border-l-[3px] border-t-[3px] border-q-gold" />
+                    <div className="absolute -bottom-3 -right-3 w-20 h-20 border-r-[3px] border-b-[3px] border-q-gold" />
+                    
+                    {/* Subtle Shadow */}
+                    <div className="absolute inset-0 shadow-[0_20px_60px_rgba(0,0,0,0.5)]" />
                   </div>
                 </div>
 
-                {/* RIGHT - Content */}
-                <div className="space-y-8">
-                  {/* Name & Title */}
-                  <div>
-                    <h3 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-white leading-tight mb-4">
-                      {t("about.leadership.chairman.name")}
-                    </h3>
-                    <div className="w-20 h-[2px] bg-q-gold mb-5" style={{ boxShadow: '0 0 15px rgba(198,167,94,0.5)' }} />
-                    <p className="text-base md:text-lg text-q-gold font-body font-semibold tracking-[0.15em] uppercase">
+                {/* RIGHT - Content (3 columns) */}
+                <div className="lg:col-span-3 space-y-10 pt-4">
+                  
+                  {/* Name & Title Block */}
+                  <div className="space-y-6">
+                    <div>
+                      <h3 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white leading-[1.1] mb-6">
+                        {t("about.leadership.chairman.name")}
+                      </h3>
+                      <div className="w-24 h-[3px] bg-q-gold mb-6" style={{ boxShadow: '0 0 20px rgba(198,167,94,0.6)' }} />
+                    </div>
+                    <p className="text-lg md:text-xl text-q-gold font-body font-bold tracking-[0.2em] uppercase">
                       {t("about.leadership.chairman.title")}
                     </p>
                   </div>
 
-                  {/* Content Paragraphs */}
-                  <div className="space-y-6">
+                  {/* Biography Content */}
+                  <div className="space-y-7 text-white/85">
                     {Array.isArray(t("about.leadership.chairman.content")) && t("about.leadership.chairman.content").map((paragraph: string, idx: number) => (
-                      <p key={idx} className="text-base md:text-lg text-white/80 font-body font-light leading-relaxed">
+                      <motion.p 
+                        key={idx}
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6, delay: idx * 0.15 }}
+                        className="text-base md:text-lg font-body font-light leading-[1.8]"
+                      >
                         {paragraph}
-                      </p>
+                      </motion.p>
                     ))}
                   </div>
+
+                  {/* Decorative Quote Mark */}
+                  <div className="pt-8 border-t border-q-gold/20">
+                    <div className="flex items-center gap-4">
+                      <div className="w-12 h-[2px] bg-q-gold/40" />
+                      <span className="text-q-gold/60 text-xs font-body uppercase tracking-[0.3em]">Leadership</span>
+                    </div>
+                  </div>
                 </div>
-              </motion.div>
-            </FadeIn>
-          </div>
+              </div>
+            </motion.div>
+          </FadeIn>
         </div>
       </section>
 
