@@ -335,72 +335,7 @@ export default function About() {
             The grid will automatically adjust from 2 columns to 3 columns (change lg:grid-cols-2 to lg:grid-cols-3).
             Also change .slice(0, 2) to .slice(0, 3) or remove .slice() entirely above*/}
             
-            {t("about.team.profiles")[2] && (
-              <FadeIn delay={0.3}>
-                <motion.div
-                  whileHover={{ y: -8 }}
-                  transition={{ duration: 0.3 }}
-                  className="group relative bg-black/60 border border-q-gold/20 p-8 transition-all duration-500 hover:border-q-gold/40 hover:bg-black/80 h-full flex flex-col"
-                >
-                  <div className="relative h-80 mb-6 overflow-hidden">
-                  
-                    <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
-                    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 shadow-[inset_0_0_40px_rgba(198,167,94,0.2)]" />
-                  </div>
-
-                {/* Content */}
-                <div className="flex-1 p-8 flex flex-col">
-                  {/* Name & Title */}
-                  <div className="mb-6">
-                    <h3 className="text-2xl lg:text-3xl font-heading font-bold text-white mb-2">
-                      {t("about.team.cco.name")}
-                    </h3>
-                    <div className="w-16 h-[2px] bg-q-gold mb-3" style={{ boxShadow: '0 0 12px rgba(198,167,94,0.5)' }} />
-                    <p className="text-base text-q-gold font-body font-medium tracking-wider uppercase">
-                      {t("about.team.cco.position")}
-                    </p>
-                  </div>
-
-                  {/* Experience & Expertise */}
-                  <div className="mb-6">
-                    <h4 className="text-lg font-heading font-bold text-white/90 mb-4">
-                      {t("about.team.experienceTitle")}
-                    </h4>
-                    <p className="text-base text-white/70 font-body font-light leading-relaxed mb-4">
-                      {t("about.team.cco.intro")}
-                    </p>
-                    <ul className="space-y-2">
-                      {t("about.team.cco.expertise").map((item: string, idx: number) => (
-                        <li key={idx} className="flex items-start gap-3">
-                          <div className="w-1.5 h-1.5 bg-q-gold rounded-full mt-2 flex-shrink-0" style={{ boxShadow: '0 0 6px rgba(198,167,94,0.4)' }} />
-                          <span className="text-sm text-white/70 font-body font-light">{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  {/* Leadership Overview */}
-                  <div className="flex-1">
-                    <h4 className="text-lg font-heading font-bold text-white/90 mb-4">
-                      {t("about.team.leadershipOverviewTitle")}
-                    </h4>
-                    <div className="space-y-3">
-                      {t("about.team.cco.leadershipOverview").map((paragraph: string, idx: number) => (
-                        <p key={idx} className="text-sm text-white/70 font-body font-light leading-relaxed">
-                          {paragraph}
-                        </p>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-
-                
-
-                {/* Bottom Accent Line */}
-                <div className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-q-gold via-q-gold/60 to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left rtl:origin-right rtl:bg-gradient-to-l" />
-              </motion.div>
-            </FadeIn>
-            )}
+          
           </div>
         </div>
       </section>
