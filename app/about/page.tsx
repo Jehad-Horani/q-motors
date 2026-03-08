@@ -168,8 +168,8 @@ export default function About() {
           </FadeIn>
 
           {/* Leadership Profile Cards */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
-            {t("about.team.profiles").map((profile: any, idx: number) => (
+          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            {t("about.team.profiles").slice(0, 2).map((profile: any, idx: number) => (
               <FadeIn key={idx} delay={idx * 0.15}>
                 <motion.div
                   whileHover={{ y: -8 }}
@@ -177,14 +177,12 @@ export default function About() {
                   className="group relative bg-black/60 border border-q-gold/20 p-8 transition-all duration-500 hover:border-q-gold/40 hover:bg-black/80 h-full flex flex-col"
                 >
                   {/* Executive Portrait */}
-                  <div className="relative h-80 mb-6 overflow-hidden">
+                  <div className="relative h-130 mb-6 overflow-hidden">
                     <Image
                       src={
                         idx === 0 
                           ? "/QMOTORCEO.jpeg"
-                          // : idx === 1
                           : "/bayan.jpeg"
-                          // : "/nader2.jpeg"
                       }
                       alt={profile.name}
                       fill
@@ -236,6 +234,68 @@ export default function About() {
                 </motion.div>
               </FadeIn>
             ))}
+
+            {/* THIRD CARD - NADER QUAYS - COMMENTED OUT TEMPORARILY */}
+            {/* 
+            To re-enable this card, simply uncomment the entire block below.
+            The grid will automatically adjust from 2 columns to 3 columns (change lg:grid-cols-2 to lg:grid-cols-3).
+            Also change .slice(0, 2) to .slice(0, 3) or remove .slice() entirely above.
+            
+            {t("about.team.profiles")[2] && (
+              <FadeIn delay={0.3}>
+                <motion.div
+                  whileHover={{ y: -8 }}
+                  transition={{ duration: 0.3 }}
+                  className="group relative bg-black/60 border border-q-gold/20 p-8 transition-all duration-500 hover:border-q-gold/40 hover:bg-black/80 h-full flex flex-col"
+                >
+                  <div className="relative h-130 mb-6 overflow-hidden">
+                    <Image
+                      src="/nader2.jpeg"
+                      alt={t("about.team.profiles")[2].name}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      unoptimized
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
+                    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 shadow-[inset_0_0_40px_rgba(198,167,94,0.2)]" />
+                  </div>
+
+                  <div className="mb-6">
+                    <h3 className="text-2xl font-heading font-bold text-white mb-2">
+                      {t("about.team.profiles")[2].name}
+                    </h3>
+                    <div className="w-16 h-[2px] bg-q-gold mb-3" style={{ boxShadow: '0 0 10px rgba(198,167,94,0.4)' }} />
+                    <p className="text-base text-q-gold font-body font-medium tracking-wide uppercase">
+                      {t("about.team.profiles")[2].position}
+                    </p>
+                  </div>
+
+                  <div className="flex-1">
+                    <h4 className="text-lg font-heading font-bold text-white/90 mb-4">
+                      {t("about.team.profiles")[2].experienceTitle}
+                    </h4>
+                    
+                    <p className="text-base text-white/70 font-body font-light leading-relaxed mb-4 whitespace-pre-line">
+                      {t("about.team.profiles")[2].intro}
+                    </p>
+
+                    <ul className="space-y-3">
+                      {t("about.team.profiles")[2].expertise.map((item: string, bulletIdx: number) => (
+                        <li key={bulletIdx} className="flex items-start gap-3">
+                          <div className="w-1.5 h-1.5 bg-q-gold rounded-full mt-2 flex-shrink-0" />
+                          <span className="text-sm text-white/70 font-body font-light leading-relaxed">
+                            {item}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-q-gold to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left" />
+                </motion.div>
+              </FadeIn>
+            )}
+            */}
           </div>
         </div>
       </section>
