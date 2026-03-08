@@ -42,7 +42,7 @@ export default function About() {
 
       <GoldDivider />
 
-      {/* LEADERSHIP MESSAGE SECTION - CHAIRMAN */}
+      {/* LEADERSHIP MESSAGE SECTION - CHAIRMAN ONLY */}
       <section className="py-32 relative bg-gradient-to-b from-black via-q-dark to-q-teal-dark">
         <div className="absolute inset-0 bg-[linear-gradient(rgba(198,167,94,0.015)_1px,transparent_1px),linear-gradient(90deg,rgba(198,167,94,0.015)_1px,transparent_1px)] bg-[size:100px_100px]" />
         
@@ -53,56 +53,54 @@ export default function About() {
               <h2 className="text-4xl md:text-6xl font-heading font-bold text-white uppercase tracking-tight mb-6">
                 {t("about.leadership.title")}
               </h2>
-              <div className="w-24 h-[2px] bg-q-gold mx-auto" style={{ boxShadow: '0 0 20px rgba(198,167,94,0.5)' }} />
+              <div className="w-32 h-[2px] bg-gradient-to-r from-transparent via-q-gold to-transparent mx-auto" style={{ boxShadow: '0 0 20px rgba(198,167,94,0.4)' }} />
             </div>
           </FadeIn>
 
-          {/* Chairman Layout - Split Design */}
-          <div className="max-w-6xl mx-auto">
+          {/* Two Leadership Cards - Chairman & CEO */}
+          <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+            
+            {/* CHAIRMAN CARD */}
             <FadeIn>
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
-                className="grid lg:grid-cols-2 gap-16 items-center"
+                className="flex flex-col h-full"
               >
-                {/* LEFT - Chairman Portrait */}
-                <div className="relative">
-                  <div className="relative h-[500px] lg:h-[600px] overflow-hidden rounded-sm shadow-2xl">
-                    <Image
-                      src="/chairman.jpeg"
-                      alt={t("about.leadership.chairman.name")}
-                      fill
-                      className="object-cover object-center"
-                      unoptimized
-                    />
-                    {/* Subtle Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
-                    
-                    {/* Corner Accents */}
-                    <div className="absolute top-0 left-0 w-16 h-16 border-l-2 border-t-2 border-q-gold/60" />
-                    <div className="absolute bottom-0 right-0 w-16 h-16 border-r-2 border-b-2 border-q-gold/60" />
-                  </div>
+                {/* Chairman Portrait */}
+                <div className="relative h-[400px] mb-6 overflow-hidden">
+                  <div className="absolute inset-0 border-2 border-q-gold/30 -translate-x-3 -translate-y-3" />
+                  <Image
+                    src="/chairman.jpeg"
+                    alt={t("about.leadership.chairman.name")}
+                    fill
+                    className="object-cover object-center"
+                    unoptimized
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent to-black/30 rtl:bg-gradient-to-l" />
+                  <div className="absolute bottom-0 left-0 w-24 h-24 border-l-2 border-b-2 border-q-gold/60 rtl:left-auto rtl:right-0 rtl:border-l-0 rtl:border-r-2" />
+                  <div className="absolute top-0 right-0 w-16 h-16 border-t-2 border-r-2 border-q-gold/40 rtl:right-auto rtl:left-0 rtl:border-r-0 rtl:border-l-2" />
                 </div>
 
-                {/* RIGHT - Content */}
-                <div className="space-y-8">
+                {/* Content - Right (RTL: Left) */}
+                <div className="flex-1 p-10 lg:p-14 flex flex-col justify-center">
                   {/* Name & Title */}
-                  <div>
-                    <h3 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-white leading-tight mb-4">
+                  <div className="mb-8">
+                    <h3 className="text-3xl lg:text-4xl font-heading font-bold text-white mb-3">
                       {t("about.leadership.chairman.name")}
                     </h3>
-                    <div className="w-20 h-[2px] bg-q-gold mb-5" style={{ boxShadow: '0 0 15px rgba(198,167,94,0.5)' }} />
-                    <p className="text-base md:text-lg text-q-gold font-body font-semibold tracking-[0.15em] uppercase">
+                    <div className="w-20 h-[2px] bg-q-gold mb-4" style={{ boxShadow: '0 0 15px rgba(198,167,94,0.5)' }} />
+                    <p className="text-lg text-q-gold font-body font-medium tracking-wider uppercase">
                       {t("about.leadership.chairman.title")}
                     </p>
                   </div>
 
                   {/* Content Paragraphs */}
-                  <div className="space-y-6">
+                  <div className="space-y-5">
                     {Array.isArray(t("about.leadership.chairman.content")) && t("about.leadership.chairman.content").map((paragraph: string, idx: number) => (
-                      <p key={idx} className="text-base md:text-lg text-white/80 font-body font-light leading-relaxed">
+                      <p key={idx} className="text-base lg:text-lg text-white/80 font-body font-light leading-relaxed">
                         {paragraph}
                       </p>
                     ))}
@@ -110,7 +108,55 @@ export default function About() {
                 </div>
               </motion.div>
             </FadeIn>
-          </div>
+
+            {/* CEO CARD */}
+            <FadeIn delay={0.2}>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="flex flex-col h-full"
+              >
+                {/* CEO Portrait */}
+                <div className="relative h-[400px] mb-6 overflow-hidden">
+                  <div className="absolute inset-0 border-2 border-q-gold/30 -translate-x-3 -translate-y-3" />
+                  <Image
+                    src="/QMOTORCEO.jpeg"
+                    alt="CEO"
+                    fill
+                    className="object-cover object-center"
+                    unoptimized
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                  <div className="absolute bottom-0 left-0 w-20 h-20 border-l-2 border-b-2 border-q-gold/60 rtl:left-auto rtl:right-0 rtl:border-l-0 rtl:border-r-2" />
+                </div>
+
+                {/* Content - Bottom */}
+                <div className="p-8">
+                  {/* Name & Title */}
+                  <div className="mb-6">
+                    <h3 className="text-2xl font-heading font-bold text-white mb-2">
+                      {t("about.leadership.chairman.name")}
+                    </h3>
+                    <div className="w-16 h-[2px] bg-q-gold mb-3" style={{ boxShadow: '0 0 10px rgba(198,167,94,0.4)' }} />
+                    <p className="text-base text-q-gold font-body font-medium tracking-wider uppercase">
+                      {t("about.leadership.chairman.title")}
+                    </p>
+                  </div>
+
+                  {/* Content Paragraphs */}
+                  <div className="space-y-4">
+                    {Array.isArray(t("about.leadership.chairman.content")) && t("about.leadership.chairman.content").map((paragraph: string, idx: number) => (
+                      <p key={idx} className="text-base text-white/80 font-body font-light leading-relaxed">
+                        {paragraph}
+                      </p>
+                    ))}
+                  </div>
+                </div>
+            </motion.div>
+          </FadeIn>
+        </div>
         </div>
       </section>
 
@@ -297,13 +343,7 @@ export default function About() {
                   className="group relative bg-black/60 border border-q-gold/20 p-8 transition-all duration-500 hover:border-q-gold/40 hover:bg-black/80 h-full flex flex-col"
                 >
                   <div className="relative h-80 mb-6 overflow-hidden">
-                    <Image
-                      src="/nader.jpeg"
-                      alt={t("about.team.profiles")[2].name}
-                      fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
-                      unoptimized
-                    />
+                  
                     <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
                     <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 shadow-[inset_0_0_40px_rgba(198,167,94,0.2)]" />
                   </div>
