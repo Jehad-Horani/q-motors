@@ -154,9 +154,9 @@ export default function About() {
                     ))}
                   </div>
                 </div>
-              </div>
             </motion.div>
           </FadeIn>
+        </div>
         </div>
       </section>
 
@@ -266,10 +266,10 @@ export default function About() {
             })}
 
             {/* THIRD CARD - NADER QUAYS - COMMENTED OUT TEMPORARILY */}
-            {/* 
+            {/*
             To re-enable this card, simply uncomment the entire block below.
             The grid will automatically adjust from 2 columns to 3 columns (change lg:grid-cols-2 to lg:grid-cols-3).
-            Also change .slice(0, 2) to .slice(0, 3) or remove .slice() entirely above.
+            Also change .slice(0, 2) to .slice(0, 3) or remove .slice() entirely above*/}
             
             {t("about.team.profiles")[2] && (
               <FadeIn delay={0.3}>
@@ -336,10 +336,13 @@ export default function About() {
                   </div>
                 </div>
 
+                
+
                 {/* Bottom Accent Line */}
                 <div className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-q-gold via-q-gold/60 to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left rtl:origin-right rtl:bg-gradient-to-l" />
               </motion.div>
             </FadeIn>
+            )}
           </div>
         </div>
       </section>
