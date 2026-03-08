@@ -147,7 +147,7 @@ export default function About() {
 
                   {/* Content Paragraphs */}
                   <div className="space-y-4">
-                    {t("about.leadership.chairman.content").map((paragraph: string, idx: number) => (
+                    {Array.isArray(t("about.leadership.chairman.content")) && t("about.leadership.chairman.content").map((paragraph: string, idx: number) => (
                       <p key={idx} className="text-base text-white/80 font-body font-light leading-relaxed">
                         {paragraph}
                       </p>
