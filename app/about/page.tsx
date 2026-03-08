@@ -306,7 +306,7 @@ export default function About() {
                           <span className="text-sm text-white/70 font-body font-light">{item}</span>
                         </li>
                       ))}
-                    </ul>
+                    </ul> 
                   </div>
 
                   {/* Leadership Overview */}
