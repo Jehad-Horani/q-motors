@@ -70,7 +70,7 @@ export default function About() {
                 className="flex flex-col h-full"
               >
                 {/* Chairman Portrait */}
-                <div className="relative h-[400px] mb-6 overflow-hidden">
+                <div className="relative h-150 mb-6 overflow-hidden">
                   <div className="absolute inset-0 border-2 border-q-gold/30 -translate-x-3 -translate-y-3" />
                   <Image
                     src="/chairman.jpeg"
@@ -118,7 +118,7 @@ export default function About() {
                 className="flex flex-col h-full"
               >
                 {/* CEO Portrait */}
-                <div className="relative h-[400px] mb-6 overflow-hidden">
+                <div className="relative h-150 mb-6 overflow-hidden">
                   <div className="absolute inset-0 border-2 border-q-gold/30 -translate-x-3 -translate-y-3" />
                   <Image
                     src="/QMOTORCEO.jpeg"
