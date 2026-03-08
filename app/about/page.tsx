@@ -176,7 +176,7 @@ export default function About() {
                 className="group relative bg-black/60 border border-q-gold/20 p-8 transition-all duration-500 hover:border-q-gold/40 hover:bg-black/80 h-full flex flex-col"
               >
                 {/* Executive Portrait */}
-                <div className="relative h-80 mb-6 overflow-hidden">
+                <div className="relative h-130 mb-6 overflow-hidden">
                   <Image
                     src="/QMOTORCEO.jpeg"
                     alt={t("about.team.ceo.name")}
@@ -248,7 +248,7 @@ export default function About() {
                 className="group relative bg-black/60 border border-q-gold/20 p-8 transition-all duration-500 hover:border-q-gold/40 hover:bg-black/80 h-full flex flex-col"
               >
                 {/* Executive Portrait */}
-                <div className="relative h-80 mb-6 overflow-hidden">
+                <div className="relative h-130 mb-6 overflow-hidden">
                   <Image
                     src="/bayan.jpeg"
                     alt={t("about.team.cco.name")}
