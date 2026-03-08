@@ -160,7 +160,7 @@ export default function About() {
 
       <GoldDivider />
 
-      {/* OUR LEADERSHIP TEAM SECTION */}
+      {/* OUR LEADERSHIP TEAM SECTION - CEO & CCO */}
       <section className="py-32 relative bg-gradient-to-b from-q-teal-dark via-q-dark to-black">
         <div className="absolute inset-0 opacity-[0.02]">
           <div className="absolute inset-0 bg-[linear-gradient(rgba(198,167,94,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(198,167,94,0.1)_1px,transparent_1px)] bg-[size:80px_80px]" />
@@ -171,132 +171,173 @@ export default function About() {
           <FadeIn>
             <div className="text-center mb-20">
               <h2 className="text-4xl md:text-6xl font-heading font-bold text-white uppercase tracking-tight mb-4">
-                {t("about.team.title")}
+                OUR LEADERSHIP TEAM
               </h2>
               <div className="w-32 h-[2px] bg-gradient-to-r from-transparent via-q-gold to-transparent mx-auto mb-8" style={{ boxShadow: '0 0 20px rgba(198,167,94,0.4)' }} />
               <p className="text-lg text-white/60 font-body font-light max-w-3xl mx-auto">
-                {t("about.team.subtitle")}
+                Executive leadership guiding Q Motors&apos; strategic growth and operational excellence.
               </p>
             </div>
           </FadeIn>
 
-          {/* Single CEO Executive Card - Centered */}
-          <div className="flex justify-center">
+          {/* Two Leadership Cards - CEO & CCO */}
+          <div className="grid md:grid-cols-2 gap-10 max-w-6xl mx-auto">
+            
+            {/* CEO CARD - Simon Ackers */}
             <FadeIn>
               <motion.div
-                whileHover={{ y: -8 }}
+                whileHover={{ y: -6 }}
                 transition={{ duration: 0.3 }}
-                className="group relative bg-black/60 border border-q-gold/30 transition-all duration-500 hover:border-q-gold/50 hover:bg-black/80 w-full max-w-[800px] md:max-w-[700px] lg:max-w-[800px]"
+                className="group relative bg-black/50 border border-q-gold/25 transition-all duration-500 hover:border-q-gold/50 hover:bg-black/70 h-full flex flex-col"
                 data-testid="ceo-leadership-card"
               >
-                {/* Desktop/Tablet Layout - Side by Side */}
-                <div className="hidden md:flex">
-                  {/* CEO Portrait - Left Side */}
-                  <div className="relative w-[320px] lg:w-[380px] flex-shrink-0 overflow-hidden">
-                    <div className="absolute inset-0">
-                      <Image
-                        src="/QMOTORCEO.jpeg"
-                        alt="Simon Ackers - CEO"
-                        fill
-                        className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
-                        unoptimized
-                      />
-                    </div>
-                    {/* Subtle overlay gradient */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-black/40" />
-                    {/* Gold corner accent */}
-                    <div className="absolute bottom-0 left-0 w-24 h-24 border-l-2 border-b-2 border-q-gold/60" />
-                    <div className="absolute top-0 right-0 w-16 h-16 border-t-2 border-r-2 border-q-gold/40" />
-                    {/* Glow effect on hover */}
-                    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 shadow-[inset_0_0_60px_rgba(198,167,94,0.15)]" />
+                {/* CEO Portrait */}
+                <div className="relative h-[320px] overflow-hidden">
+                  <Image
+                    src="/QMOTORCEO.jpeg"
+                    alt="Simon Ackers - CEO"
+                    fill
+                    className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                    unoptimized
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                  <div className="absolute bottom-0 left-0 w-20 h-20 border-l-2 border-b-2 border-q-gold/60" />
+                  <div className="absolute top-0 right-0 w-12 h-12 border-t-2 border-r-2 border-q-gold/40" />
+                </div>
+
+                {/* Content */}
+                <div className="flex-1 p-8 flex flex-col">
+                  {/* Name & Title */}
+                  <div className="mb-6">
+                    <h3 className="text-2xl lg:text-3xl font-heading font-bold text-white mb-2">
+                      Simon Ackers
+                    </h3>
+                    <div className="w-16 h-[2px] bg-q-gold mb-3" style={{ boxShadow: '0 0 12px rgba(198,167,94,0.5)' }} />
+                    <p className="text-base text-q-gold font-body font-medium tracking-wider uppercase">
+                      Chief Executive Officer
+                    </p>
                   </div>
 
-                  {/* Content - Right Side */}
-                  <div className="flex-1 p-10 lg:p-12 flex flex-col justify-center">
-                    {/* Name & Title */}
-                    <div className="mb-8">
-                      <h3 className="text-3xl lg:text-4xl font-heading font-bold text-white mb-3">
-                        Simon Ackers
-                      </h3>
-                      <div className="w-20 h-[2px] bg-q-gold mb-4" style={{ boxShadow: '0 0 15px rgba(198,167,94,0.5)' }} />
-                      <p className="text-lg text-q-gold font-body font-medium tracking-wider uppercase">
-                        Chief Executive Officer
+                  {/* Experience & Expertise */}
+                  <div className="mb-6">
+                    <h4 className="text-lg font-heading font-bold text-white/90 mb-4">
+                      Experience &amp; Expertise
+                    </h4>
+                    <p className="text-base text-white/70 font-body font-light leading-relaxed mb-4">
+                      30 years of multinational distribution &amp; OEM experience.
+                    </p>
+                    <ul className="space-y-2">
+                      <li className="flex items-start gap-3">
+                        <div className="w-1.5 h-1.5 bg-q-gold rounded-full mt-2 flex-shrink-0" style={{ boxShadow: '0 0 6px rgba(198,167,94,0.4)' }} />
+                        <span className="text-sm text-white/70 font-body font-light">Proven Saudi Market Entry &amp; Scale up</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <div className="w-1.5 h-1.5 bg-q-gold rounded-full mt-2 flex-shrink-0" style={{ boxShadow: '0 0 6px rgba(198,167,94,0.4)' }} />
+                        <span className="text-sm text-white/70 font-body font-light">Structured, Brand-Protective Distribution Models</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <div className="w-1.5 h-1.5 bg-q-gold rounded-full mt-2 flex-shrink-0" style={{ boxShadow: '0 0 6px rgba(198,167,94,0.4)' }} />
+                        <span className="text-sm text-white/70 font-body font-light">EV &amp; Premium Technology Positioning</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <div className="w-1.5 h-1.5 bg-q-gold rounded-full mt-2 flex-shrink-0" style={{ boxShadow: '0 0 6px rgba(198,167,94,0.4)' }} />
+                        <span className="text-sm text-white/70 font-body font-light">Governance, Capital &amp; Cashflow Discipline</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <div className="w-1.5 h-1.5 bg-q-gold rounded-full mt-2 flex-shrink-0" style={{ boxShadow: '0 0 6px rgba(198,167,94,0.4)' }} />
+                        <span className="text-sm text-white/70 font-body font-light">High-Performance Local Leadership Platform</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <div className="w-1.5 h-1.5 bg-q-gold rounded-full mt-2 flex-shrink-0" style={{ boxShadow: '0 0 6px rgba(198,167,94,0.4)' }} />
+                        <span className="text-sm text-white/70 font-body font-light">Long-Term Strategic Partnership Approach</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  {/* Leadership Overview */}
+                  <div className="flex-1">
+                    <h4 className="text-lg font-heading font-bold text-white/90 mb-4">
+                      Leadership Overview
+                    </h4>
+                    <div className="space-y-3">
+                      <p className="text-sm text-white/70 font-body font-light leading-relaxed">
+                        Q Motors was established as a fully integrated automotive distribution and market development platform designed to support global OEM brands entering and expanding within the Saudi market.
+                      </p>
+                      <p className="text-sm text-white/70 font-body font-light leading-relaxed">
+                        Our leadership combines deep Saudi market expertise with international automotive experience, enabling disciplined governance, strong operational execution, and long-term brand development.
+                      </p>
+                      <p className="text-sm text-white/70 font-body font-light leading-relaxed">
+                        The platform is built to provide OEM partners with a stable, transparent, and scalable operating environment that supports sustainable growth aligned with Vision 2030.
                       </p>
                     </div>
-
-                    {/* Experience Title */}
-                    <h4 className="text-xl font-heading font-bold text-white/90 mb-5">
-                      {t("about.team.profiles")[0]?.experienceTitle || "Leadership & Expertise"}
-                    </h4>
-
-                    {/* Intro Text */}
-                    <p className="text-base lg:text-lg text-white/70 font-body font-light leading-relaxed mb-6 whitespace-pre-line">
-                      {t("about.team.profiles")[0]?.intro || ""}
-                    </p>
-
-                    {/* Expertise Bullets */}
-                    <ul className="space-y-3">
-                      {(t("about.team.profiles")[0]?.expertise || []).map((item: string, bulletIdx: number) => (
-                        <li key={bulletIdx} className="flex items-start gap-3">
-                          <div className="w-2 h-2 bg-q-gold rounded-full mt-2 flex-shrink-0" style={{ boxShadow: '0 0 8px rgba(198,167,94,0.4)' }} />
-                          <span className="text-base text-white/70 font-body font-light leading-relaxed">
-                            {item}
-                          </span>
-                        </li>
-                      ))}
-                    </ul>
                   </div>
                 </div>
 
-                {/* Mobile Layout - Stacked */}
-                <div className="md:hidden">
-                  {/* CEO Portrait - Top */}
-                  <div className="relative h-[400px] overflow-hidden">
-                    <Image
-                      src="/QMOTORCEO.jpeg"
-                      alt="Simon Ackers - CEO"
-                      fill
-                      className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
-                      unoptimized
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                    {/* Gold corner accent */}
-                    <div className="absolute bottom-0 left-0 w-20 h-20 border-l-2 border-b-2 border-q-gold/60" />
+                {/* Bottom Accent Line */}
+                <div className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-q-gold via-q-gold/60 to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left" />
+              </motion.div>
+            </FadeIn>
+
+            {/* CCO CARD - Bayan Kairat */}
+            <FadeIn delay={0.15}>
+              <motion.div
+                whileHover={{ y: -6 }}
+                transition={{ duration: 0.3 }}
+                className="group relative bg-black/50 border border-q-gold/25 transition-all duration-500 hover:border-q-gold/50 hover:bg-black/70 h-full flex flex-col"
+                data-testid="cco-leadership-card"
+              >
+                {/* CCO Portrait */}
+                <div className="relative h-[320px] overflow-hidden">
+                  <Image
+                    src="/bayan.jpeg"
+                    alt="Bayan Kairat - CCO"
+                    fill
+                    className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                    unoptimized
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                  <div className="absolute bottom-0 left-0 w-20 h-20 border-l-2 border-b-2 border-q-gold/60" />
+                  <div className="absolute top-0 right-0 w-12 h-12 border-t-2 border-r-2 border-q-gold/40" />
+                </div>
+
+                {/* Content */}
+                <div className="flex-1 p-8 flex flex-col">
+                  {/* Name & Title */}
+                  <div className="mb-6">
+                    <h3 className="text-2xl lg:text-3xl font-heading font-bold text-white mb-2">
+                      Bayan Kairat
+                    </h3>
+                    <div className="w-16 h-[2px] bg-q-gold mb-3" style={{ boxShadow: '0 0 12px rgba(198,167,94,0.5)' }} />
+                    <p className="text-base text-q-gold font-body font-medium tracking-wider uppercase">
+                      Chief Commercial Officer
+                    </p>
                   </div>
 
-                  {/* Content - Bottom */}
-                  <div className="p-8">
-                    {/* Name & Title */}
-                    <div className="mb-6">
-                      <h3 className="text-2xl font-heading font-bold text-white mb-2">
-                        Simon Ackers
-                      </h3>
-                      <div className="w-16 h-[2px] bg-q-gold mb-3" style={{ boxShadow: '0 0 10px rgba(198,167,94,0.4)' }} />
-                      <p className="text-base text-q-gold font-body font-medium tracking-wider uppercase">
-                        Chief Executive Officer
-                      </p>
-                    </div>
-
-                    {/* Experience Title */}
+                  {/* Experience & Expertise */}
+                  <div className="flex-1">
                     <h4 className="text-lg font-heading font-bold text-white/90 mb-4">
-                      {t("about.team.profiles")[0]?.experienceTitle || "Leadership & Expertise"}
+                      Experience &amp; Expertise
                     </h4>
-
-                    {/* Intro Text */}
-                    <p className="text-base text-white/70 font-body font-light leading-relaxed mb-5 whitespace-pre-line">
-                      {t("about.team.profiles")[0]?.intro || ""}
+                    <p className="text-base text-white/70 font-body font-light leading-relaxed mb-4">
+                      Multilingual — Including Chinese. Over 10 years of experience in Marketing, Public Relations, and OEM business development.
                     </p>
-
-                    {/* Expertise Bullets */}
-                    <ul className="space-y-3">
-                      {(t("about.team.profiles")[0]?.expertise || []).map((item: string, bulletIdx: number) => (
-                        <li key={bulletIdx} className="flex items-start gap-3">
-                          <div className="w-1.5 h-1.5 bg-q-gold rounded-full mt-2 flex-shrink-0" />
-                          <span className="text-sm text-white/70 font-body font-light leading-relaxed">
-                            {item}
-                          </span>
-                        </li>
-                      ))}
+                    <ul className="space-y-2">
+                      <li className="flex items-start gap-3">
+                        <div className="w-1.5 h-1.5 bg-q-gold rounded-full mt-2 flex-shrink-0" style={{ boxShadow: '0 0 6px rgba(198,167,94,0.4)' }} />
+                        <span className="text-sm text-white/70 font-body font-light">Leading multi-brand automotive distribution strategy in Saudi Arabia</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <div className="w-1.5 h-1.5 bg-q-gold rounded-full mt-2 flex-shrink-0" style={{ boxShadow: '0 0 6px rgba(198,167,94,0.4)' }} />
+                        <span className="text-sm text-white/70 font-body font-light">Deep regional expertise and strong Chinese OEM relationships</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <div className="w-1.5 h-1.5 bg-q-gold rounded-full mt-2 flex-shrink-0" style={{ boxShadow: '0 0 6px rgba(198,167,94,0.4)' }} />
+                        <span className="text-sm text-white/70 font-body font-light">Drives market expansion, partnerships, and long-term commercial success</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <div className="w-1.5 h-1.5 bg-q-gold rounded-full mt-2 flex-shrink-0" style={{ boxShadow: '0 0 6px rgba(198,167,94,0.4)' }} />
+                        <span className="text-sm text-white/70 font-body font-light">Go-To-Market Strategy Expert – KSA</span>
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -306,43 +347,6 @@ export default function About() {
               </motion.div>
             </FadeIn>
           </div>
-
-          {/* HIDDEN PROFILES - CCO AND CSCO - COMMENTED OUT */}
-          {/* 
-          To re-enable additional leadership cards:
-          1. Change the layout from single card to grid: className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto"
-          2. Uncomment the profiles below
-          3. Adjust .slice() as needed in the profiles array
-          
-          CCO - Bayan Kairat Card:
-          <FadeIn delay={0.15}>
-            <motion.div
-              whileHover={{ y: -8 }}
-              transition={{ duration: 0.3 }}
-              className="group relative bg-black/60 border border-q-gold/20 p-8 transition-all duration-500 hover:border-q-gold/40 hover:bg-black/80 h-full flex flex-col"
-            >
-              <div className="relative h-80 mb-6 overflow-hidden">
-                <Image src="/bayan.jpeg" alt="Bayan Kairat - CCO" fill className="object-cover transition-transform duration-500 group-hover:scale-105" unoptimized />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
-              </div>
-              <div className="mb-6">
-                <h3 className="text-2xl font-heading font-bold text-white mb-2">Bayan Kairat</h3>
-                <div className="w-16 h-[2px] bg-q-gold mb-3" />
-                <p className="text-base text-q-gold font-body font-medium tracking-wide uppercase">Chief Commercial Officer</p>
-              </div>
-              <div className="flex-1">
-                <p className="text-base text-white/70 font-body font-light leading-relaxed">{t("about.team.profiles")[1]?.intro}</p>
-              </div>
-            </motion.div>
-          </FadeIn>
-
-          CSCO - Nader Quays Card:
-          <FadeIn delay={0.3}>
-            <motion.div className="group relative bg-black/60 border border-q-gold/20 p-8 ...">
-              ...
-            </motion.div>
-          </FadeIn>
-          */}
         </div>
       </section>
 
