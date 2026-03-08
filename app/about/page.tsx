@@ -57,90 +57,103 @@ export default function About() {
             </div>
           </FadeIn>
 
-          {/* Improved Layout - Image Left, Text Right */}
-          <div className="grid lg:grid-cols-5 gap-8 lg:gap-12 items-center">
-            {/* Left Side - Executive Image (2 columns on desktop) */}
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="lg:col-span-2 relative"
-            >
-              <div className="relative h-[500px] lg:h-[600px]">
-                {/* Border Frame */}
-                <div className="absolute inset-0 border-2 border-q-gold/30 -translate-x-3 -translate-y-3 lg:-translate-x-4 lg:-translate-y-4" />
-                
-                {/* Executive Portrait */}
-                <div className="relative h-full overflow-hidden">
-                  <Image
-                    src="chairman.jpeg"
-                    alt="Executive Leadership"
-                    fill
-                    className="object-cover relative z-10"
-                    unoptimized
-                  />
-                  {/* Subtle Gradient Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent z-20" />
-                  
-                  {/* Gold Accent Corner */}
-                  <div className="absolute bottom-0 left-0 w-20 h-20 border-l-2 border-b-2 border-q-gold/60 z-30" />
-                </div>
-              </div>
-
-              {/* Chairman Name & Title */}
+          {/* Two Leadership Cards - Chairman & CEO */}
+          <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+            
+            {/* CHAIRMAN CARD */}
+            <FadeIn>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: 0.3 }}
-                className="mt-6 bg-black/60 border border-q-gold/30 p-6"
+                transition={{ duration: 0.8 }}
+                className="flex flex-col h-full"
               >
-                <h3 className="text-2xl font-heading font-bold text-white mb-2">
-                  {t("about.leadership.chairman.name")}
-                </h3>
-                <div className="w-12 h-[2px] bg-q-gold mb-3" style={{ boxShadow: '0 0 10px rgba(198,167,94,0.4)' }} />
-                <p className="text-sm text-q-gold font-body font-medium uppercase tracking-wider">
-                  {t("about.leadership.chairman.title")}
-                </p>
-              </motion.div>
-            </motion.div>
+                {/* Chairman Portrait */}
+                <div className="relative h-[400px] mb-6 overflow-hidden">
+                  <div className="absolute inset-0 border-2 border-q-gold/30 -translate-x-3 -translate-y-3" />
+                  <Image
+                    src="/chairman.jpeg"
+                    alt="Chairman"
+                    fill
+                    className="object-cover relative z-10"
+                    unoptimized
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent z-20" />
+                  <div className="absolute bottom-0 left-0 w-20 h-20 border-l-2 border-b-2 border-q-gold/60 z-30" />
+                </div>
 
-            {/* Right Side - Leadership Statement (3 columns on desktop) */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="lg:col-span-3"
-            >
-              <div className="relative">
-                {/* Gold Accent Line */}
-                <div className="absolute -left-4 top-0 bottom-0 w-[2px] bg-gradient-to-b from-q-gold/60 via-q-gold/40 to-transparent hidden lg:block" />
-                
-                {/* Content Box */}
-                <div className="bg-q-teal-dark/30 border border-q-gold/20 p-8 lg:p-12 backdrop-blur-sm">
-                  {/* Statement Content */}
-                  <div className="space-y-6">
-                    {t("about.leadership.content").split('\\n\\n').map((paragraph: string, idx: number) => (
-                      <p key={idx} className="text-lg md:text-xl lg:text-2xl text-white/90 font-body font-light leading-relaxed">
+                {/* Chairman Name & Title */}
+                <div className="bg-black/60 border border-q-gold/30 p-6 mb-6">
+                  <h3 className="text-2xl font-heading font-bold text-white mb-2">
+                    {t("about.leadership.chairman.name")}
+                  </h3>
+                  <div className="w-12 h-[2px] bg-q-gold mb-3" style={{ boxShadow: '0 0 10px rgba(198,167,94,0.4)' }} />
+                  <p className="text-sm text-q-gold font-body font-medium uppercase tracking-wider">
+                    {t("about.leadership.chairman.title")}
+                  </p>
+                </div>
+
+                {/* Chairman Content */}
+                <div className="flex-1 bg-q-teal-dark/30 border border-q-gold/20 p-8">
+                  <div className="absolute -left-4 top-0 bottom-0 w-[2px] bg-gradient-to-b from-q-gold/60 via-q-gold/40 to-transparent hidden lg:block" />
+                  <div className="space-y-4">
+                    {t("about.leadership.chairman.content").split('\\n\\n').map((paragraph: string, idx: number) => (
+                      <p key={idx} className="text-base text-white/80 font-body font-light leading-relaxed">
                         {paragraph}
                       </p>
                     ))}
                   </div>
+                </div>
+              </motion.div>
+            </FadeIn>
 
-                  {/* Bottom Gold Divider */}
-                  <div className="mt-8 pt-6 border-t border-q-gold/20">
-                    <div className="flex items-center gap-3">
-                      <div className="w-12 h-[2px] bg-q-gold" style={{ boxShadow: '0 0 10px rgba(198,167,94,0.4)' }} />
-                      <span className="text-xs text-q-gold/70 font-body font-light uppercase tracking-wider">
-                        Leadership Statement
-                      </span>
-                    </div>
+            {/* CEO CARD */}
+            <FadeIn delay={0.2}>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="flex flex-col h-full"
+              >
+                {/* CEO Portrait */}
+                <div className="relative h-[400px] mb-6 overflow-hidden">
+                  <div className="absolute inset-0 border-2 border-q-gold/30 -translate-x-3 -translate-y-3" />
+                  <Image
+                    src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=800&auto=format&fit=crop"
+                    alt="CEO"
+                    fill
+                    className="object-cover relative z-10"
+                    unoptimized
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent z-20" />
+                  <div className="absolute bottom-0 left-0 w-20 h-20 border-l-2 border-b-2 border-q-gold/60 z-30" />
+                </div>
+
+                {/* CEO Name & Title */}
+                <div className="bg-black/60 border border-q-gold/30 p-6 mb-6">
+                  <h3 className="text-2xl font-heading font-bold text-white mb-2">
+                    {t("about.leadership.ceo.name")}
+                  </h3>
+                  <div className="w-12 h-[2px] bg-q-gold mb-3" style={{ boxShadow: '0 0 10px rgba(198,167,94,0.4)' }} />
+                  <p className="text-sm text-q-gold font-body font-medium uppercase tracking-wider">
+                    {t("about.leadership.ceo.title")}
+                  </p>
+                </div>
+
+                {/* CEO Content */}
+                <div className="flex-1 bg-q-teal-dark/30 border border-q-gold/20 p-8">
+                  <div className="space-y-4">
+                    {t("about.leadership.ceo.content").split('\\n\\n').map((paragraph: string, idx: number) => (
+                      <p key={idx} className="text-base text-white/80 font-body font-light leading-relaxed">
+                        {paragraph}
+                      </p>
+                    ))}
                   </div>
                 </div>
-              </div>
-            </motion.div>
+              </motion.div>
+            </FadeIn>
           </div>
         </div>
       </section>
@@ -169,71 +182,75 @@ export default function About() {
 
           {/* Leadership Profile Cards */}
           <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            {t("about.team.profiles").slice(0, 2).map((profile: any, idx: number) => (
-              <FadeIn key={idx} delay={idx * 0.15}>
-                <motion.div
-                  whileHover={{ y: -8 }}
-                  transition={{ duration: 0.3 }}
-                  className="group relative bg-black/60 border border-q-gold/20 p-8 transition-all duration-500 hover:border-q-gold/40 hover:bg-black/80 h-full flex flex-col"
-                >
-                  {/* Executive Portrait */}
-                  <div className="relative h-130 mb-6 overflow-hidden">
-                    <Image
-                      src={
-                        idx === 0 
-                          ? "/QMOTORCEO.jpeg"
-                          : "/bayan.jpeg"
-                      }
-                      alt={profile.name}
-                      fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
-                      unoptimized
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
-                    {/* Subtle glow effect */}
-                    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 shadow-[inset_0_0_40px_rgba(198,167,94,0.2)]" />
-                  </div>
+            {t("about.team.profiles").slice(0, 2).map((profile: any, idx: number) => {
+              // Map images to profiles
+              const imageMap: { [key: number]: string } = {
+                0: "/QMOTORCEO.jpeg",      // Simon Ackers - CEO
+                1: "/bayan.jpeg",            // Bayan Kairat - CCO
+              };
 
-                  {/* Name & Position */}
-                  <div className="mb-6">
-                    <h3 className="text-2xl font-heading font-bold text-white mb-2">
-                      {profile.name}
-                    </h3>
-                    <div className="w-16 h-[2px] bg-q-gold mb-3" style={{ boxShadow: '0 0 10px rgba(198,167,94,0.4)' }} />
-                    <p className="text-base text-q-gold font-body font-medium tracking-wide uppercase">
-                      {profile.position}
-                    </p>
-                  </div>
+              return (
+                <FadeIn key={idx} delay={idx * 0.15}>
+                  <motion.div
+                    whileHover={{ y: -8 }}
+                    transition={{ duration: 0.3 }}
+                    className="group relative bg-black/60 border border-q-gold/20 p-8 transition-all duration-500 hover:border-q-gold/40 hover:bg-black/80 h-full flex flex-col"
+                  >
+                    {/* Executive Portrait */}
+                    <div className="relative h-80 mb-6 overflow-hidden">
+                      <Image
+                        src={imageMap[idx]}
+                        alt={profile.name}
+                        fill
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                        unoptimized
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
+                      {/* Subtle glow effect */}
+                      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 shadow-[inset_0_0_40px_rgba(198,167,94,0.2)]" />
+                    </div>
 
-                  {/* Experience & Expertise */}
-                  <div className="flex-1">
-                    <h4 className="text-lg font-heading font-bold text-white/90 mb-4">
-                      {profile.experienceTitle}
-                    </h4>
-                    
-                    {/* Intro */}
-                    <p className="text-base text-white/70 font-body font-light leading-relaxed mb-4 whitespace-pre-line">
-                      {profile.intro}
-                    </p>
+                    {/* Name & Position */}
+                    <div className="mb-6">
+                      <h3 className="text-2xl font-heading font-bold text-white mb-2">
+                        {profile.name}
+                      </h3>
+                      <div className="w-16 h-[2px] bg-q-gold mb-3" style={{ boxShadow: '0 0 10px rgba(198,167,94,0.4)' }} />
+                      <p className="text-base text-q-gold font-body font-medium tracking-wide uppercase">
+                        {profile.position}
+                      </p>
+                    </div>
 
-                    {/* Expertise Bullets */}
-                    <ul className="space-y-3">
-                      {profile.expertise.map((item: string, bulletIdx: number) => (
-                        <li key={bulletIdx} className="flex items-start gap-3">
-                          <div className="w-1.5 h-1.5 bg-q-gold rounded-full mt-2 flex-shrink-0" />
-                          <span className="text-sm text-white/70 font-body font-light leading-relaxed">
-                            {item}
-                          </span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                    {/* Experience & Expertise */}
+                    <div className="flex-1">
+                      <h4 className="text-lg font-heading font-bold text-white/90 mb-4">
+                        {profile.experienceTitle}
+                      </h4>
+                      
+                      {/* Intro */}
+                      <p className="text-base text-white/70 font-body font-light leading-relaxed mb-4 whitespace-pre-line">
+                        {profile.intro}
+                      </p>
 
-                  {/* Bottom Accent Line */}
-                  <div className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-q-gold to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left" />
-                </motion.div>
-              </FadeIn>
-            ))}
+                      {/* Expertise Bullets */}
+                      <ul className="space-y-3">
+                        {profile.expertise.map((item: string, bulletIdx: number) => (
+                          <li key={bulletIdx} className="flex items-start gap-3">
+                            <div className="w-1.5 h-1.5 bg-q-gold rounded-full mt-2 flex-shrink-0" />
+                            <span className="text-sm text-white/70 font-body font-light leading-relaxed">
+                              {item}
+                            </span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    {/* Bottom Accent Line */}
+                    <div className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-q-gold to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left" />
+                  </motion.div>
+                </FadeIn>
+              );
+            })}
 
             {/* THIRD CARD - NADER QUAYS - COMMENTED OUT TEMPORARILY */}
             {/* 
@@ -250,7 +267,11 @@ export default function About() {
                 >
                   <div className="relative h-130 mb-6 overflow-hidden">
                     <Image
+<<<<<<< HEAD
                       src="/nader2.jpeg"
+=======
+                      src="/nader.jpeg"
+>>>>>>> b77f3cca3837f304352e452e8f41d4a812ff4ab8
                       alt={t("about.team.profiles")[2].name}
                       fill
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
