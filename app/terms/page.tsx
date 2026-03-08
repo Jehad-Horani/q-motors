@@ -28,7 +28,7 @@ export default function Terms() {
 
         {/* Sections */}
         <div className="space-y-12">
-          {t("terms.sections").map((section: any, idx: number) => (
+          {Array.isArray(t("terms.sections")) && t("terms.sections").map((section: any, idx: number) => (
             <div key={idx}>
               <h2 className="text-2xl font-heading font-bold text-q-gold mb-4">
                 {section.title}
