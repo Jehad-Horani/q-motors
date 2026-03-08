@@ -160,7 +160,7 @@ export function Footer() {
                 {t("footer.social.title")}
               </h4>
               <div className="flex items-center gap-3">
-                {t("footer.social.platforms").map((platform: any, idx: number) => {
+                {Array.isArray(t("footer.social.platforms")) && t("footer.social.platforms").map((platform: any, idx: number) => {
                   const Icon = socialIcons[platform.name];
                   return (
                     <a
