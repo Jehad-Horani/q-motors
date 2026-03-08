@@ -435,7 +435,7 @@ export default function About() {
                   {t("about.philosophy.content1")}
                 </p>
                 <ul className="space-y-6 mb-8">
-                  {t("about.philosophy.bullets").map((bullet: string, idx: number) => (
+                  {Array.isArray(t("about.philosophy.bullets")) && t("about.philosophy.bullets").map((bullet: string, idx: number) => (
                     <li key={idx} className="flex items-start gap-4">
                       <CheckCircle2 className="w-6 h-6 text-q-gold flex-shrink-0 mt-1" />
                       <span className="text-lg text-white/80 font-body">{bullet}</span>
