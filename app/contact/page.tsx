@@ -182,11 +182,11 @@ export default function Contact() {
                 {/* Icon Row - Social Media */}
                 <div className="flex justify-center items-center gap-8 mt-12 pt-8 border-t border-q-gold/10">
                   {[
+                    { Icon: XIcon, label: "X", url: "https://x.com/QmotorsSaudi" },
+                    { Icon: Instagram, label: "Instagram", url: "https://www.instagram.com/qmotorssaudi/" },
                     { Icon: Youtube, label: "YouTube", url: "https://www.youtube.com/@QmotorsSaudi" },
                     { Icon: Facebook, label: "Facebook", url: "https://www.facebook.com/QMotorsSaudi" },
-                    { Icon: Instagram, label: "Instagram", url: "https://www.instagram.com/qmotorssaudi/" },
                     { Icon: MailIcon, label: "Email", url: "mailto:info@qmotorssaudi.com" },
-                    { Icon: XIcon, label: "X", url: "https://x.com/QmotorsSaudi" },
                   ].map(({ Icon, label, url }, idx) => (
                     <motion.a
                       key={idx}
