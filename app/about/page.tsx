@@ -42,7 +42,7 @@ export default function About() {
 
       <GoldDivider />
 
-      {/* LEADERSHIP MESSAGE SECTION */}
+      {/* LEADERSHIP MESSAGE SECTION - CHAIRMAN ONLY */}
       <section className="py-32 relative bg-gradient-to-b from-black via-q-dark to-q-teal-dark">
         <div className="absolute inset-0 bg-[linear-gradient(rgba(198,167,94,0.015)_1px,transparent_1px),linear-gradient(90deg,rgba(198,167,94,0.015)_1px,transparent_1px)] bg-[size:100px_100px]" />
         
@@ -70,36 +70,37 @@ export default function About() {
                 className="flex flex-col h-full"
               >
                 {/* Chairman Portrait */}
-                <div className="relative h-150 mb-6 overflow-hidden">
+                <div className="relative h-[400px] mb-6 overflow-hidden">
                   <div className="absolute inset-0 border-2 border-q-gold/30 -translate-x-3 -translate-y-3" />
                   <Image
                     src="/chairman.jpeg"
-                    alt="Chairman"
+                    alt={t("about.leadership.chairman.name")}
                     fill
-                    className="object-cover relative z-10"
+                    className="object-cover object-center"
                     unoptimized
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent z-20" />
-                  <div className="absolute bottom-0 left-0 w-20 h-20 border-l-2 border-b-2 border-q-gold/60 z-30" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent to-black/30 rtl:bg-gradient-to-l" />
+                  <div className="absolute bottom-0 left-0 w-24 h-24 border-l-2 border-b-2 border-q-gold/60 rtl:left-auto rtl:right-0 rtl:border-l-0 rtl:border-r-2" />
+                  <div className="absolute top-0 right-0 w-16 h-16 border-t-2 border-r-2 border-q-gold/40 rtl:right-auto rtl:left-0 rtl:border-r-0 rtl:border-l-2" />
                 </div>
 
-                {/* Chairman Name & Title */}
-                <div className="bg-black/60 border border-q-gold/30 p-6 mb-6">
-                  <h3 className="text-2xl font-heading font-bold text-white mb-2">
-                    {t("about.leadership.chairman.name")}
-                  </h3>
-                  <div className="w-12 h-[2px] bg-q-gold mb-3" style={{ boxShadow: '0 0 10px rgba(198,167,94,0.4)' }} />
-                  <p className="text-sm text-q-gold font-body font-medium uppercase tracking-wider">
-                    {t("about.leadership.chairman.title")}
-                  </p>
-                </div>
+                {/* Content - Right (RTL: Left) */}
+                <div className="flex-1 p-10 lg:p-14 flex flex-col justify-center">
+                  {/* Name & Title */}
+                  <div className="mb-8">
+                    <h3 className="text-3xl lg:text-4xl font-heading font-bold text-white mb-3">
+                      {t("about.leadership.chairman.name")}
+                    </h3>
+                    <div className="w-20 h-[2px] bg-q-gold mb-4" style={{ boxShadow: '0 0 15px rgba(198,167,94,0.5)' }} />
+                    <p className="text-lg text-q-gold font-body font-medium tracking-wider uppercase">
+                      {t("about.leadership.chairman.title")}
+                    </p>
+                  </div>
 
-                {/* Chairman Content */}
-                <div className="flex-1 bg-q-teal-dark/30 border border-q-gold/20 p-8">
-                  <div className="absolute -left-4 top-0 bottom-0 w-[2px] bg-gradient-to-b from-q-gold/60 via-q-gold/40 to-transparent hidden lg:block" />
-                  <div className="space-y-4">
-                    {t("about.leadership.chairman.content").split('\\n\\n').map((paragraph: string, idx: number) => (
-                      <p key={idx} className="text-base text-white/80 font-body font-light leading-relaxed">
+                  {/* Content Paragraphs */}
+                  <div className="space-y-5">
+                    {t("about.leadership.chairman.content").map((paragraph: string, idx: number) => (
+                      <p key={idx} className="text-base lg:text-lg text-white/80 font-body font-light leading-relaxed">
                         {paragraph}
                       </p>
                     ))}
@@ -118,52 +119,53 @@ export default function About() {
                 className="flex flex-col h-full"
               >
                 {/* CEO Portrait */}
-                <div className="relative h-150 mb-6 overflow-hidden">
+                <div className="relative h-[400px] mb-6 overflow-hidden">
                   <div className="absolute inset-0 border-2 border-q-gold/30 -translate-x-3 -translate-y-3" />
                   <Image
-                    src="/QMOTORCEO.jpeg"
+                    src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=800&auto=format&fit=crop"
                     alt="CEO"
                     fill
-                    className="object-cover relative z-10"
+                    className="object-cover object-center"
                     unoptimized
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent z-20" />
-                  <div className="absolute bottom-0 left-0 w-20 h-20 border-l-2 border-b-2 border-q-gold/60 z-30" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                  <div className="absolute bottom-0 left-0 w-20 h-20 border-l-2 border-b-2 border-q-gold/60 rtl:left-auto rtl:right-0 rtl:border-l-0 rtl:border-r-2" />
                 </div>
 
-                {/* CEO Name & Title */}
-                <div className="bg-black/60 border border-q-gold/30 p-6 mb-6">
-                  <h3 className="text-2xl font-heading font-bold text-white mb-2">
-                    {t("about.leadership.ceo.name")}
-                  </h3>
-                  <div className="w-12 h-[2px] bg-q-gold mb-3" style={{ boxShadow: '0 0 10px rgba(198,167,94,0.4)' }} />
-                  <p className="text-sm text-q-gold font-body font-medium uppercase tracking-wider">
-                    {t("about.leadership.ceo.title")}
-                  </p>
-                </div>
+                {/* Content - Bottom */}
+                <div className="p-8">
+                  {/* Name & Title */}
+                  <div className="mb-6">
+                    <h3 className="text-2xl font-heading font-bold text-white mb-2">
+                      {t("about.leadership.chairman.name")}
+                    </h3>
+                    <div className="w-16 h-[2px] bg-q-gold mb-3" style={{ boxShadow: '0 0 10px rgba(198,167,94,0.4)' }} />
+                    <p className="text-base text-q-gold font-body font-medium tracking-wider uppercase">
+                      {t("about.leadership.chairman.title")}
+                    </p>
+                  </div>
 
-                {/* CEO Content */}
-                <div className="flex-1 bg-q-teal-dark/30 border border-q-gold/20 p-8">
+                  {/* Content Paragraphs */}
                   <div className="space-y-4">
-                    {t("about.leadership.ceo.content").split('\\n\\n').map((paragraph: string, idx: number) => (
+                    {t("about.leadership.chairman.content").map((paragraph: string, idx: number) => (
                       <p key={idx} className="text-base text-white/80 font-body font-light leading-relaxed">
                         {paragraph}
                       </p>
                     ))}
                   </div>
                 </div>
-              </motion.div>
-            </FadeIn>
-          </div>
+              </div>
+            </motion.div>
+          </FadeIn>
         </div>
       </section>
 
       <GoldDivider />
 
-      {/* OUR LEADERSHIP TEAM SECTION */}
+      {/* OUR LEADERSHIP TEAM SECTION - CEO & CCO */}
       <section className="py-32 relative bg-gradient-to-b from-q-teal-dark via-q-dark to-black">
         <div className="absolute inset-0 opacity-[0.02]">
-          <div className="absolute inset-0 bg-[linear-gradient(rgba(198,167,94,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(198,167,94,0.1)_1px,transparent_1px)] bg-[size:80px_80px]" />
+          <div className="absolute inset-0 bg-[linear-gradient(rgba(198,167,94,0.1)_1px,transparent_1px),linear_gradient(90deg,rgba(198,167,94,0.1)_1px,transparent_1px)] bg-[size:80px_80px]" />
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -185,7 +187,7 @@ export default function About() {
             {t("about.team.profiles").slice(0, 2).map((profile: any, idx: number) => {
               // Map images to profiles
               const imageMap: { [key: number]: string } = {
-                0: "/QMOTORCEO.jpeg",      // Simon Ackers - CEO
+                0: "/QMOTORSCEO.jpeg",      // Simon Ackers - CEO
                 1: "/bayan.jpeg",            // Bayan Kairat - CCO
               };
 
@@ -210,40 +212,51 @@ export default function About() {
                       <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 shadow-[inset_0_0_40px_rgba(198,167,94,0.2)]" />
                     </div>
 
-                    {/* Name & Position */}
-                    <div className="mb-6">
-                      <h3 className="text-2xl font-heading font-bold text-white mb-2">
-                        {profile.name}
-                      </h3>
-                      <div className="w-16 h-[2px] bg-q-gold mb-3" style={{ boxShadow: '0 0 10px rgba(198,167,94,0.4)' }} />
-                      <p className="text-base text-q-gold font-body font-medium tracking-wide uppercase">
-                        {profile.position}
-                      </p>
-                    </div>
+                {/* Content */}
+                <div className="flex-1 p-8 flex flex-col">
+                  {/* Name & Title */}
+                  <div className="mb-6">
+                    <h3 className="text-2xl lg:text-3xl font-heading font-bold text-white mb-2">
+                      {t("about.team.ceo.name")}
+                    </h3>
+                    <div className="w-16 h-[2px] bg-q-gold mb-3" style={{ boxShadow: '0 0 12px rgba(198,167,94,0.5)' }} />
+                    <p className="text-base text-q-gold font-body font-medium tracking-wider uppercase">
+                      {t("about.team.ceo.position")}
+                    </p>
+                  </div>
 
-                    {/* Experience & Expertise */}
-                    <div className="flex-1">
-                      <h4 className="text-lg font-heading font-bold text-white/90 mb-4">
-                        {profile.experienceTitle}
-                      </h4>
-                      
-                      {/* Intro */}
-                      <p className="text-base text-white/70 font-body font-light leading-relaxed mb-4 whitespace-pre-line">
-                        {profile.intro}
-                      </p>
+                  {/* Experience & Expertise */}
+                  <div className="mb-6">
+                    <h4 className="text-lg font-heading font-bold text-white/90 mb-4">
+                      {t("about.team.experienceTitle")}
+                    </h4>
+                    <p className="text-base text-white/70 font-body font-light leading-relaxed mb-4">
+                      {t("about.team.ceo.intro")}
+                    </p>
+                    <ul className="space-y-2">
+                      {t("about.team.ceo.expertise").map((item: string, idx: number) => (
+                        <li key={idx} className="flex items-start gap-3">
+                          <div className="w-1.5 h-1.5 bg-q-gold rounded-full mt-2 flex-shrink-0" style={{ boxShadow: '0 0 6px rgba(198,167,94,0.4)' }} />
+                          <span className="text-sm text-white/70 font-body font-light">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
 
-                      {/* Expertise Bullets */}
-                      <ul className="space-y-3">
-                        {profile.expertise.map((item: string, bulletIdx: number) => (
-                          <li key={bulletIdx} className="flex items-start gap-3">
-                            <div className="w-1.5 h-1.5 bg-q-gold rounded-full mt-2 flex-shrink-0" />
-                            <span className="text-sm text-white/70 font-body font-light leading-relaxed">
-                              {item}
-                            </span>
-                          </li>
-                        ))}
-                      </ul>
+                  {/* Leadership Overview */}
+                  <div className="flex-1">
+                    <h4 className="text-lg font-heading font-bold text-white/90 mb-4">
+                      {t("about.team.leadershipOverviewTitle")}
+                    </h4>
+                    <div className="space-y-3">
+                      {t("about.team.ceo.leadershipOverview").map((paragraph: string, idx: number) => (
+                        <p key={idx} className="text-sm text-white/70 font-body font-light leading-relaxed">
+                          {paragraph}
+                        </p>
+                      ))}
                     </div>
+                  </div>
+                </div>
 
                     {/* Bottom Accent Line */}
                     <div className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-q-gold to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left" />
@@ -265,13 +278,9 @@ export default function About() {
                   transition={{ duration: 0.3 }}
                   className="group relative bg-black/60 border border-q-gold/20 p-8 transition-all duration-500 hover:border-q-gold/40 hover:bg-black/80 h-full flex flex-col"
                 >
-                  <div className="relative h-130 mb-6 overflow-hidden">
+                  <div className="relative h-80 mb-6 overflow-hidden">
                     <Image
-<<<<<<< HEAD
-                      src="/nader2.jpeg"
-=======
                       src="/nader.jpeg"
->>>>>>> b77f3cca3837f304352e452e8f41d4a812ff4ab8
                       alt={t("about.team.profiles")[2].name}
                       fill
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -281,42 +290,56 @@ export default function About() {
                     <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 shadow-[inset_0_0_40px_rgba(198,167,94,0.2)]" />
                   </div>
 
+                {/* Content */}
+                <div className="flex-1 p-8 flex flex-col">
+                  {/* Name & Title */}
                   <div className="mb-6">
-                    <h3 className="text-2xl font-heading font-bold text-white mb-2">
-                      {t("about.team.profiles")[2].name}
+                    <h3 className="text-2xl lg:text-3xl font-heading font-bold text-white mb-2">
+                      {t("about.team.cco.name")}
                     </h3>
-                    <div className="w-16 h-[2px] bg-q-gold mb-3" style={{ boxShadow: '0 0 10px rgba(198,167,94,0.4)' }} />
-                    <p className="text-base text-q-gold font-body font-medium tracking-wide uppercase">
-                      {t("about.team.profiles")[2].position}
+                    <div className="w-16 h-[2px] bg-q-gold mb-3" style={{ boxShadow: '0 0 12px rgba(198,167,94,0.5)' }} />
+                    <p className="text-base text-q-gold font-body font-medium tracking-wider uppercase">
+                      {t("about.team.cco.position")}
                     </p>
                   </div>
 
-                  <div className="flex-1">
+                  {/* Experience & Expertise */}
+                  <div className="mb-6">
                     <h4 className="text-lg font-heading font-bold text-white/90 mb-4">
-                      {t("about.team.profiles")[2].experienceTitle}
+                      {t("about.team.experienceTitle")}
                     </h4>
-                    
-                    <p className="text-base text-white/70 font-body font-light leading-relaxed mb-4 whitespace-pre-line">
-                      {t("about.team.profiles")[2].intro}
+                    <p className="text-base text-white/70 font-body font-light leading-relaxed mb-4">
+                      {t("about.team.cco.intro")}
                     </p>
-
-                    <ul className="space-y-3">
-                      {t("about.team.profiles")[2].expertise.map((item: string, bulletIdx: number) => (
-                        <li key={bulletIdx} className="flex items-start gap-3">
-                          <div className="w-1.5 h-1.5 bg-q-gold rounded-full mt-2 flex-shrink-0" />
-                          <span className="text-sm text-white/70 font-body font-light leading-relaxed">
-                            {item}
-                          </span>
+                    <ul className="space-y-2">
+                      {t("about.team.cco.expertise").map((item: string, idx: number) => (
+                        <li key={idx} className="flex items-start gap-3">
+                          <div className="w-1.5 h-1.5 bg-q-gold rounded-full mt-2 flex-shrink-0" style={{ boxShadow: '0 0 6px rgba(198,167,94,0.4)' }} />
+                          <span className="text-sm text-white/70 font-body font-light">{item}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
 
-                  <div className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-q-gold to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left" />
-                </motion.div>
-              </FadeIn>
-            )}
-            */}
+                  {/* Leadership Overview */}
+                  <div className="flex-1">
+                    <h4 className="text-lg font-heading font-bold text-white/90 mb-4">
+                      {t("about.team.leadershipOverviewTitle")}
+                    </h4>
+                    <div className="space-y-3">
+                      {t("about.team.cco.leadershipOverview").map((paragraph: string, idx: number) => (
+                        <p key={idx} className="text-sm text-white/70 font-body font-light leading-relaxed">
+                          {paragraph}
+                        </p>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Bottom Accent Line */}
+                <div className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-q-gold via-q-gold/60 to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left rtl:origin-right rtl:bg-gradient-to-l" />
+              </motion.div>
+            </FadeIn>
           </div>
         </div>
       </section>
