@@ -269,7 +269,7 @@ export default function Strategy() {
               </h3>
               
               <div className="grid sm:grid-cols-2 gap-6">
-                {t("strategy.vision.pillars").map((pillar: any, idx: number) => (
+                {Array.isArray(t("strategy.vision.pillars")) && t("strategy.vision.pillars").map((pillar: any, idx: number) => (
                   <motion.div
                     key={idx}
                     initial={{ opacity: 0, y: 20 }}
