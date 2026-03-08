@@ -121,7 +121,7 @@ export default function About() {
                 <div className="relative h-[400px] mb-6 overflow-hidden">
                   <div className="absolute inset-0 border-2 border-q-gold/30 -translate-x-3 -translate-y-3" />
                   <Image
-                    src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=800&auto=format&fit=crop"
+                    src="/QMOTORCEO.jpeg"
                     alt="CEO"
                     fill
                     className="object-cover relative z-10"
