@@ -122,7 +122,7 @@ export default function About() {
                 <div className="relative h-[400px] mb-6 overflow-hidden">
                   <div className="absolute inset-0 border-2 border-q-gold/30 -translate-x-3 -translate-y-3" />
                   <Image
-                    src="/QMOTORSCEO.jpeg"
+                    src="/QMOTORCEO.jpeg"
                     alt="CEO"
                     fill
                     className="object-cover object-center"
@@ -195,7 +195,7 @@ export default function About() {
                 {/* Executive Portrait */}
                 <div className="relative h-80 mb-6 overflow-hidden">
                   <Image
-                    src="/QMOTORSCEO.jpeg"
+                    src="/QMOTORCEO.jpeg"
                     alt={t("about.team.ceo.name")}
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
