@@ -2,7 +2,7 @@
 
 import { useLanguage } from "@/components/LanguageProvider";
 import { FadeIn, GoldDivider } from "@/components/Shared";
-import { Youtube, Facebook, Instagram } from "lucide-react";
+import { Youtube, Facebook, Instagram, MailIcon } from "lucide-react";
 import { motion } from "motion/react";
 import Link from "next/link";
 
@@ -185,6 +185,7 @@ export default function Contact() {
                     { Icon: Youtube, label: "YouTube", url: "https://www.youtube.com/@QmotorsSaudi" },
                     { Icon: Facebook, label: "Facebook", url: "https://www.facebook.com/QMotorsSaudi" },
                     { Icon: Instagram, label: "Instagram", url: "https://www.instagram.com/qmotorssaudi/" },
+                    { Icon: MailIcon, label: "Email", url: "mailto:info@qmotorssaudi.com" },
                     { Icon: XIcon, label: "X", url: "https://x.com/QmotorsSaudi" },
                   ].map(({ Icon, label, url }, idx) => (
                     <motion.a
@@ -197,14 +198,12 @@ export default function Contact() {
                       transition={{ duration: 0.3 }}
                       aria-label={label}
                     >
-                      <Link href={url} target="_blank">
                       <div className="w-14 h-14 border border-q-gold/40 flex items-center justify-center transition-all duration-300 hover:border-q-gold hover:bg-q-gold/10">
                         <Icon className="w-6 h-6 text-q-gold" />
                       </div>
                       <span className="text-xs text-white/40 font-body uppercase tracking-wider">
                         {label}
                       </span>
-                      </Link>
                     </motion.a>
                   ))}
                 </div>

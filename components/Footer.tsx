@@ -1,7 +1,7 @@
 "use client";
 
 import { useLanguage } from "@/components/LanguageProvider";
-import { Youtube, Facebook, Instagram } from "lucide-react";
+import { Youtube, Facebook, Instagram, MailIcon } from "lucide-react";
 import Link from "next/link";
 import { motion } from "motion/react";
 
@@ -24,6 +24,7 @@ export function Footer() {
     YouTube: Youtube,
     Facebook: Facebook,
     Instagram: Instagram,
+    Email: MailIcon,
     X: XIcon,
   };
 

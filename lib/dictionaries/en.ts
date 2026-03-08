@@ -376,6 +376,7 @@ export const en = {
         { name: "YouTube", url: "https://www.youtube.com/@QmotorsSaudi" },
         { name: "Facebook", url: "https://www.facebook.com/QMotorsSaudi" },
         { name: "Instagram", url: "https://www.instagram.com/qmotorssaudi/" },
+        { name: "Email", url: "mailto:info@qmotorssaudi.com" },
         { name: "X", url: "https://x.com/QmotorsSaudi" },
       ],
     },
