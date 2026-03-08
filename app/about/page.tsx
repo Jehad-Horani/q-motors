@@ -168,7 +168,7 @@ export default function About() {
           </FadeIn>
 
           {/* Leadership Profile Cards */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
             {t("about.team.profiles").map((profile: any, idx: number) => (
               <FadeIn key={idx} delay={idx * 0.15}>
                 <motion.div
@@ -182,9 +182,9 @@ export default function About() {
                       src={
                         idx === 0 
                           ? "/QMOTORCEO.jpeg"
-                          : idx === 1
-                          ? "/bayan.jpeg"
-                          : "/nader2.jpeg"
+                          // : idx === 1
+                          : "/bayan.jpeg"
+                          // : "/nader2.jpeg"
                       }
                       alt={profile.name}
                       fill
