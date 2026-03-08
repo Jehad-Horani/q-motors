@@ -27,7 +27,7 @@ export default function Home() {
           </FadeIn>
 
           <div className="grid md:grid-cols-2 gap-6 mb-20">
-            {t("home.foundation.bullets").map((bullet: string, idx: number) => (
+            {Array.isArray(t("home.foundation.bullets")) && t("home.foundation.bullets").map((bullet: string, idx: number) => (
               <FadeIn
                 key={idx}
                 delay={idx * 0.1}
